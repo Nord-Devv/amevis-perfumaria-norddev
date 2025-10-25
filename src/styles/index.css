@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@import './breakpoints.css';
+@import './colors.css';
+@import './fonts.css';
+@import "tw-animate-css";
+
+
+/* configuraçoes globais */
+@layer base {
+    body {
+        @apply font-sans;
+    }
+}
+
