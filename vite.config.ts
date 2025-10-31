@@ -10,15 +10,20 @@ export default defineConfig({
     tailwindcss()
   ],
   resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    target: 'esnext',
+    outDir: 'build',
   },
   server: {
     port: 5174,
     watch: {
       usePolling: true
     }
-    
+
   }
 })

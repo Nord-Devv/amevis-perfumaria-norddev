@@ -1,0 +1,58 @@
+import { CartDrawer, type CartItem } from "../CartDrawer";
+import logoAmevi from "../../assets/e214b3767302229bb769b749498b0cffbf615395.png";
+
+interface HeaderProps {
+  cartItems: CartItem[];
+  onRemoveFromCart: (index: number) => void;
+  onClearCart: () => void;
+  onUpdateQuantity: (index: number, newQuantity: number) => void;
+}
+
+export function Header({ cartItems, onRemoveFromCart, onClearCart, onUpdateQuantity }: HeaderProps) {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#C9A14A]/20">
+      <div className="container mx-auto px-6 py-5">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-12">
+            <img 
+              src={logoAmevi} 
+              alt="Amevi" 
+              className="h-10 w-auto object-contain cursor-pointer"
+              onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
+            />
+            <nav className="hidden md:flex items-center gap-8">
+              <a 
+                href="#home" 
+                onClick={(e) => handleSmoothScroll(e, "home")}
+                className="text-white hover:text-[#C9A14A] transition-colors text-sm"
+              >
+                Início
+              </a>
+              <a 
+                href="#catalog" 
+                onClick={(e) => handleSmoothScroll(e, "catalog")}
+                className="text-white hover:text-[#C9A14A] transition-colors text-sm text-[14px]"
+              >
+                Catálogo
+              </a>
+               </nav>
+          </div>
+          
+          <div className="flex items-center gap-3">
+            <CartDrawer 
+              items={cartItems}
+              onRemoveItem={onRemoveFromCart}
+              onClearCart={onClearCart}
+              onUpdateQuantity={onUpdateQuantity}
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
