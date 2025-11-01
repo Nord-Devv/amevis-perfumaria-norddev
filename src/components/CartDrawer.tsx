@@ -1,6 +1,5 @@
 import {
   ShoppingCart,
-
   X,
   Plus,
   Minus,
