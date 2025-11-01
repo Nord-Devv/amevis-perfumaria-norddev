@@ -8,10 +8,10 @@ import { useCatalog } from "@/hooks/useCatalog";
 interface sectionCatalogProps {
   toggleDialog: (open: boolean) => void;
 }
-export const SectionCatalog = ({toggleDialog} : sectionCatalogProps) => {
+export const SectionCatalog = ({ toggleDialog }: sectionCatalogProps) => {
 
   const { filteredProducts, productTypes, selectedCategory, selectedSubcategory, selectedType, showFilters, subcategories,
-    handleAddToCart, handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, handleOpenProductModal, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog();
+    handleAddToCart, handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, handleOpenProductModal, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog({ toggleDialog });
 
   return (<>
     <section

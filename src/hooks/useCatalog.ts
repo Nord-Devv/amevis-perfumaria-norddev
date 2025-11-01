@@ -39,11 +39,11 @@ type Product = PerfumariaProduct | MaquiagemProduct | AutocuidadoProduct
 
 
 
-interface useCatalogParams{
+interface useCatalogParams {
   toggleDialog: (open: boolean) => void;
 }
 
-export const useCatalog = ({toggleDialog} : useCatalogParams) => {
+export const useCatalog = ({ toggleDialog }: useCatalogParams) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [showFilters, setShowFilters] = useState(false)
   const [filteredProducts, setFilteredProdutcs] = useState<Product[]>([]);
@@ -141,7 +141,6 @@ export const useCatalog = ({toggleDialog} : useCatalogParams) => {
   function handleOpenProductModal(product: Product): void {
     setSelectedProduct(product);
     toggleDialog(true);
-    throw new Error("Function not implemented.");
   }
 
   function handleAddToCart(product: Product): void {
