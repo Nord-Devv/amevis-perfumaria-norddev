@@ -24,6 +24,7 @@ import { Input } from "./ui/input";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useState, useEffect } from "react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 
 interface ProductDialogProps {
   open: boolean;
@@ -58,15 +59,18 @@ export function ProductDialog({
   const [calculating, setCalculating] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  const { closeProduct } = useSelectedProductStore();
+
+
   // Detectar se é mobile
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -108,13 +112,13 @@ export function ProductDialog({
     <>
       {/* Close Button */}
       <div className="flex w-full flex-row justify-end">
-      <button
-        onClick={() => onOpenChange(false)}
-        className="relative ml-3 z-50 w-8 h-8 flex items-center justify-center hover:bg-[#C9A14A]/20 text-[#C9A14A] hover:border-[#C9A14A] hover:text-[#C9A14A] rounded-none transition-all duration-300 group"
-        aria-label="Fechar"
-      >
-        <X className="h-4 w-4 text-[#C9A14A] group-hover:text-white transition-colors" />
-      </button>
+        <button
+          onClick={closeProduct}
+          className="relative ml-3 z-50 w-8 h-8 flex items-center justify-center hover:bg-[#C9A14A]/20 text-[#C9A14A] hover:border-[#C9A14A] hover:text-[#C9A14A] rounded-none transition-all duration-300 group"
+          aria-label="Fechar"
+        >
+          <X className="h-4 w-4 text-[#C9A14A] group-hover:text-white transition-colors" />
+        </button>
       </div>
       {/* Header com padding */}
       <div className="p-6 pb-4 flex-shrink-0 relative">
@@ -194,7 +198,7 @@ export function ProductDialog({
           <div className="bg-gradient-to-br from-[#C9A14A]/10 to-[#C9A14A]/5 rounded-none p-5 border border-[#C9A14A]/40 shadow-inner relative overflow-hidden">
             {/* Decorative corner */}
             <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#C9A14A]/20"></div>
-            
+
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="h-4 w-4 text-[#C9A14A]" />
               <h3 className="text-[#C9A14A] uppercase tracking-wider text-sm">

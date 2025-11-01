@@ -13,13 +13,14 @@ import {
 import { Footer } from "./components/layout/footer";
 import { CarouselGallery } from "./components/features/carouselGallery";
 import { SectionCatalog } from "./components/SectionCatalog";
+import { useSelectedProductStore } from "./store/useSelectedProductStore";
 
 
 export default function App() {
   const [showAdmin, setShowAdmin] = useState(false);
   // const [products, setProducts] = useState<Product[]>([]);
-  const [selectedProduct, setSelectedProduct] =
-    useState<Product | null>(null);
+  // const [selectedProduct, setSelectedProduct] =
+  //   useState<Product | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   // const [categoryFilter, setCategoryFilter] =
   useState<string>("Perfumaria");
@@ -28,7 +29,8 @@ export default function App() {
   // const [showFilters, setShowFilters] = useState(false); // Controlar visibilidade dos filtros
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   // const [visibleProducts, setVisibleProducts] = useState(8); // Mostrar 9 produtos inicialmente (3 colunas x 3 linhas)
-
+  //
+  const selectedProduct = useSelectedProductStore().product;
 
   const handleAddToCart = (product: Product) => {
     // Check if item already exists in cart
@@ -101,7 +103,7 @@ export default function App() {
   //   );
   // }
   //
-  
+
   return (
     <div className="min-h-screen bg-white">
       <Header
@@ -164,7 +166,7 @@ export default function App() {
       {/* Product Dialog */}
       {selectedProduct && (
         <ProductDialog
-          open={isDialogOpen}
+          open={!!selectedProduct}
           onOpenChange={setIsDialogOpen}
           product={selectedProduct}
           onAddToCart={() => handleAddToCart(selectedProduct)}

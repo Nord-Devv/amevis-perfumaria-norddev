@@ -1,58 +1,15 @@
 import { fetchCatalog } from "@/services/fetchCatalog";
+import type { PerfumariaProduct, Product } from "@/types/Product";
 import { useEffect, useState } from "react";
 
-export interface BaseProduct {
-  id: string;
-  name: string;
-  brand: string;
-  price: string;
-  category: "Perfumaria" | "Maquiagem" | "Autocuidado";
-  image: string;
-  description: string;
-
-  productType?: string; // "Comum", "Body Splash", "Brand Collection" (para Perfumaria)
-
-  notes?: {
-    top: string[];
-    heart: string[];
-    base: string[];
-  };
-}
-
-
-interface PerfumariaProduct extends BaseProduct {
-  category: "Perfumaria";
-  productType: "Comum" | "Body Splash" | "Brand";
-  subcategory: "Feminino" | "Masculino" | "Unissex";
-}
-interface MaquiagemProduct extends BaseProduct {
-  category: "Maquiagem";
-  subcategory: "Rosto" | "Olhos" | "Boca" | "Acessórios"
-
-}
-interface AutocuidadoProduct extends BaseProduct {
-  category: "Autocuidado";
-  subcategory: "Corpo" | "Rosto";
-}
-
-type Product = PerfumariaProduct | MaquiagemProduct | AutocuidadoProduct
-
-
-
-interface useCatalogParams {
-  toggleDialog: (open: boolean) => void;
-}
-
-export const useCatalog = ({ toggleDialog }: useCatalogParams) => {
+export const useCatalog = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [showFilters, setShowFilters] = useState(false)
   const [filteredProducts, setFilteredProdutcs] = useState<Product[]>([]);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string>("Perfumaria")
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>("Todos")
   const [selectedType, setSelectedType] = useState<string>("Todos")
   const [visibleProducts, setVisibleProducts] = useState(8);
-
 
   const handleCategoryChange = (value: string) => {
     setSelectedCategory(value);
@@ -138,11 +95,6 @@ export const useCatalog = ({ toggleDialog }: useCatalogParams) => {
 
 
 
-  function handleOpenProductModal(product: Product): void {
-    setSelectedProduct(product);
-    toggleDialog(true);
-  }
-
   function handleAddToCart(product: Product): void {
     throw new Error("Function not implemented.");
   }
@@ -150,7 +102,6 @@ export const useCatalog = ({ toggleDialog }: useCatalogParams) => {
   return {
     filteredProducts,
     visibleProducts,
-    selectedProduct,
     showFilters,
     selectedCategory,
     selectedSubcategory,
@@ -162,7 +113,6 @@ export const useCatalog = ({ toggleDialog }: useCatalogParams) => {
     handleCategoryChange,
     handleProductTypeChange,
     handleSubcategoryToggle,
-    handleOpenProductModal,
     handleAddToCart,
   }
 

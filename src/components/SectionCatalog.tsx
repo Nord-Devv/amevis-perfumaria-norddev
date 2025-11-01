@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ProductCard } from "./ProductCard";
 import { useCatalog } from "@/hooks/useCatalog";
+import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 
 interface sectionCatalogProps {
   toggleDialog: (open: boolean) => void;
@@ -11,7 +12,9 @@ interface sectionCatalogProps {
 export const SectionCatalog = ({ toggleDialog }: sectionCatalogProps) => {
 
   const { filteredProducts, productTypes, selectedCategory, selectedSubcategory, selectedType, showFilters, subcategories,
-    handleAddToCart, handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, handleOpenProductModal, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog({ toggleDialog });
+    handleAddToCart, handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog();
+  const { openProduct } = useSelectedProductStore();
+
 
   return (<>
     <section
@@ -193,7 +196,7 @@ export const SectionCatalog = ({ toggleDialog }: sectionCatalogProps) => {
                   key={product.id}
                   {...product}
                   onViewDetails={() =>
-                    handleOpenProductModal(product)
+                    openProduct(product)
                   }
                   onAddToCart={() => handleAddToCart(product)}
                 />
