@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "./components/layout/Header";
 import { ProductCard } from "./components/ProductCard";
 import { ProductDialog } from "./components/ProductDialog";
-import { WhatsAppIcon } from "./components/WhatsAppIcon";
 import { Button } from "./components/ui/button";
 import {
   Tabs,
@@ -11,8 +10,6 @@ import {
   TabsTrigger,
 } from "./components/ui/tabs";
 import {
-  Instagram,
-  Settings,
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
@@ -20,16 +17,15 @@ import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import { type CartItem } from "./components/CartDrawer";
 import { toast } from "sonner";
 import { Toaster } from "./components/ui/sonner";
-import logoAmevi from "./assets/e214b3767302229bb769b749498b0cffbf615395.png";
 import {
   ProductStore,
   type Product,
-  type ProductInput,
   initializeDefaultProducts,
 } from "./admin/productStore";
 import { AdminPage } from "./admin/AdminPage";
 import { fetchCatalog } from "./services/fetchCatalog";
 import { Footer } from "./components/layout/footer";
+import { CarouselGallery } from "./components/carousel-gallery";
 
 // Initial products (will be auto-assigned IDs)
 const initialProductsData = fetchCatalog();
@@ -49,7 +45,6 @@ export default function App() {
   >([]); // Array para múltipla seleção de gênero
   const [showFilters, setShowFilters] = useState(false); // Controlar visibilidade dos filtros
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [activeSlide, setActiveSlide] = useState(0);
   const [visibleProducts, setVisibleProducts] = useState(8); // Mostrar 9 produtos inicialmente (3 colunas x 3 linhas)
 
   // Initialize default products and load from storage on mount
@@ -62,17 +57,6 @@ export default function App() {
     const loadedProducts = ProductStore.getProducts();
     setProducts(loadedProducts);
   };
-  
-  // Fast slideshow automation for luxury gallery
-  useEffect(() => {
-    const totalSlides = 4;
-
-    const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % totalSlides);
-    }, 2500); // Troca a cada 2.5 segundos
-
-    return () => clearInterval(interval);
-  }, []);
 
   const handleViewDetails = (product: Product) => {
     setSelectedProduct(product);
@@ -503,83 +487,7 @@ export default function App() {
       </section>
 
       {/* Luxury Gallery Section - Fast Upward Carousel */}
-      <section className="py-0 overflow-hidden bg-[#1A1A1A] h-96 relative">
-        <div className="relative w-full h-full">
-          <AnimatePresence initial={false}>
-            {activeSlide === 0 && (
-              <motion.div
-                key="slide-0"
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "-100%" }}
-                transition={{ duration: 0.8, ease: "linear" }}
-                className="absolute inset-0 will-change-transform"
-              >
-                <ImageWithFallback
-                  src="https://drive.google.com/thumbnail?id=1z_F_0MsBA9b6kGP07GWwhY4Wlw9szFpt&sz=w3000"
-                  alt="Monochromatic Lifestyle"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/50 to-transparent"></div>
-              </motion.div>
-            )}
-
-            {activeSlide === 1 && (
-              <motion.div
-                key="slide-1"
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "-100%" }}
-                transition={{ duration: 0.8, ease: "linear" }}
-                className="absolute inset-0 will-change-transform"
-              >
-                <ImageWithFallback
-                  src="https://drive.google.com/thumbnail?id=1p1DhAMta9K-CmQcCwM02MAvwjHfWipp2&sz=w3000"
-                  alt="Row of Luxury Perfumes"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/50 to-transparent"></div>
-              </motion.div>
-            )}
-
-            {activeSlide === 2 && (
-              <motion.div
-                key="slide-2"
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "-100%" }}
-                transition={{ duration: 0.8, ease: "linear" }}
-                className="absolute inset-0 will-change-transform"
-              >
-                <ImageWithFallback
-                  src="https://drive.google.com/thumbnail?id=1OLCm4tMbmOt_X-cgzU6KzXoWAS6M2gC-&sz=w3000"
-                  alt="Red Tones Fragrance"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/50 to-transparent"></div>
-              </motion.div>
-            )}
-
-            {activeSlide === 3 && (
-              <motion.div
-                key="slide-3"
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "-100%" }}
-                transition={{ duration: 0.8, ease: "linear" }}
-                className="absolute inset-0 will-change-transform"
-              >
-                <ImageWithFallback
-                  src="https://drive.google.com/thumbnail?id=1QihvFHsotudEEbrz2YZWcxgV57nkluty&sz=w3000"
-                  alt="Golden Perfumes Table"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/50 to-transparent"></div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </section>
+      <CarouselGallery />
 
       {/* Product Dialog */}
       {selectedProduct && (
@@ -592,7 +500,6 @@ export default function App() {
       )}
 
       {/* Footer */}
-
       <Footer setShowAdmin={setShowAdmin}/>
 
       {/* Toaster */}
