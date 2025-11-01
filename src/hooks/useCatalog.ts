@@ -22,9 +22,8 @@ export interface BaseProduct {
 
 interface PerfumariaProduct extends BaseProduct {
   category: "Perfumaria";
+  productType: "Comum" | "Body Splash" | "Brand";
   subcategory: "Feminino" | "Masculino" | "Unissex";
-  productType: "Comum" | "Body Splash" | "Brand"
-  ;
 }
 interface MaquiagemProduct extends BaseProduct {
   category: "Maquiagem";
@@ -128,9 +127,6 @@ export const useCatalog = () => {
     }
 
     setSelectedSubcategory(subcategory);
-    if (selectedCategory === "Perfumaria") {
-      setSelectedType("Todos");
-    }
   };
 
 
