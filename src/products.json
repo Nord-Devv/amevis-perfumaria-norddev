@@ -1,0 +1,1001 @@
+[
+  {
+    "name": "Sauvage",
+    "brand": "Christian Dior",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1ALFjZoWDHAS5CQtyi8eYY0O52BZ3ePmO&sz=w1000",
+    "description": "Um fougère aromático moderno com notas poderosas de bergamota e ambroxan, com um toque picante.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Aromático",
+        "Fougère",
+        "Especiado"
+      ]
+    }
+  },
+  {
+    "name": "Yara",
+    "brand": "Lattafa",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1K_e9j30PIQ2gTPrvoWlRQN0BDpTp2o_S&sz=w1000",
+    "description": "Um best-seller árabe, um oriental baunilha com notas de orquídea, frutas tropicais e baunilha cremosa.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Baunilha",
+        "Frutado"
+      ]
+    }
+  },
+  {
+    "name": "J'adore",
+    "brand": "Christian Dior",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1zqutcdLT9Bjw6rpXK0_BzqzgLiIOifzH&sz=w1000",
+    "description": "Um buquê floral radiante e clássico, com Ylang-Ylang, Jasmim e Rosa. A essência da feminilidade absoluta.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado",
+        "Branco"
+      ]
+    }
+  },
+  {
+    "name": "1 Million",
+    "brand": "Paco Rabanne",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1kAaTXt352GHjUiDfIJkrsqlWrXFX-Kzg&sz=w1000",
+    "description": "Um clássico ousado com notas de couro e canela, representando poder e riqueza.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Amadeirado",
+        "Especiado",
+        "Couro"
+      ]
+    }
+  },
+  {
+    "name": "Good Girl",
+    "brand": "Carolina Herrera",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=17jwprjPsy72HRO5LpSkL7-FvsPXmfyK1&sz=w1000",
+    "description": "A icônica fragrância que representa a dualidade da mulher moderna, com notas doces de baunilha e amêndoa.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Floral",
+        "Gourmand"
+      ]
+    }
+  },
+  {
+    "name": "Scandal",
+    "brand": "Jean Paul Gaultier",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1S7fCot23cLDAwn6L1ZSO4KVf6tIoAjq5&sz=w1000",
+    "description": "Um chipre gourmand luxuoso, famoso pela combinação de mel e patchouli. Um aroma elegante e atrevido.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Chipre",
+        "Floral",
+        "Gourmand"
+      ]
+    }
+  },
+  {
+    "name": "212 VIP Rosé",
+    "brand": "Carolina Herrera",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1qBirVcMViy-PTiXb5PalzmQGmjI-NT3A&sz=w1000",
+    "description": "Um aroma efervescente e festivo, com a leveza do Champagne Rosé e a sedução do almíscar.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado",
+        "Almiscarado"
+      ]
+    }
+  },
+  {
+    "name": "Invictus",
+    "brand": "Brand Collection",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1S-fb3ONuiW9Qt4DWLtqhiwsoS3c1Vapd&sz=w1000",
+    "description": "Miniatura inspirada no Invictus, com acordes aquáticos e cítricos.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Amadeirado",
+        "Aquático",
+        "Cítrico"
+      ]
+    }
+  },
+  {
+    "name": "Toy Boy",
+    "brand": "Moschino",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1wIO5Ho6JsXcmn4V4LuwBMgVyamqxk3pq&sz=w1000",
+    "description": "Amadeirado Especiado inusitado. Abre com pera e pimenta rosa, surpreendendo com um coração floral de rosa e magnólia.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Amadeirado",
+        "Rosa",
+        "Pera"
+      ]
+    }
+  },
+  {
+    "name": "Lady Million",
+    "brand": "Paco Rabanne",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1i2YHYdHqbZ1-Azr3PImWnu9YubR5inkl&sz=w1000",
+    "description": "Um perfume opulento e viciante com flores brancas e notas doces de mel e patchouli.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado",
+        "Amadeirado"
+      ]
+    }
+  },
+  {
+    "name": "Fame",
+    "brand": "Brand Collection",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1MmHEF6VPAKr9KDgllqKJY7rt3AEcn2f8&sz=w1000",
+    "description": "Uma fragrância Chipre Floral Frutada que exala luxo e ousadia, combinando manga suculenta com um buquê de jasmim cremoso e incenso.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Chipre",
+        "Floral",
+        "Manga"
+      ]
+    }
+  },
+  {
+    "name": "Olympea",
+    "brand": "Paco Rabanne",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1XWRpE5G_-c6CxPDPlq-Bz7s8x1iMhPdR&sz=w1000",
+    "description": "Um oriental fresco com um acorde de baunilha salgada viciante, representando a deusa moderna.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Floral",
+        "Salgado"
+      ]
+    }
+  },
+  {
+    "name": "Phantom",
+    "brand": "Paco Rabanne",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1NXZBCjPcaUjw8YQfPXJ4LU4cy-vpyluq&sz=w1000",
+    "description": "A primeira fragrância conectada, com lavanda cremosa e limão que energiza a mente.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Amadeirado",
+        "Aromático",
+        "Baunilha"
+      ]
+    }
+  },
+  {
+    "name": "Scandal",
+    "brand": "Jean Paul Gaultier",
+    "price": "R$ 30,00",
+    "category": "Perfumaria",
+    "productType": "Body Splash",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1ecIskeYTlvUpaZL6dJMchm2B_sgOpRUY&sz=w1000",
+    "description": "Versão Body Splash da icônica fragrância, ideal para prolongar a sensação de banho.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Chipre",
+        "Floral",
+        "Mel"
+      ]
+    }
+  },
+  {
+    "name": "Skateboard Heroes",
+    "brand": "Brand Collection",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1EXyFM6BCiSXQdwv75UDtHqIGcif6Yko_&sz=w1000",
+    "description": "Miniatura inspirada no 212 Heroes, um aroma frutado e ousado.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Cítrico",
+        "Especiado",
+        "Frutado"
+      ]
+    }
+  },
+  {
+    "name": "Hypnotic Poison",
+    "brand": "Christian Dior",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1HIMfAzpFUwT40Qm1VL2kEzFORTGHCfGn&sz=w1000",
+    "description": "Um oriental hipnótico com baunilha, amêndoa e coco, com uma vibe doce e misteriosa.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Baunilha",
+        "Amêndoa"
+      ]
+    }
+  },
+  {
+    "name": "Musamam White Intense ",
+    "brand": "Lattafa",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Unissex",
+    "image": "https://drive.google.com/thumbnail?id=1Q7Fsuim2F39xH_2GXVJUkbQpga6uVCQP&sz=w1000",
+    "description": "Uma fragrância amadeirada cremosa e intensa, com notas cítricas de abertura, suavizadas por âmbar e madeiras de Oud.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Amadeirado",
+        "Aromático",
+        "Âmbar"
+      ]
+    }
+  },
+  {
+    "name": "Asad Vinho",
+    "brand": "Lattafa",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1r4ODm7Lo0WuRYqHtHNr2Qv5lRuvTj7Qs&sz=w1000",
+    "description": "Uma fragrância ambarada e intensa com baunilha, tabaco e pimenta preta. Forte projeção e fixação.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Amadeirado",
+        "Especiado"
+      ]
+    }
+  },
+  {
+    "name": "Asad (Preto)",
+    "brand": "Lattafa",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1aSodfCJOdLTDXJQF_Q8xN84hyLfXDHSs&sz=w1000",
+    "description": "Versão intensa com notas de café, âmbar e baunilha, uma fragrância quente e viciante.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Amadeirado",
+        "Gourmand"
+      ]
+    }
+  },
+  {
+    "name": "Fakhar Lattafa Dourado",
+    "brand": "Lattafa",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1-Xf34Iu4OyLJOjr2DMvggOS0Y5C3sVNU&sz=w1000",
+    "description": "Uma fragrância floral opulenta e sensual, com tuberosa e notas frutadas.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Floral",
+        "Branco"
+      ]
+    }
+  },
+  {
+    "name": "Fakhar Lattafa Prata",
+    "brand": "Lattafa",
+    "price": "R$ 39,90",
+    "category": "Perfumes",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1IhpmznxIkXeew3s9CxMFYXsQLBkoQckQ&sz=w1000",
+    "description": "Um amadeirado aromático fresco e limpo, com ótima performance para o uso diário.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Amadeirado",
+        "Aromático",
+        "Marinho"
+      ]
+    }
+  },
+  {
+    "name": "Fakhar Rose",
+    "brand": "Lattafa",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1Bu6s8l_lBy9dzIaEgPW9D5UDdf8FonC_&sz=w1000",
+    "description": "Um amadeirado aromático fresco e limpo, com ótima performance para o uso diário.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado",
+        "Baunilha"
+      ]
+    }
+  },
+  {
+    "name": "Yara",
+    "brand": "Lattafa",
+    "price": "R$ 30,00",
+    "category": "Perfumaria",
+    "productType": "Body Splash",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1vTjTRP9tGJoVosR2Li0u7yxn4LVxuOGU&sz=w1000",
+    "description": "Uma fragrância floral exuberante e sedutora, com destaque para um buquê de flores brancas (Tuberosa, Jasmim) e um fundo suave de baunilha.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Baunilha",
+        "Frutado"
+      ]
+    }
+  },
+  {
+    "name": "Sabah Al Ward",
+    "brand": "Lattafa",
+    "price": "R$ 30,00",
+    "category": "Perfumaria",
+    "productType": "Body Splash",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1MqGEfIp4ygk1obVB19T5rligAanoeyGs&sz=w1000",
+    "description": "Body Splash floral oriental com pimenta rosa e cacau, perfeito para um toque exótico no dia a dia.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Oriental",
+        "Especiado"
+      ]
+    }
+  },
+  {
+    "name": "Royal Amber",
+    "brand": "Orientica",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Unissex",
+    "image": "https://drive.google.com/thumbnail?id=1K6M8lJcEIo55AvrbmpbrwZVmPquDw7qL&sz=w1000",
+    "description": "Um oriental ambarado e quente, com toques de melão e baunilha. Rico e luxuoso.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Baunilha",
+        "Âmbar"
+      ]
+    }
+  },
+  {
+    "name": "212 VIP Men",
+    "brand": "Carolina Herrera",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1cA_7OjFJJKS524fRZiPRis6qFBVajucg&sz=w1000",
+    "description": "Uma fragrância intensa e moderna, inspirada na vida noturna vibrante e exclusiva.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Amadeirado",
+        "Especiado"
+      ]
+    }
+  },
+  {
+    "name": "212 VIP Black",
+    "brand": "Carolina Herrera",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=14MXv7eIVCuV-r0NvlQGiKVccARIlgM_f&sz=w1000",
+    "description": "Um perfume explosivo e viciante, com notas de absinto e lavanda que celebram a exclusividade.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Aromático",
+        "Fougère",
+        "Baunilha"
+      ]
+    }
+  },
+  {
+    "name": "Royal Amber",
+    "brand": "Orientica",
+    "price": "R$ 30,00",
+    "category": "Perfumaria",
+    "productType": "Body Splash",
+    "subcategory": "Unissex",
+    "image": "https://drive.google.com/thumbnail?id=1z6k6yO1dF5E3qvHV4ycYR35CUIMjB3N0&sz=w1000",
+    "description": "Versão Body Splash do perfume, ideal para manter a aura ambarada e exótica com leveza.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Âmbar",
+        "Baunilha"
+      ]
+    }
+  },
+  {
+    "name": "Malbec",
+    "brand": "O Boticário",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1N_U23iUJsyekV7VgzV0vlCYMg66uFcei&sz=w1000",
+    "description": "O clássico brasileiro, um amadeirado aromático com a exclusividade do álcool vínico envelhecido em barris de carvalho.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Amadeirado",
+        "Aromático",
+        "Musgo"
+      ]
+    }
+  },
+  {
+    "name": "Angel",
+    "brand": "Thierry Mugler",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=10egfXmn3Tf4oev_gAFaLDL9-eGYgNNI_&sz=w1000",
+    "description": "O primeiro gourmand, uma fragrância inesquecível com notas de algodão-doce, chocolate e patchouli.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Baunilha",
+        "Gourmand"
+      ]
+    }
+  },
+  {
+    "name": "CK One",
+    "brand": "Calvin Klein",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Unissex",
+    "image": "https://drive.google.com/thumbnail?id=1AvE9CCorTRFh79zZHhJpvd6icC4o_mQj&sz=w1000",
+    "description": "O aroma cítrico e limpo que marcou uma geração. Perfeito para o frescor do dia a dia.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Cítrico",
+        "Aromático",
+        "Chá Verde"
+      ]
+    }
+  },
+  {
+    "name": "La Vie Est Belle",
+    "brand": "Lancôme",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1hqTufq0a0NkZ09dDoapb6NbxzpJNZ43y&sz=w1000",
+    "description": "Um floral frutado gourmand que celebra a felicidade, com notas de Íris e Pralinê.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado",
+        "Gourmand"
+      ]
+    }
+  },
+  {
+    "name": "Light Blue",
+    "brand": "Dolce & Gabbana",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1dCOHTydBptqepS8dpalKPA8AvZSBEQld&sz=w1000",
+    "description": "Um clássico fresco e cítrico, que remete aos dias de verão no Mediterrâneo, com limão siciliano e cedro.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado",
+        "Cítrico"
+      ]
+    }
+  },
+  {
+    "name": "Rouge 540",
+    "brand": "Baccarat / MFK",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Unissex",
+    "image": "https://drive.google.com/thumbnail?id=1n05Q3GH8Wc6L58CqJYlTYLpOR8fRN2z_&sz=w1000",
+    "description": "Um perfume que virou fenômeno. É ambarado, com notas de açafrão, jasmim e um acorde de algodão-doce.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Floral",
+        "Âmbar"
+      ]
+    }
+  },
+  {
+    "name": "Valaya",
+    "brand": "Parfums de Marly",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1ELaxllLD7Pw0mM_HklXzjpbuQZwA1jGB&sz=w1000",
+    "description": "Uma fragrância luxuosa com uma aura de algodão e pele limpa, destacada por almíscar e aldeídos.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Almiscarado",
+        "Almíscar"
+      ]
+    }
+  },
+  {
+    "name": "Black",
+    "brand": "Ferrari",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1hBVp6NfL-HEoDWVFUnGIb5A8JFJ82_Gi&sz=w1000",
+    "description": "Um fougère aromático frutado e versátil, com maçã, canela e baunilha.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Aromático",
+        "Fougère",
+        "Frutado"
+      ]
+    }
+  },
+  {
+    "name": "Silver Scent Intense",
+    "brand": "Jacques Bogart",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1KbBTNtUyugfJ1q0CwYmwuZ_7pV5zVrTo&sz=w1000",
+    "description": "Uma versão mais potente, oriental e doce do clássico, com notas de oud e fava tonka.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Fougère",
+        "Baunilha"
+      ]
+    }
+  },
+  {
+    "name": "Animale For Men",
+    "brand": "Animale",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=15qVZXAENOjUBmyFUmJ4RlyHcbwV_2q4D&sz=w1000",
+    "description": "Um oriental especiado clássico e complexo, com notas de couro e lavanda.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Especiado",
+        "Couro"
+      ]
+    }
+  },
+  {
+    "name": "CH Men",
+    "brand": "Carolina Herrera",
+    "price": "R$ 39,90",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://drive.google.com/thumbnail?id=1nJYzsedw01j0G-yvfLiy1EncB454rCPw&sz=w1000",
+    "description": "Um aroma elegante e casual que combina couro, açafrão e açúcar, ideal para o dia a dia sofisticado.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Oriental",
+        "Couro",
+        "Especiado"
+      ]
+    }
+  },
+  {
+    "name": "212 VIP Rosé",
+    "brand": "Carolina Herrera",
+    "price": "R$ 30,00",
+    "category": "Perfumaria",
+    "productType": "Body Splash",
+    "subcategory": "Feminino",
+    "image": "https://drive.google.com/thumbnail?id=1FaLPqzCokIe8PGP1XxKep7t2WM-kpT6a&sz=w1000",
+    "description": "Versão leve e refrescante da fragrância VIP Rosé, perfeita para uso diário após o banho.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado",
+        "Champagne Rosé"
+      ]
+    }
+  },
+  {
+    "name": "Géis Aromatizantes Secrets Woman (Kit)",
+    "brand": "Swiss Beauty",
+    "price": "R$ 25,00",
+    "category": "Autocuidado",
+    "subcategory": "Corpo",
+    "image": "https://drive.google.com/thumbnail?id=1f6-e7nAS7MEGij0PLacpLjLYwSu1FTfK&sz=w1000",
+    "description": "Géis íntimos aromatizantes com sabores variados (Uva, Chocolate c/ Morango, Morango c/ Creme), ideais para uso na virilha.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Uva",
+        "Chocolate",
+        "Morango"
+      ]
+    }
+  },
+  {
+    "name": "Kit Acessórios Skincare",
+    "brand": "MEILI STAR / Genérico",
+    "price": "R$ 38,00",
+    "category": "Autocuidado",
+    "subcategory": "Rosto",
+    "image": "https://drive.google.com/thumbnail?id=1rSzj8IszTyPCPKjN1SodHzwfpx0ojclo&sz=w1000",
+    "description": "Conjunto de ferramentas para rotina facial: rolo massageador de Obsidiana (preto) para drenagem, esponja de silicone Polvo para limpeza e esponja gota para maquiagem.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Massagem",
+        "Drenagem",
+        "Limpeza",
+        "Aplicação",
+        "Roller Preto (Obsidiana)"
+      ]
+    }
+  },
+  {
+    "name": "Kit Acessórios Skincare",
+    "brand": "MEILI STAR / Genérico",
+    "price": "R$ 38,00",
+    "category": "Autocuidado",
+    "subcategory": "Rosto",
+    "image": "https://drive.google.com/thumbnail?id=174XZTZ505F6nBodJ_I0DlLmNaNxoZ48l&sz=w1000",
+    "description": "Conjunto de ferramentas para rotina facial: rolo massageador de Jade (verde) para drenagem, esponja de silicone Polvo para limpeza e esponja gota para maquiagem.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Massagem",
+        "Drenagem",
+        "Limpeza",
+        "Aplicação",
+        "Roller Verde (Jade)"
+      ]
+    }
+  },
+  {
+    "name": "Kit Acessórios Skincare",
+    "brand": "MEILI STAR / Genérico",
+    "price": "R$ 38,00",
+    "category": "Autocuidado",
+    "subcategory": "Rosto",
+    "image": "https://drive.google.com/thumbnail?id=1HU68igl1rVK383VxgfjLfJ8EjcJ4K_lZ&sz=w1000",
+    "description": "Conjunto de ferramentas para rotina facial: rolo massageador de Quartzo Branco/Rosa (claro) para drenagem, esponja de silicone Polvo para limpeza e esponja gota para maquiagem.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Massagem",
+        "Drenagem",
+        "Limpeza",
+        "Aplicação",
+        "Roller Branco (Quartzo)"
+      ]
+    }
+  },
+  {
+    "name": "Paleta para Sobrancelhas Trio Matte",
+    "brand": "Swiss Beauty",
+    "price": "R$ 20,00",
+    "category": "Maquiagem",
+    "subcategory": "Rosto",
+    "image": "https://drive.google.com/thumbnail?id=1Abc-Emk1iEtp_QTdLSlxHRV6lFSErzO5&sz=w1000",
+    "description": "Paleta com três tons de sombra em pó matte (Claro, Médio, Escuro) para preencher, definir e modelar as sobrancelhas de forma natural.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Pó Compacto",
+        "Matte",
+        "Marrom"
+      ]
+    }
+  },
+  {
+    "name": "Blush Double Love Duo",
+    "brand": "Pink 21",
+    "price": "R$ 17,00",
+    "category": "Maquiagem",
+    "subcategory": "Rosto",
+    "image": "https://drive.google.com/thumbnail?id=1_cTxQ3kikMXyeRxKGUBD-nK_O_L8bDGk&sz=w1000",
+    "description": "Duo de blush em formato de coração, com cores pêssego/coral, textura aveludada e acabamento matte, fácil de esfumar.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Pó",
+        "Matte",
+        "Pêssego"
+      ]
+    }
+  },
+  {
+    "name": "Iluminador Heart Radiance Dopamine",
+    "brand": "Ruby Rose",
+    "price": "R$ 17,00",
+    "category": "Maquiagem",
+    "subcategory": "Rosto",
+    "image": "https://drive.google.com/thumbnail?id=1YEdeORF7wLeuuyDNzdYnmiD8dHSeDD4k&sz=w1000",
+    "description": "Iluminador em pó compacto com brilho intenso (tonalidade Laranja/Cobre), ideal para destacar as áreas do rosto.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Pó",
+        "Cintilante",
+        "Cobre"
+      ]
+    }
+  },
+  {
+    "name": "Paleta de Sombras Energy Eyeshadows",
+    "brand": "Luisance",
+    "price": "R$ 28,00",
+    "category": "Maquiagem",
+    "subcategory": "Olhos",
+    "image": "https://drive.google.com/thumbnail?id=1dnNo3oNk_JC91N3pnuxxnj-JQAFOIkz1&sz=w1000",
+    "description": "Paleta versátil com tons neutros e vibrantes (roxo, bronze), oferecendo acabamentos matte e cintilante.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Matte",
+        "Cintilante",
+        "Roxo"
+      ]
+    }
+  },
+  {
+    "name": "Kit Pincéis Sereia",
+    "brand": "Genérico",
+    "price": "R$ 20,00",
+    "category": "Maquiagem",
+    "subcategory": "Acessórios",
+    "image": "https://drive.google.com/thumbnail?id=1-DrLumQ3N1xUytZOrl_J076Pj7GE2Zf2&sz=w1000",
+    "description": "Kit multifuncional de pincéis com cabos em design sereia/holográfico, com gradiente completo de cores (Pink, Roxo, Azul, Verde). Essenciais para face e olhos.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Cerdas Sintéticas",
+        "Holográfico",
+        "Cabo Arco-Íris"
+      ]
+    }
+  },
+  {
+    "name": "Kit Pincéis Sereia",
+    "brand": "Genérico",
+    "price": "R$ 20,00",
+    "category": "Maquiagem",
+    "subcategory": "Acessórios",
+    "image": "https://drive.google.com/thumbnail?id=1MzNDxwNbID_51paEpfOEesAwfEibS1dP&sz=w1000",
+    "description": "Kit multifuncional de pincéis com cabos em design sereia/holográfico, com dominância de tons turquesa, azul e roxo. Essenciais para face e olhos.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Cerdas Sintéticas",
+        "Holográfico",
+        "Cabo Turquesa/Roxo"
+      ]
+    }
+  },
+  {
+    "name": "Esponjinhas (Kit)",
+    "brand": "Bilansy",
+    "price": "R$ 20,00",
+    "category": "Maquiagem",
+    "subcategory": "Acessórios",
+    "image": "https://drive.google.com/thumbnail?id=1qj2jrnlVgbvuII_7wsvV_Nx6YUlX8FHE&sz=w1000",
+    "description": "Kit de esponjas em formato gota e anatômicos para aplicação uniforme de maquiagem líquida ou cremosa.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Latex-free",
+        "Gota"
+      ]
+    }
+  },
+  {
+    "name": "Candy Lip Gloss",
+    "brand": "Vivai",
+    "price": "R$ 10,00",
+    "category": "Maquiagem",
+    "subcategory": "Boca",
+    "image": "https://drive.google.com/thumbnail?id=1WRqxaTRd6dEp9ZYwD7PBthaFoq_iVBQB&sz=w1000",
+    "description": "Glosses labiais em embalagem divertida de 'doces', com brilho intenso e partículas de glitter. Cores/sabores sortidos como frutas.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Glitter",
+        "Brilho Labial",
+        "Cheirinho de Frutas/Doces"
+      ]
+    }
+  },
+  {
+    "name": "Brilho Labial",
+    "brand": "Sarah's Beauty",
+    "price": "R$ 10,00",
+    "category": "Maquiagem",
+    "subcategory": "Boca",
+    "image": "https://drive.google.com/thumbnail?id=1qVY2FXSuEXRQ-jIq9hv-fhVlbnHpiyQ_&sz=w1000",
+    "description": "Glosses líquidos com cores e microbrilhos cintilantes (vermelho, pink, nude), para hidratação e volume nos lábios. Possui fragrância suave.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Brilho",
+        "Cintilante",
+        "Volume"
+      ]
+    }
+  }
+]
