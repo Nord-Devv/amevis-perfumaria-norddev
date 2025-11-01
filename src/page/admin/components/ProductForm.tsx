@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { type Product } from "./productStore";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
-import { Textarea } from "../components/ui/textarea";
+import { Button } from "../../../components/ui/button";
+import { Input } from "../../../components/ui/input";
+import { Label } from "../../../components/ui/label";
+import { Textarea } from "../../../components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../components/ui/select";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+} from "../../../components/ui/select";
+import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card";
 import { X } from "lucide-react";
 
 interface ProductFormProps {
@@ -34,79 +34,57 @@ export function ProductForm({ product, onSave, onCancel }: ProductFormProps) {
 
   useEffect(() => {
 
-      if (product) {
+    if (product) {
 
-        setFormData({
+      setFormData({
 
-          name: product.name,
+        name: product.name,
 
-          brand: product.brand,
+        brand: product.brand,
 
-          price: product.price,
+        price: product.price,
 
-          category: product.category,
+        category: product.category,
 
-          subcategory: product.subcategory,
+        subcategory: product.subcategory,
 
-          image: product.image,
+        image: product.image,
 
-          description: product.description,
+        description: product.description,
 
-          notes: product.notes ? [product.notes.top.join(", "), product.notes.heart.join(", "), product.notes.base.join(", ")].join(" | ") : "",
+        notes: product.notes ? [product.notes.top.join(", "), product.notes.heart.join(", "), product.notes.base.join(", ")].join(" | ") : "",
 
-        });
+      });
 
-      }
+    }
 
-    }, [product]);
+  }, [product]);
 
-  
 
-    const handleSubmit = (e: React.FormEvent) => {
 
-      e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
 
-      
+    e.preventDefault();
 
-      const notesParts = formData.notes.split("|").map(part => part.trim());
+    const notesParts = formData.notes.split("|").map(part => part.trim());
+    const topNotes = notesParts[0] ? notesParts[0].split(",").map((n) => n.trim()) : [];
+    const heartNotes = notesParts[1] ? notesParts[1].split(",").map((n) => n.trim()) : [];
+    const baseNotes = notesParts[2] ? notesParts[2].split(",").map((n) => n.trim()) : [];
 
-      const topNotes = notesParts[0] ? notesParts[0].split(",").map((n) => n.trim()) : [];
-
-      const heartNotes = notesParts[1] ? notesParts[1].split(",").map((n) => n.trim()) : [];
-
-      const baseNotes = notesParts[2] ? notesParts[2].split(",").map((n) => n.trim()) : [];
-
-  
-
-      const productData: Omit<Product, "id"> = {
-
-        name: formData.name,
-
-        brand: formData.brand,
-
-        price: formData.price,
-
-        category: formData.category,
-
-        subcategory: formData.subcategory,
-
-        image: formData.image,
-
-        description: formData.description,
-
-        notes: formData.notes
-
-          ? { top: topNotes, heart: heartNotes, base: baseNotes }
-
-          : undefined,
-
-      };
-
-  
-
-      onSave(productData);
-
+    const productData: Omit<Product, "id"> = {
+      name: formData.name,
+      brand: formData.brand,
+      price: formData.price,
+      category: formData.category,
+      subcategory: formData.subcategory,
+      image: formData.image,
+      description: formData.description,
+      notes: formData.notes
+        ? { top: topNotes, heart: heartNotes, base: baseNotes }
+        : undefined,
     };
+    onSave(productData);
+  };
 
   const handleCategoryChange = (value: string) => {
     setFormData((prev) => ({ ...prev, category: value }));
