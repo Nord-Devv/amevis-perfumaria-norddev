@@ -22,9 +22,8 @@ export interface BaseProduct {
 
 interface PerfumariaProduct extends BaseProduct {
   category: "Perfumaria";
+  productType: "Comum" | "Body Splash" | "Brand";
   subcategory: "Feminino" | "Masculino" | "Unissex";
-  productType: "Comum" | "Body Splash" | "Brand"
-  ;
 }
 interface MaquiagemProduct extends BaseProduct {
   category: "Maquiagem";
@@ -40,7 +39,11 @@ type Product = PerfumariaProduct | MaquiagemProduct | AutocuidadoProduct
 
 
 
-export const useCatalog = () => {
+interface useCatalogParams{
+  toggleDialog: (open: boolean) => void;
+}
+
+export const useCatalog = ({toggleDialog} : useCatalogParams) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [showFilters, setShowFilters] = useState(false)
   const [filteredProducts, setFilteredProdutcs] = useState<Product[]>([]);
@@ -57,7 +60,7 @@ export const useCatalog = () => {
     setSelectedType("Todos");
   };
 
-
+  // options to list 
   const productTypes =
     selectedCategory === "Perfumaria"
       ? ["Todos", "Comum", "Body Splash", "Brand"]
@@ -72,6 +75,8 @@ export const useCatalog = () => {
           ? ["Corpo", "Rosto"]
           : [];
 
+
+  // fetch catalog api (json)
   useEffect(() => {
     const fetchProducts = async () => {
 
@@ -89,6 +94,7 @@ export const useCatalog = () => {
 
   }, [])
 
+  // update filtered products list when selected category, type or subcategory change
   useEffect(() => {
     let filtered = [...products];
 
@@ -128,14 +134,13 @@ export const useCatalog = () => {
     }
 
     setSelectedSubcategory(subcategory);
-    if (selectedCategory === "Perfumaria") {
-      setSelectedType("Todos");
-    }
   };
 
 
 
-  function handleViewDetails(product: Product): void {
+  function handleOpenProductModal(product: Product): void {
+    setSelectedProduct(product);
+    toggleDialog(true);
     throw new Error("Function not implemented.");
   }
 
@@ -158,7 +163,7 @@ export const useCatalog = () => {
     handleCategoryChange,
     handleProductTypeChange,
     handleSubcategoryToggle,
-    handleViewDetails,
+    handleOpenProductModal,
     handleAddToCart,
   }
 

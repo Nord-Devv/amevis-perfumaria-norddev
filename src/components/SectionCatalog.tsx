@@ -5,10 +5,13 @@ import { Button } from "./ui/button";
 import { ProductCard } from "./ProductCard";
 import { useCatalog } from "@/hooks/useCatalog";
 
-export const SectionCatalog = () => {
+interface sectionCatalogProps {
+  toggleDialog: (open: boolean) => void;
+}
+export const SectionCatalog = ({toggleDialog} : sectionCatalogProps) => {
 
   const { filteredProducts, productTypes, selectedCategory, selectedSubcategory, selectedType, showFilters, subcategories,
-    handleAddToCart, handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, handleViewDetails, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog();
+    handleAddToCart, handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, handleOpenProductModal, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog();
 
   return (<>
     <section
@@ -190,7 +193,7 @@ export const SectionCatalog = () => {
                   key={product.id}
                   {...product}
                   onViewDetails={() =>
-                    handleViewDetails(product)
+                    handleOpenProductModal(product)
                   }
                   onAddToCart={() => handleAddToCart(product)}
                 />

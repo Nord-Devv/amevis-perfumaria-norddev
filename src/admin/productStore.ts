@@ -39,6 +39,7 @@ const STORAGE_KEY = 'amevi_products';
 // Produtos iniciais (padrão) - IDs serão adicionados automaticamente
 export let defaultProducts: Product[] = [];
 
+
 // Function to initialize default products from initial data
 export function initializeDefaultProducts(initialData: ProductInput[]): void {
   defaultProducts = initialData.map((product, index) => ({
@@ -52,6 +53,7 @@ export class ProductStore {
     if (typeof window === 'undefined') return defaultProducts;
     
     const stored = localStorage.getItem(STORAGE_KEY);
+
     if (stored) {
       try {
         const products = JSON.parse(stored);
