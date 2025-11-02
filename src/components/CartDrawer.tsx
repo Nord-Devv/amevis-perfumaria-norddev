@@ -18,138 +18,16 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
-import type { CartItem } from "@/types/Cart";
 import { useCartStore } from "@/store/useCartStore";
+import { useWhatsApp } from "@/hooks/useWhatsApp";
 
 export function CartDrawer() {
-  // Função para calcular o total do carrinho e info de desconto
-  const { cart, increaseQuantity, decreaseQuantity, removeItem, cleanCart } = useCartStore();
-  const calculateTotal = () => {
-    // Separar itens por tipo de produto
-    const perfumeComuns: CartItem[] = [];
-    const perfumeBrands: CartItem[] = [];
-    const bodySplashes: CartItem[] = [];
-    const others: CartItem[] = [];
-
-    cart.forEach(item => {
-      const isPerfumaria = item.category.toLowerCase().includes('perfume') ||
-        item.category.toLowerCase() === 'feminino' ||
-        item.category.toLowerCase() === 'masculino' ||
-        item.category.toLowerCase() === 'unissex';
-
-      if (isPerfumaria) {
-        if (item.productType === 'Brand Collection' || item.productType === 'Brand') {
-          perfumeBrands.push(item);
-        } else if (item.productType === 'Body Splash') {
-          bodySplashes.push(item);
-        } else {
-          perfumeComuns.push(item);
-        }
-      } else {
-        others.push(item);
-      }
-    });
-
-    // Contar quantidades totais de cada tipo
-    let comunsCount = perfumeComuns.reduce((sum, item) => sum + item.quantity, 0);
-    const brandsCount = perfumeBrands.reduce((sum, item) => sum + item.quantity, 0);
-    let bodySplashCount = bodySplashes.reduce((sum, item) => sum + item.quantity, 0);
-
-    // Calcular totais originais (sem promoção)
-    const originalComunsTotal = comunsCount * 39.90;
-    const originalBrandsTotal = brandsCount * parseFloat(perfumeBrands[0]?.price.replace('R$', '').replace(',', '.').trim() || '0');
-    const originalBodySplashTotal = bodySplashCount * parseFloat(bodySplashes[0]?.price.replace('R$', '').replace(',', '.').trim() || '0');
-
-    let total = 0;
-    let originalTotal = 0;
-
-    // PROMOÇÃO 1: Comum + Body Splash = R$ 50,00
-    const comboComumBodySplash = Math.min(comunsCount, bodySplashCount);
-    if (comboComumBodySplash > 0) {
-      total += comboComumBodySplash * 50.00;
-      comunsCount -= comboComumBodySplash;
-      bodySplashCount -= comboComumBodySplash;
-    }
-
-    // PROMOÇÃO 2: 2 Brands = R$ 140,00
-    const brandPairs = Math.floor(brandsCount / 2);
-    const brandRemainder = brandsCount % 2;
-    if (brandPairs > 0) {
-      total += brandPairs * 140.00;
-    }
-    if (brandRemainder > 0) {
-      const brandPrice = parseFloat(perfumeBrands[0]?.price.replace('R$', '').replace(',', '.').trim() || '0');
-      total += brandRemainder * brandPrice;
-    }
-
-    // PROMOÇÃO 3: Perfumes Comuns - 3 por R$ 90,00 ou 4 por R$ 130,00
-    if (comunsCount === 1 || comunsCount === 2) {
-      total += comunsCount * 39.90;
-    } else if (comunsCount === 3) {
-      total += 90.00;
-    } else if (comunsCount >= 4) {
-      const sets = Math.floor(comunsCount / 4);
-      const remainder = comunsCount % 4;
-      total += (sets * 130.00) + (remainder * 39.90);
-    }
-
-    // Body Splash restantes (sem promoção)
-    if (bodySplashCount > 0) {
-      const bodyPrice = parseFloat(bodySplashes[0]?.price.replace('R$', '').replace(',', '.').trim() || '0');
-      total += bodySplashCount * bodyPrice;
-    }
-
-    // Outros itens (sem promoção)
-    const othersTotal = others.reduce((sum, item) => {
-      const price = parseFloat(item.price.replace('R$', '').replace(',', '.').trim());
-      return sum + (price * item.quantity);
-    }, 0);
-    total += othersTotal;
-
-    // Total original para comparação
-    originalTotal = originalComunsTotal + originalBrandsTotal + originalBodySplashTotal + othersTotal;
-
-    const hasDiscount = total < originalTotal;
-
-    return {
-      total,
-      originalTotal: hasDiscount ? originalTotal : null,
-      hasDiscount
-    };
-  };
+  const { cart, hasDiscount, originalTotal, total, increaseQuantity, decreaseQuantity, removeItem, cleanCart } = useCartStore();
+  const { buyCartProducts } = useWhatsApp();
 
   const handleWhatsAppCheckout = () => {
     if (cart.length === 0) return;
-
-    let message =
-      "Olá! Gostaria de fazer um pedido dos seguintes produtos:\\n\\n";
-
-    cart.forEach((item, index) => {
-      message += `${index + 1}. *${item.name}* - ${item.brand}\\n`;
-      message += `   Categoria: ${item.category}\\n`;
-      message += `   Quantidade: ${item.quantity}\\n`;
-      message += `   Preço unitário: ${item.price}\\n\\n`;
-    });
-
-    const { total, originalTotal, hasDiscount } = calculateTotal();
-
-    if (hasDiscount && originalTotal) {
-      message += `Total sem desconto: ~R$ ${originalTotal.toFixed(2).replace('.', ',')}~\\n`;
-      message += `*Total com desconto: R$ ${total.toFixed(2).replace('.', ',')}*\\n\\n`;
-    } else {
-      message += `*Total: R$ ${total.toFixed(2).replace('.', ',')}*\\n\\n`;
-    }
-
-    message +=
-      "Aguardo retorno com informações sobre disponibilidade e forma de pagamento!";
-
-    const encodedMessage = encodeURIComponent(message);
-    // Substitua pelo número real do WhatsApp da vendedora (formato: 5511999999999)
-    const whatsappNumber = "5585998039134";
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
-      "_blank",
-    );
+    buyCartProducts(cart);
   };
 
 
@@ -283,30 +161,51 @@ export function CartDrawer() {
               <div className="border-t mx-auto border-[#C9A14A]/30 max-w-[98%] pt-4 mt-4 space-y-3">
                 {/* Total */}
                 <div className="bg-gradient-to-r from-[#C9A14A]/10 to-[#C9A14A]/5 border border-[#C9A14A]/40 rounded-none p-4 mb-3">
-                  {(() => {
-                    const { total, originalTotal, hasDiscount } = calculateTotal();
-                    return (
-                      <div className="space-y-2">
-                        {hasDiscount && originalTotal && (
-                          <div className="flex justify-between items-center">
-                            <span className="text-white/60 text-sm">Sem desconto:</span>
-                            <span className="text-white/60 line-through text-sm">
-                              R$ {originalTotal.toFixed(2).replace('.', ',')}
-                            </span>
-                          </div>
-                        )}
-                        <div className="flex justify-between items-center">
-                          <span className="text-white uppercase tracking-wider">
-                            {hasDiscount ? 'Total com Desconto:' : 'Total:'}
-                          </span>
-                          <span className="text-[#C9A14A] tracking-wider">
-                            R$ {total.toFixed(2).replace('.', ',')}
-                          </span>
-                        </div>
+                  <div className="space-y-2">
+                    {hasDiscount && originalTotal && (
+                      <div className="flex justify-between items-center">
+                        <span className="text-white/60 text-sm">Sem desconto:</span>
+                        <span className="text-white/60 line-through text-sm">
+                          R$ {originalTotal.toFixed(2).replace('.', ',')}
+                        </span>
                       </div>
-                    );
-                  })()}
+                    )}
+                    <div className="flex justify-between items-center">
+                      <span className="text-white uppercase tracking-wider">
+                        {hasDiscount ? 'Total com Desconto:' : 'Total:'}
+                      </span>
+                      <span className="text-[#C9A14A] tracking-wider">
+                        R$ {total.toFixed(2).replace('.', ',')}
+                      </span>
+                    </div>
+                  </div>
                 </div>
+
+                {/* <div className="bg-gradient-to-r from-[#C9A14A]/10 to-[#C9A14A]/5 border border-[#C9A14A]/40 rounded-none p-4 mb-3"> */}
+                {/*   {(() => { */}
+                {/*     const { total, originalTotal, hasDiscount } = calculateTotal(cart); */}
+                {/*     return ( */}
+                {/*       <div className="space-y-2"> */}
+                {/*         {hasDiscount && originalTotal && ( */}
+                {/*           <div className="flex justify-between items-center"> */}
+                {/*             <span className="text-white/60 text-sm">Sem desconto:</span> */}
+                {/*             <span className="text-white/60 line-through text-sm"> */}
+                {/*               R$ {originalTotal.toFixed(2).replace('.', ',')} */}
+                {/*             </span> */}
+                {/*           </div> */}
+                {/*         )} */}
+                {/*         <div className="flex justify-between items-center"> */}
+                {/*           <span className="text-white uppercase tracking-wider"> */}
+                {/*             {hasDiscount ? 'Total com Desconto:' : 'Total:'} */}
+                {/*           </span> */}
+                {/*           <span className="text-[#C9A14A] tracking-wider"> */}
+                {/*             R$ {total.toFixed(2).replace('.', ',')} */}
+                {/*           </span> */}
+                {/*         </div> */}
+                {/*       </div> */}
+                {/*     ); */}
+                {/*   })()} */}
+                {/* </div> */}
 
                 <Button
                   onClick={handleWhatsAppCheckout}

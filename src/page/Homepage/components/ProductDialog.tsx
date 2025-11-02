@@ -22,12 +22,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { useCartStore } from "@/store/useCartStore";
 import type { Product } from "@/types/Product";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { useWhatsApp } from "@/hooks/useWhatsApp";
 
 interface ProductDialogProps {
   open: boolean;
@@ -45,8 +46,10 @@ export function ProductDialog({
   } | null>(null);
   const [calculating, setCalculating] = useState(false);
 
+  const { isMobile } = useIsMobile();
   const { closeProduct } = useSelectedProductStore();
   const { addItem } = useCartStore();
+  const { buySingleProduct } = useWhatsApp();
 
   function onOpenChange(isOpen: boolean) {
     !isOpen && closeProduct();
@@ -57,19 +60,10 @@ export function ProductDialog({
     addItem({ ...product, quantity: 1 })
   }
 
+  function handleBuySingleProduct() {
+    buySingleProduct(product)
+  }
 
-  const { isMobile } = useIsMobile();
-
-  const handleWhatsApp = () => {
-    const message = encodeURIComponent(
-      `Olá! Tenho interesse no perfume *${product.name}* da marca ${product.brand}. Gostaria de mais informações!`,
-    );
-    const whatsappNumber = "5585998039134";
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${message}`,
-      "_blank",
-    );
-  };
 
   const calculateShipping = () => {
     if (cep.length === 8) {
@@ -265,7 +259,7 @@ export function ProductDialog({
           </Button>
 
           <Button
-            onClick={handleWhatsApp}
+            onClick={handleBuySingleProduct}
             className="w-full bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] text-black rounded-none h-12 uppercase tracking-wider shadow-lg shadow-[#C9A14A]/30 hover:shadow-[#C9A14A]/50 transition-all duration-300"
             size="lg"
           >
