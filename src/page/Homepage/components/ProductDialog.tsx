@@ -27,6 +27,7 @@ import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { useCartStore } from "@/store/useCartStore";
 import type { Product } from "@/types/Product";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface ProductDialogProps {
   open: boolean;
@@ -43,7 +44,6 @@ export function ProductDialog({
     days: string;
   } | null>(null);
   const [calculating, setCalculating] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   const { closeProduct } = useSelectedProductStore();
   const { addItem } = useCartStore();
@@ -58,17 +58,7 @@ export function ProductDialog({
   }
 
 
-  // Detectar se é mobile
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  const { isMobile } = useIsMobile();
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
