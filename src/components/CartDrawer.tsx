@@ -23,7 +23,7 @@ import { useCartStore } from "@/store/useCartStore";
 
 export function CartDrawer() {
   // Função para calcular o total do carrinho e info de desconto
-  const { cart, increaseQuantity, decreaseQuantity, removeItem } = useCartStore();
+  const { cart, increaseQuantity, decreaseQuantity, removeItem, cleanCart } = useCartStore();
   const calculateTotal = () => {
     // Separar itens por tipo de produto
     const perfumeComuns: CartItem[] = [];
@@ -318,6 +318,7 @@ export function CartDrawer() {
                 </Button>
 
                 <Button
+                  onClick={cleanCart}
                   variant="outline"
                   className="w-full border-2 border-red-500/40 bg-red-900/20 text-red-400 hover:bg-red-900/40 hover:text-red-300 hover:border-red-500/60 rounded-none transition-all duration-300 uppercase"
                 >
