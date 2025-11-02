@@ -1,5 +1,6 @@
 import type { CartItem } from '@/types/Cart';
 import { create } from 'zustand'
+import { toast } from "sonner";
 
 interface cartState {
   cart: CartItem[];
@@ -38,17 +39,20 @@ function handleAddItem(product: CartItem, state: cartState): cartState {
     // Item exists, increase quantity
     const updatedCart = [...state.cart];
     updatedCart[existingItemIndex].quantity += 1;
+    toast.success(`${product.name} - quantidade atualizada!`);
+
     return { ...state, cart: updatedCart }
-    // toast.success(`${product.name} - quantidade atualizada!`);
   } else {
+    toast.success(`${product.name} adicionado ao carrinho!`);
+
     return { ...state, cart: [...state.cart, { ...product, quantity: 1 }] };
-    // toast.success(`${product.name} adicionado ao carrinho!`);
   }
 };
 function handleRemoveItem(index: number, state: cartState): cartState {
   const updatedCart = state.cart.filter((_, i) => i !== index);
+  toast.info("Produto removido do carrinho");
+
   return { ...state, cart: updatedCart };
-  // toast.info("Produto removido do carrinho");
 
 }
 
