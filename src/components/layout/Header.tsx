@@ -19,6 +19,9 @@ export function Header() {
               className="h-10 w-auto object-contain cursor-pointer"
               onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
             />
+          </div>
+
+          <div className="flex items-center gap-7">
             <nav className="hidden md:flex items-center gap-8">
               <a
                 href="#home"
@@ -35,9 +38,7 @@ export function Header() {
                 Catálogo
               </a>
             </nav>
-          </div>
 
-          <div className="flex items-center gap-3">
             <CartDrawer
             />
           </div>
