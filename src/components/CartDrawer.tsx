@@ -256,9 +256,7 @@ export function CartDrawer() {
                             variant="ghost"
                             size="icon"
                             onClick={() => {
-                              if (item.quantity > 1) {
-                                decreaseQuantity(index);
-                              }
+                              decreaseQuantity(index);
                             }}
                             className="h-7 w-7 hover:bg-[#C9A14A]/20 border border-[#C9A14A]/30 hover:border-[#C9A14A] rounded-none"
                           >

@@ -44,23 +44,25 @@ function handleAddItem(product: CartItem, state: cartState): cartState {
     // toast.success(`${product.name} adicionado ao carrinho!`);
   }
 };
-
-function handleIncreaseQuantity(index: number, state: cartState): cartState {
-  const updatedCart = state.cart.map((item, i) =>
-    i === index ? { ...item, quantity: item.quantity + 1 } : item);
-  return { ...state, cart: updatedCart }
-}
-
-function handleDecreaseQuantity(index: number, state: cartState): cartState {
-  const updatedCart = state.cart.map((item, i) =>
-    i === index ? { ...item, quantity: item.quantity - 1 } : item);
-  return { ...state, cart: updatedCart }
-}
 function handleRemoveItem(index: number, state: cartState): cartState {
   const updatedCart = state.cart.filter((_, i) => i !== index);
   return { ...state, cart: updatedCart };
   // toast.info("Produto removido do carrinho");
 
+}
+
+
+function handleIncreaseQuantity(index: number, state: cartState): cartState {
+  const updatedCart = state.cart.map((item, i) =>
+    i === index ? { ...item, quantity: item.quantity + 1 } : item)
+  return { ...state, cart: updatedCart }
+}
+
+function handleDecreaseQuantity(index: number, state: cartState): cartState {
+  const updatedCart = state.cart.map((item, i) =>
+    i === index ? { ...item, quantity: item.quantity - 1 } : item)
+    .filter(item => item.quantity > 0);
+  return { ...state, cart: updatedCart }
 }
 
 
