@@ -79,7 +79,6 @@ function handleDecreaseQuantity(index: number, state: cartState): cartState {
 
 function handleUpdateValues(cart: CartItem[], state: cartState): cartState {
   const { total, originalTotal, hasDiscount } = calculateTotal(cart);
-  console.log(hasDiscount)
   return { ...state, cart, total, originalTotal, hasDiscount }
 }
 

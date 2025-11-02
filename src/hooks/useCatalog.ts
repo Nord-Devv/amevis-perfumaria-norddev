@@ -93,11 +93,6 @@ export const useCatalog = () => {
     setSelectedSubcategory(subcategory);
   };
 
-  function handleAddToCart(product: Product): void {
-    throw new Error("Function not implemented.");
-  }
-
-
 
   return {
     filteredProducts,
@@ -113,7 +108,6 @@ export const useCatalog = () => {
     handleCategoryChange,
     handleProductTypeChange,
     handleSubcategoryToggle,
-    handleAddToCart,
   }
 
 }
