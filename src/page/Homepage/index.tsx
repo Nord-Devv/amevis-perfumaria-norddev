@@ -17,18 +17,9 @@ import { SectionCatalog } from "./components/SectionCatalog";
 
 export function HomePage() {
   const [showAdmin, setShowAdmin] = useState(false);
-  // const [products, setProducts] = useState<Product[]>([]);
-  // const [selectedProduct, setSelectedProduct] =
-  //   useState<Product | null>(null);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  // const [categoryFilter, setCategoryFilter] =
   useState<string>("Perfumaria");
-  // const [productTypeFilter, setProductTypeFilter] =
   useState<string>("Todos"); // Body Splash, Brand
-  // const [showFilters, setShowFilters] = useState(false); // Controlar visibilidade dos filtros
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  // const [visibleProducts, setVisibleProducts] = useState(8); // Mostrar 9 produtos inicialmente (3 colunas x 3 linhas)
-  //
   const selectedProduct = useSelectedProductStore().product;
 
   const handleAddToCart = (product: Product) => {
@@ -158,7 +149,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <SectionCatalog toggleDialog={setIsDialogOpen} />
+      <SectionCatalog />
       {/* Luxury Gallery Section - Fast Upward Carousel */}
       <CarouselGallery />
 
@@ -166,7 +157,6 @@ export function HomePage() {
       {selectedProduct && (
         <ProductDialog
           open={!!selectedProduct}
-          onOpenChange={setIsDialogOpen}
           product={selectedProduct}
           onAddToCart={() => handleAddToCart(selectedProduct)}
         />

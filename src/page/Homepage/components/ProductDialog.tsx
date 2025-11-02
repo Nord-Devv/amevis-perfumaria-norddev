@@ -28,7 +28,6 @@ import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 
 interface ProductDialogProps {
   open: boolean;
-  onOpenChange: (open: boolean) => void;
   product: {
     name: string;
     brand: string;
@@ -47,7 +46,6 @@ interface ProductDialogProps {
 
 export function ProductDialog({
   open,
-  onOpenChange,
   product,
   onAddToCart,
 }: ProductDialogProps) {
@@ -60,6 +58,10 @@ export function ProductDialog({
   const [isMobile, setIsMobile] = useState(false);
 
   const { closeProduct } = useSelectedProductStore();
+
+  function onOpenChange(isOpen: boolean) {
+    !isOpen && closeProduct();
+  }
 
 
   // Detectar se é mobile
@@ -271,7 +273,7 @@ export function ProductDialog({
           <Button
             onClick={() => {
               onAddToCart();
-              onOpenChange(false);
+              closeProduct();
             }}
             variant="outline"
             className="w-full bg-transparent border-2 border-[#C9A14A] text-[#C9A14A] hover:bg-[#C9A14A]/10 hover:text-[#C9A14A] rounded-none h-12 uppercase tracking-wider transition-all duration-300"

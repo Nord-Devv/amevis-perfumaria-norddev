@@ -6,11 +6,7 @@ import { useCatalog } from "@/hooks/useCatalog";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-interface sectionCatalogProps {
-  toggleDialog: (open: boolean) => void;
-}
-export const SectionCatalog = ({ toggleDialog }: sectionCatalogProps) => {
-
+export const SectionCatalog = () => {
   const { filteredProducts, productTypes, selectedCategory, selectedSubcategory, selectedType, showFilters, subcategories,
     handleAddToCart, handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog();
   const { openProduct } = useSelectedProductStore();
