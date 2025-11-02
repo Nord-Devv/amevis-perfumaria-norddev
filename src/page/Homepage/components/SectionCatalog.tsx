@@ -1,10 +1,10 @@
-import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { ProductCard } from "./ProductCard";
 import { useCatalog } from "@/hooks/useCatalog";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface sectionCatalogProps {
   toggleDialog: (open: boolean) => void;

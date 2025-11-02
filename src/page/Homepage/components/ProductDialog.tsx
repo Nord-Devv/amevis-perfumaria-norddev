@@ -10,20 +10,20 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "./ui/dialog";
+} from "@/components/ui/dialog";
 import {
   Drawer,
   DrawerContent,
   DrawerDescription,
   DrawerHeader,
   DrawerTitle,
-} from "./ui/drawer";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { Input } from "./ui/input";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+} from "@/components/ui/drawer";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { useState, useEffect } from "react";
-import { WhatsAppIcon } from "./WhatsAppIcon";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 
 interface ProductDialogProps {
