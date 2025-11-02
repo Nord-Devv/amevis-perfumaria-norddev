@@ -41,13 +41,11 @@ interface ProductDialogProps {
     };
     description: string;
   };
-  onAddToCart: () => void;
 }
 
 export function ProductDialog({
   open,
   product,
-  onAddToCart,
 }: ProductDialogProps) {
   const [cep, setCep] = useState("");
   const [shippingInfo, setShippingInfo] = useState<{
@@ -272,7 +270,6 @@ export function ProductDialog({
 
           <Button
             onClick={() => {
-              onAddToCart();
               closeProduct();
             }}
             variant="outline"
