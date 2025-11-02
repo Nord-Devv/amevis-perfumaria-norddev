@@ -1,14 +1,8 @@
-import { CartDrawer, type CartItem } from "@/components/CartDrawer";
+import { CartDrawer } from "@/components/CartDrawer";
 import logoAmevi from "@/assets/e214b3767302229bb769b749498b0cffbf615395.png";
 
-interface HeaderProps {
-  cartItems: CartItem[];
-  onRemoveFromCart: (index: number) => void;
-  onClearCart: () => void;
-  onUpdateQuantity: (index: number, newQuantity: number) => void;
-}
 
-export function Header({ cartItems, onRemoveFromCart, onClearCart, onUpdateQuantity }: HeaderProps) {
+export function Header() {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
@@ -19,36 +13,32 @@ export function Header({ cartItems, onRemoveFromCart, onClearCart, onUpdateQuant
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-12">
-            <img 
-              src={logoAmevi} 
-              alt="Amevi" 
+            <img
+              src={logoAmevi}
+              alt="Amevi"
               className="h-10 w-auto object-contain cursor-pointer"
               onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
             />
             <nav className="hidden md:flex items-center gap-8">
-              <a 
-                href="#home" 
+              <a
+                href="#home"
                 onClick={(e) => handleSmoothScroll(e, "home")}
                 className="text-white hover:text-[#C9A14A] transition-colors text-sm"
               >
                 Início
               </a>
-              <a 
-                href="#catalog" 
+              <a
+                href="#catalog"
                 onClick={(e) => handleSmoothScroll(e, "catalog")}
                 className="text-white hover:text-[#C9A14A] transition-colors text-sm text-[14px]"
               >
                 Catálogo
               </a>
-               </nav>
+            </nav>
           </div>
-          
+
           <div className="flex items-center gap-3">
-            <CartDrawer 
-              items={cartItems}
-              onRemoveItem={onRemoveFromCart}
-              onClearCart={onClearCart}
-              onUpdateQuantity={onUpdateQuantity}
+            <CartDrawer
             />
           </div>
         </div>

@@ -1,17 +1,15 @@
 import { useState } from "react";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 
 import { Header } from "@/components/layout/Header";
 import { ProductDialog } from "@/page/Homepage/components/ProductDialog";
 import { Button } from "@/components/ui/button";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
-import { type CartItem } from "@/components/CartDrawer";
 import { Toaster } from "@/components/ui/sonner";
 // import { AdminPage } from "./admin/AdminPage";
 import { Footer } from "@/components/layout/footer";
 import { CarouselGallery } from "@/components/features/carouselGallery";
 
-import { type Product } from "@/page/admin/service/productStore";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { SectionCatalog } from "@/page/Homepage/components/SectionCatalog";
 
@@ -19,59 +17,59 @@ export function HomePage() {
   const [showAdmin, setShowAdmin] = useState(false);
   useState<string>("Perfumaria");
   useState<string>("Todos"); // Body Splash, Brand
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  // const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const selectedProduct = useSelectedProductStore().product;
 
-  const handleAddToCart = (product: Product) => {
-    // Check if item already exists in cart
-    const existingItemIndex = cartItems.findIndex(
-      (item) =>
-        item.name === product.name &&
-        item.brand === product.brand,
-    );
+  // const handleAddToCart = (product: Product) => {
+  //   // Check if item already exists in cart
+  //   const existingItemIndex = cartItems.findIndex(
+  //     (item) =>
+  //       item.name === product.name &&
+  //       item.brand === product.brand,
+  //   );
+  //
+  //   if (existingItemIndex >= 0) {
+  //     // Item exists, increase quantity
+  //     const updatedCart = [...cartItems];
+  //     updatedCart[existingItemIndex].quantity += 1;
+  //     setCartItems(updatedCart);
+  //     toast.success(`${product.name} - quantidade atualizada!`);
+  //   } else {
+  //     // New item, add to cart
+  //     const cartItem: CartItem = {
+  //       name: product.name,
+  //       brand: product.brand,
+  //       price: product.price,
+  //       image: product.image,
+  //       category: product.category,
+  //       productType: product.productType,
+  //       quantity: 1,
+  //     };
+  //     setCartItems([...cartItems, cartItem]);
+  //     toast.success(`${product.name} adicionado ao carrinho!`);
+  //   }
+  // };
 
-    if (existingItemIndex >= 0) {
-      // Item exists, increase quantity
-      const updatedCart = [...cartItems];
-      updatedCart[existingItemIndex].quantity += 1;
-      setCartItems(updatedCart);
-      toast.success(`${product.name} - quantidade atualizada!`);
-    } else {
-      // New item, add to cart
-      const cartItem: CartItem = {
-        name: product.name,
-        brand: product.brand,
-        price: product.price,
-        image: product.image,
-        category: product.category,
-        productType: product.productType,
-        quantity: 1,
-      };
-      setCartItems([...cartItems, cartItem]);
-      toast.success(`${product.name} adicionado ao carrinho!`);
-    }
-  };
-
-  const handleRemoveFromCart = (index: number) => {
-    const newCart = cartItems.filter((_, i) => i !== index);
-    setCartItems(newCart);
-    toast.info("Produto removido do carrinho");
-  };
-
-  const handleUpdateQuantity = (
-    index: number,
-    newQuantity: number,
-  ) => {
-    if (newQuantity < 1) return;
-    const updatedCart = [...cartItems];
-    updatedCart[index].quantity = newQuantity;
-    setCartItems(updatedCart);
-  };
-
-  const handleClearCart = () => {
-    setCartItems([]);
-    toast.info("Carrinho limpo");
-  };
+  // const handleRemoveFromCart = (index: number) => {
+  //   const newCart = cartItems.filter((_, i) => i !== index);
+  //   setCartItems(newCart);
+  //   toast.info("Produto removido do carrinho");
+  // };
+  //
+  // const handleUpdateQuantity = (
+  //   index: number,
+  //   newQuantity: number,
+  // ) => {
+  //   if (newQuantity < 1) return;
+  //   const updatedCart = [...cartItems];
+  //   updatedCart[index].quantity = newQuantity;
+  //   setCartItems(updatedCart);
+  // };
+  //
+  // const handleClearCart = () => {
+  //   setCartItems([]);
+  //   toast.info("Carrinho limpo");
+  // };
 
 
   //
@@ -97,10 +95,6 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Header
-        cartItems={cartItems}
-        onRemoveFromCart={handleRemoveFromCart}
-        onClearCart={handleClearCart}
-        onUpdateQuantity={handleUpdateQuantity}
       />
 
       {/* Hero Section */}
@@ -158,7 +152,6 @@ export function HomePage() {
         <ProductDialog
           open={!!selectedProduct}
           product={selectedProduct}
-          onAddToCart={() => handleAddToCart(selectedProduct)}
         />
       )}
 

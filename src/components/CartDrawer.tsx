@@ -18,31 +18,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import type { CartItem } from "@/types/Cart";
+import { useCartStore } from "@/store/useCartStore";
 
-export interface CartItem {
-  name: string;
-  brand: string;
-  price: string;
-  image: string;
-  category: string;
-  productType?: string;
-  quantity: number;
-}
-
-interface CartDrawerProps {
-  items: CartItem[];
-  onRemoveItem: (index: number) => void;
-  onClearCart: () => void;
-  onUpdateQuantity: (index: number, newQuantity: number) => void;
-}
-
-export function CartDrawer({
-  items,
-  onRemoveItem,
-  onClearCart,
-  onUpdateQuantity,
-}: CartDrawerProps) {
+export function CartDrawer() {
   // Função para calcular o total do carrinho e info de desconto
+  const { cart, increaseQuantity, decreaseQuantity } = useCartStore();
   const calculateTotal = () => {
     // Separar itens por tipo de produto
     const perfumeComuns: CartItem[] = [];
@@ -50,7 +31,7 @@ export function CartDrawer({
     const bodySplashes: CartItem[] = [];
     const others: CartItem[] = [];
 
-    items.forEach(item => {
+    cart.forEach(item => {
       const isPerfumaria = item.category.toLowerCase().includes('perfume') ||
         item.category.toLowerCase() === 'feminino' ||
         item.category.toLowerCase() === 'masculino' ||
@@ -138,12 +119,12 @@ export function CartDrawer({
   };
 
   const handleWhatsAppCheckout = () => {
-    if (items.length === 0) return;
+    if (cart.length === 0) return;
 
     let message =
       "Olá! Gostaria de fazer um pedido dos seguintes produtos:\\n\\n";
 
-    items.forEach((item, index) => {
+    cart.forEach((item, index) => {
       message += `${index + 1}. *${item.name}* - ${item.brand}\\n`;
       message += `   Categoria: ${item.category}\\n`;
       message += `   Quantidade: ${item.quantity}\\n`;
@@ -171,6 +152,11 @@ export function CartDrawer({
     );
   };
 
+  function onRemoveItem(index: number): void {
+    console.log(index)
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -180,9 +166,9 @@ export function CartDrawer({
           className="relative border-[#C9A14A]/30 text-white hover:bg-white/10 hover:border-[#C9A14A] hover:text-[#C9A14A] rounded-[0px]"
         >
           <ShoppingCart className="h-5 w-5" />
-          {items.length > 0 && (
+          {cart.length > 0 && (
             <Badge className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 bg-[#C9A14A] hover:bg-white/10 hover:text-[#C9A14A] border-0 text-xs">
-              {items.length}
+              {cart.length}
             </Badge>
           )}
         </Button>
@@ -204,14 +190,14 @@ export function CartDrawer({
             </SheetClose>
           </div>
           <SheetDescription className="text-[#C9A14A]/70">
-            {items.length === 0
+            {cart.length === 0
               ? "Seu carrinho está vazio"
-              : `${items.length} ${items.length === 1 ? "item" : "itens"} selecionado${items.length === 1 ? "" : "s"}`}
+              : `${cart.length} ${cart.length === 1 ? "item" : "itens"} selecionado${cart.length === 1 ? "" : "s"}`}
           </SheetDescription>
         </SheetHeader>
 
         <div className="mt-6 flex flex-col h-[calc(100vh-200px)]">
-          {items.length === 0 ? (
+          {cart.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center">
               <div className="w-24 h-24 rounded-full bg-[#C9A14A]/10 flex items-center justify-center mb-4 border border-[#C9A14A]/30">
                 <ShoppingCart className="h-12 w-12 text-[#C9A14A]" />
@@ -227,7 +213,7 @@ export function CartDrawer({
           ) : (
             <>
               <div className="mx-auto w-full flex-1 justify-center items-center overflow-y-auto space-y-4 px-[8px] py-[0px]">
-                {items.map((item, index) => (
+                {cart.map((item, index) => (
                   <div
                     key={index}
                     className="mx-auto bg-gradient-to-br from-[#1A1A1A] to-[#252525] rounded-none p-4 border border-[#C9A14A]/30 shadow-lg relative overflow-hidden group hover:border-[#C9A14A]/50 transition-all duration-300"
@@ -275,7 +261,7 @@ export function CartDrawer({
                             size="icon"
                             onClick={() => {
                               if (item.quantity > 1) {
-                                onUpdateQuantity(index, item.quantity - 1);
+                                decreaseQuantity(index);
                               }
                             }}
                             className="h-7 w-7 hover:bg-[#C9A14A]/20 border border-[#C9A14A]/30 hover:border-[#C9A14A] rounded-none"
@@ -288,7 +274,7 @@ export function CartDrawer({
                           <Button
                             variant="ghost"
                             size="icon"
-                            onClick={() => onUpdateQuantity(index, item.quantity + 1)}
+                            onClick={() => increaseQuantity(index)}
                             className="h-7 w-7 hover:bg-[#C9A14A]/20 border border-[#C9A14A]/30 hover:border-[#C9A14A] rounded-none"
                           >
                             <Plus className="h-3 w-3 text-[#C9A14A]" />
@@ -338,7 +324,6 @@ export function CartDrawer({
                 </Button>
 
                 <Button
-                  onClick={onClearCart}
                   variant="outline"
                   className="w-full border-2 border-red-500/40 bg-red-900/20 text-red-400 hover:bg-red-900/40 hover:text-red-300 hover:border-red-500/60 rounded-none transition-all duration-300 uppercase"
                 >

@@ -5,12 +5,19 @@ import { ProductCard } from "@/page/Homepage/components/ProductCard";
 import { useCatalog } from "@/hooks/useCatalog";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { Product } from "@/types/Product";
+import { useCartStore } from "@/store/useCartStore";
 
 export const SectionCatalog = () => {
   const { filteredProducts, productTypes, selectedCategory, selectedSubcategory, selectedType, showFilters, subcategories,
-    handleAddToCart, handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog();
+    handleCategoryChange, handleProductTypeChange, handleSubcategoryToggle, setShowFilters, setVisibleProducts, visibleProducts } = useCatalog();
   const { openProduct } = useSelectedProductStore();
 
+  const { addItem } = useCartStore();
+
+  function handleAddToCart(product: Product) {
+    addItem({ ...product, quantity: 1 })
+  }
 
   return (<>
     <section
@@ -189,12 +196,12 @@ export const SectionCatalog = () => {
               .slice(0, visibleProducts)
               .map((product) => (
                 <ProductCard
+                  onAddToCart={() => handleAddToCart((product))}
                   key={product.id}
                   {...product}
                   onViewDetails={() =>
                     openProduct(product)
                   }
-                  onAddToCart={() => handleAddToCart(product)}
                 />
               ))}
           </div>
