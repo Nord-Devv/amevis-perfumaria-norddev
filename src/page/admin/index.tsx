@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { ProductStore,type Product } from "./components/productStore";
-import { ProductForm } from "./components/ProductForm";
-import { ProductList } from "./components/ProductList";
-import { Button } from "../../components/ui/button";
+import { ProductStore, type Product } from "@/admin/productStore";
+import { ProductForm } from "@/page/admin/components/ProductForm";
+import { ProductList } from "@/page/admin/components/ProductList";
+import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { Toaster } from "../../components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 import { Plus, ArrowLeft, RefreshCw } from "lucide-react";
-import logoAmevi from "../assets/e214b3767302229bb769b749498b0cffbf615395.png";
+import logoAmevi from "@/assets/e214b3767302229bb769b749498b0cffbf615395.png";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -17,7 +17,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "../../components/ui/alert-dialog";
+} from "@/components/ui/alert-dialog";
 
 interface AdminPageProps {
   onBackToSite: () => void;

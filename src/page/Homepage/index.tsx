@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { toast } from "sonner";
 
-import { Header } from "../../components/layout/Header";
-import { ProductDialog } from "./components/ProductDialog";
-import { Button } from "../../components/ui/button";
-import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
-import { type CartItem } from "../../components/CartDrawer";
-import { Toaster } from "../../components/ui/sonner";
+import { Header } from "@/components/layout/Header";
+import { ProductDialog } from "@/page/Homepage/components/ProductDialog";
+import { Button } from "@/components/ui/button";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
+import { type CartItem } from "@/components/CartDrawer";
+import { Toaster } from "@/components/ui/sonner";
 // import { AdminPage } from "./admin/AdminPage";
-import { Footer } from "../../components/layout/footer";
-import { CarouselGallery } from "../../components/features/carouselGallery";
+import { Footer } from "@/components/layout/footer";
+import { CarouselGallery } from "@/components/features/carouselGallery";
 
-import { type Product } from "../admin/components/productStore";
-import { useSelectedProductStore } from "../../store/useSelectedProductStore";
-import { SectionCatalog } from "./components/SectionCatalog";
+import { type Product } from "@/page/admin/service/productStore";
+import { useSelectedProductStore } from "@/store/useSelectedProductStore";
+import { SectionCatalog } from "@/page/Homepage/components/SectionCatalog";
 
 export function HomePage() {
   const [showAdmin, setShowAdmin] = useState(false);

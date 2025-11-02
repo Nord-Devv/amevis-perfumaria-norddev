@@ -1,7 +1,7 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "@/page/Homepage/components/ProductCard";
 import { useCatalog } from "@/hooks/useCatalog";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";

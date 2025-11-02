@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { HomePage } from '../page/Homepage';
+import { HomePage } from '@/page/Homepage';
 // import { AdminPage } from '../page/admin';
 
 export function AppRoutes() {

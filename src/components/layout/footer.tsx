@@ -1,7 +1,7 @@
 import { Instagram, Settings } from "lucide-react";
-import { WhatsAppIcon } from "../WhatsAppIcon";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
-import logoAmevi from "../../assets/e214b3767302229bb769b749498b0cffbf615395.png";
+import logoAmevi from "@/assets/e214b3767302229bb769b749498b0cffbf615395.png";
 
 import { useEffect } from "react";
 

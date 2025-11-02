@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { useEffect, useState } from "react";
 
 

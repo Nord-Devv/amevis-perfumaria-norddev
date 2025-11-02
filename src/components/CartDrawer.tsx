@@ -13,11 +13,11 @@ import {
   SheetTitle,
   SheetTrigger,
   SheetClose,
-} from "./ui/sheet";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { WhatsAppIcon } from "./WhatsAppIcon";
+} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export interface CartItem {
   name: string;

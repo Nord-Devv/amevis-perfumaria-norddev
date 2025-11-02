@@ -97,6 +97,8 @@ export const useCatalog = () => {
     throw new Error("Function not implemented.");
   }
 
+
+
   return {
     filteredProducts,
     visibleProducts,
