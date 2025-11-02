@@ -4,14 +4,17 @@ import { create } from 'zustand'
 interface cartState {
   cart: CartItem[];
   addItem: (item: CartItem) => void;
+  removeItem: (index: number) => void;
   increaseQuantity: (index: number) => void;
   decreaseQuantity: (index: number) => void;
-  // removeItem: (index: number) => void;
 }
 export const useCartStore = create<cartState>((set) => ({
   cart: [],
   addItem: (item) => {
-    set((state) => handleAddToCart(item, state))
+    set((state) => handleAddItem(item, state))
+  },
+  removeItem: (index) => {
+    set((state) => handleRemoveItem(index, state))
   },
   increaseQuantity: (index) => {
     set((state) => handleIncreaseQuantity(index, state))
@@ -23,12 +26,10 @@ export const useCartStore = create<cartState>((set) => ({
 }))
 
 
-function handleAddToCart(product: CartItem, state: cartState): cartState {
+function handleAddItem(product: CartItem, state: cartState): cartState {
   // Check if item already exists in cart
   const existingItemIndex = state.cart.findIndex(
     (item) =>
-      // item.name === product.name &&
-      // item.brand === product.brand,
       item.id === product.id
   );
 
@@ -55,16 +56,11 @@ function handleDecreaseQuantity(index: number, state: cartState): cartState {
     i === index ? { ...item, quantity: item.quantity - 1 } : item);
   return { ...state, cart: updatedCart }
 }
+function handleRemoveItem(index: number, state: cartState): cartState {
+  const updatedCart = state.cart.filter((_, i) => i !== index);
+  return { ...state, cart: updatedCart };
+  // toast.info("Produto removido do carrinho");
 
-
-// const handleUpdateQuantity = (
-//   index: number,
-//   newQuantity: number,
-// ) => {
-//   if (newQuantity < 1) return;
-//   const updatedCart = [...cartItems];
-//   updatedCart[index].quantity = newQuantity;
-//   setCartItems(updatedCart);
-// };
+}
 
 

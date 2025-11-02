@@ -23,7 +23,7 @@ import { useCartStore } from "@/store/useCartStore";
 
 export function CartDrawer() {
   // Função para calcular o total do carrinho e info de desconto
-  const { cart, increaseQuantity, decreaseQuantity } = useCartStore();
+  const { cart, increaseQuantity, decreaseQuantity, removeItem } = useCartStore();
   const calculateTotal = () => {
     // Separar itens por tipo de produto
     const perfumeComuns: CartItem[] = [];
@@ -152,10 +152,6 @@ export function CartDrawer() {
     );
   };
 
-  function onRemoveItem(index: number): void {
-    console.log(index)
-    throw new Error("Function not implemented.");
-  }
 
   return (
     <Sheet>
@@ -245,7 +241,7 @@ export function CartDrawer() {
                         <Button
                           variant="ghost"
                           size="icon"
-                          onClick={() => onRemoveItem(index)}
+                          onClick={() => removeItem(index)}
                           className="h-8 w-8 flex-shrink-0 hover:bg-red-900/30 group border border-red-500/30 hover:border-red-500 rounded-none"
                         >
                           <Trash2 className="h-4 w-4 text-red-400 group-hover:text-red-300" />
