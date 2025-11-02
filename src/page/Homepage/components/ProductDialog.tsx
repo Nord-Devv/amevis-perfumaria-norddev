@@ -25,22 +25,12 @@ import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { useState, useEffect } from "react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
+import { useCartStore } from "@/store/useCartStore";
+import type { Product } from "@/types/Product";
 
 interface ProductDialogProps {
   open: boolean;
-  product: {
-    name: string;
-    brand: string;
-    price: string;
-    image: string;
-    category: string;
-    notes?: {
-      top: string[];
-      heart: string[];
-      base: string[];
-    };
-    description: string;
-  };
+  product: Product
 }
 
 export function ProductDialog({
@@ -56,9 +46,15 @@ export function ProductDialog({
   const [isMobile, setIsMobile] = useState(false);
 
   const { closeProduct } = useSelectedProductStore();
+  const { addItem } = useCartStore();
 
   function onOpenChange(isOpen: boolean) {
     !isOpen && closeProduct();
+  }
+
+  function handleAddItemToCart() {
+    closeProduct()
+    addItem({ ...product, quantity: 1 })
   }
 
 
@@ -269,9 +265,7 @@ export function ProductDialog({
           </div>
 
           <Button
-            onClick={() => {
-              closeProduct();
-            }}
+            onClick={handleAddItemToCart}
             variant="outline"
             className="w-full bg-transparent border-2 border-[#C9A14A] text-[#C9A14A] hover:bg-[#C9A14A]/10 hover:text-[#C9A14A] rounded-none h-12 uppercase tracking-wider transition-all duration-300"
             size="lg"
