@@ -1,96 +1,126 @@
 import type { CartItem } from "@/types/Cart";
+import { convertCurrencyStringToFloat } from "./convertCurrencyStringToFloat";
+import type { PerfumariaProduct } from "@/types/Product";
 
 export const calculateTotal = (cart: CartItem[]) => {
   // Separar itens por tipo de produto
-  const perfumeComuns: CartItem[] = [];
-  const perfumeBrands: CartItem[] = [];
-  const bodySplashes: CartItem[] = [];
-  const others: CartItem[] = [];
+  // apenas produtos de perfumaria tem desconto, tipos:
+  // "Comum" | "Body Splash" | "Brand"
+  let perfumeComuns: CartItem[] = [];
+  let perfumeBrands: CartItem[] = [];
+  let bodySplashes: CartItem[] = [];
 
-  cart.forEach(item => {
-    const isPerfumaria = item.category.toLowerCase().includes('perfume') ||
-      item.category.toLowerCase() === 'feminino' ||
-      item.category.toLowerCase() === 'masculino' ||
-      item.category.toLowerCase() === 'unissex';
+  let others: CartItem[] = [];
+
+  let totalWithoutDiscount = 0;
+
+  cart.forEach(cartItem => {
+    const product = { ...cartItem }
+    const { category } = product;
+    const isPerfumaria = category === "Perfumaria";
+
+    totalWithoutDiscount += product.quantity * convertCurrencyStringToFloat(product.price);
 
     if (isPerfumaria) {
-      if (item.productType === 'Brand Collection' || item.productType === 'Brand') {
-        perfumeBrands.push(item);
-      } else if (item.productType === 'Body Splash') {
-        bodySplashes.push(item);
-      } else {
-        perfumeComuns.push(item);
-      }
-    } else {
-      others.push(item);
+      const { productType } = product as Pick<PerfumariaProduct, "productType">
+
+      productType === "Brand" && perfumeBrands.push(product);
+      productType === "Body Splash" && bodySplashes.push(product);
+      productType === "Comum" && perfumeComuns.push(product);
+      return;
     }
-  });
 
-  // Contar quantidades totais de cada tipo
-  let comunsCount = perfumeComuns.reduce((sum, item) => sum + item.quantity, 0);
-  const brandsCount = perfumeBrands.reduce((sum, item) => sum + item.quantity, 0);
-  let bodySplashCount = bodySplashes.reduce((sum, item) => sum + item.quantity, 0);
+    others.push(product);
+  })
 
-  // Calcular totais originais (sem promoção)
-  const originalComunsTotal = comunsCount * 39.90;
-  const originalBrandsTotal = brandsCount * parseFloat(perfumeBrands[0]?.price.replace('R$', '').replace(',', '.').trim() || '0');
-  const originalBodySplashTotal = bodySplashCount * parseFloat(bodySplashes[0]?.price.replace('R$', '').replace(',', '.').trim() || '0');
+  // first apply discount based on comum perfumes quantity
+  // second apply discount to pairs of comum perfme and bodysplash
+  // also apply discount on brand perfumes quantity
+  const comumDiscount = calculateComumPerfumeDiscount();
+  const comboDiscount = calculatePerfumeAndBodysplahDiscount()
+  const brandDiscount = calculateBrandPerfumDiscount();
 
-  let total = 0;
-  let originalTotal = 0;
+  const perfumeTotalWithDiscount = comboDiscount + comumDiscount + brandDiscount + calculateBodysplashs();
 
-  // PROMOÇÃO 1: Comum + Body Splash = R$ 50,00
-  const comboComumBodySplash = Math.min(comunsCount, bodySplashCount);
-  if (comboComumBodySplash > 0) {
-    total += comboComumBodySplash * 50.00;
-    comunsCount -= comboComumBodySplash;
-    bodySplashCount -= comboComumBodySplash;
-  }
-
-  // PROMOÇÃO 2: 2 Brands = R$ 140,00
-  const brandPairs = Math.floor(brandsCount / 2);
-  const brandRemainder = brandsCount % 2;
-  if (brandPairs > 0) {
-    total += brandPairs * 140.00;
-  }
-  if (brandRemainder > 0) {
-    const brandPrice = parseFloat(perfumeBrands[0]?.price.replace('R$', '').replace(',', '.').trim() || '0');
-    total += brandRemainder * brandPrice;
-  }
-
-  // PROMOÇÃO 3: Perfumes Comuns - 3 por R$ 90,00 ou 4 por R$ 130,00
-  if (comunsCount === 1 || comunsCount === 2) {
-    total += comunsCount * 39.90;
-  } else if (comunsCount === 3) {
-    total += 90.00;
-  } else if (comunsCount >= 4) {
-    const sets = Math.floor(comunsCount / 4);
-    const remainder = comunsCount % 4;
-    total += (sets * 130.00) + (remainder * 39.90);
-  }
-
-  // Body Splash restantes (sem promoção)
-  if (bodySplashCount > 0) {
-    const bodyPrice = parseFloat(bodySplashes[0]?.price.replace('R$', '').replace(',', '.').trim() || '0');
-    total += bodySplashCount * bodyPrice;
-  }
-
-  // Outros itens (sem promoção)
-  const othersTotal = others.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace('R$', '').replace(',', '.').trim());
-    return sum + (price * item.quantity);
-  }, 0);
-  total += othersTotal;
-
-  // Total original para comparação
-  originalTotal = originalComunsTotal + originalBrandsTotal + originalBodySplashTotal + othersTotal;
-
-  const hasDiscount = total < originalTotal;
+  const totalWithDiscount = perfumeTotalWithDiscount + calculateOthersValues()
+  const hasDiscount = totalWithDiscount < totalWithoutDiscount;
 
   return {
-    total,
-    originalTotal: hasDiscount ? originalTotal : null,
+    total: totalWithDiscount,
+    originalTotal: hasDiscount ? totalWithoutDiscount : null,
     hasDiscount
   };
+
+
+
+  function calculateOthersValues() {
+    let total = 0;
+    total = total + others.reduce((acc, p) => acc + convertCurrencyStringToFloat(p.price),
+      0)
+
+    return total
+  }
+
+  function calculateComumPerfumeDiscount() {
+    let total = 0;
+    perfumeComuns.forEach(perfume => {
+      while (perfume.quantity >= 4) {
+        total += 130;
+        perfume.quantity -= 4;
+      }
+      while (perfume.quantity >= 3) {
+        total += 90;
+        perfume.quantity -= 3;
+      }
+    });
+
+    return total;
+  }
+
+  function calculatePerfumeAndBodysplahDiscount() {
+    let total = 0;
+
+    perfumeComuns.forEach(perfume => {
+      while (perfume.quantity > 0 && bodySplashes.length > 0) {
+        perfume.quantity--;
+        const body = bodySplashes[0];
+        if (body.quantity === 1) {
+          bodySplashes.shift();
+        } else {
+          body.quantity--;
+        }
+        total += 50;
+      }
+
+    })
+    return total;
+
+
+  }
+
+  function calculateBodysplashs() {
+    let total = 0
+    bodySplashes.forEach(product => {
+      total = total + product.quantity * convertCurrencyStringToFloat(product.price);
+    })
+    return total
+  }
+
+  function calculateBrandPerfumDiscount() {
+    let total = 0;
+    let totalQty = perfumeBrands.reduce((acc, perfume) => acc + perfume.quantity, 0)
+
+    while (totalQty >= 2) {
+      total += 135;
+      totalQty -= 2;
+    }
+
+    const price = convertCurrencyStringToFloat(perfumeBrands[0]?.price || "0");
+    total += totalQty * price;
+
+    return total;
+
+  }
+
 };
 

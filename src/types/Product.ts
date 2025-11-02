@@ -7,7 +7,7 @@ export interface BaseProduct {
   image: string;
   description: string;
 
-  productType?: string; // "Comum", "Body Splash", "Brand Collection" (para Perfumaria)
+  productType?: string; // "Comum", "Body Splash", "Brand" (para Perfumaria)
 
   notes?: {
     top: string[];
