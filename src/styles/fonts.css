@@ -1,0 +1,28 @@
+
+
+:root {
+  /* Tipografia */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Lora', serif;
+  --font-size: 16px;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+}
+
+.font-hero {
+font-family: "Noto Serif Display", serif;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
