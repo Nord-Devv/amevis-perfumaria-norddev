@@ -28,6 +28,7 @@ export function CartDrawer() {
   const handleWhatsAppCheckout = () => {
     if (cart.length === 0) return;
     buyCartProducts(cart);
+    cleanCart();
   };
 
 
