@@ -42,11 +42,11 @@ export const calculateTotal = (cart: CartItem[]) => {
 
   const perfumeTotalWithDiscount = comboDiscount + comumDiscount + brandDiscount + calculateBodysplashs();
 
-  const totalWithDiscount = perfumeTotalWithDiscount + calculateOthersValues()
-  const hasDiscount = totalWithDiscount < totalWithoutDiscount;
+  const totalDiscount = perfumeTotalWithDiscount + calculateOthersValues()
+  const hasDiscount = totalDiscount > 0 && totalDiscount < totalWithoutDiscount;
 
   return {
-    total: totalWithDiscount,
+    total: hasDiscount ? totalDiscount : totalWithoutDiscount,
     originalTotal: hasDiscount ? totalWithoutDiscount : null,
     hasDiscount
   };
