@@ -16,22 +16,22 @@ export const useWhatsApp = () => {
 
   const buyCartProducts = (cart: CartItem[]) => {
     let message =
-      "Olá! Gostaria de fazer um pedido dos seguintes produtos:\\n\\n";
+      "Olá! Gostaria de fazer um pedido dos seguintes produtos:\n\n";
 
     cart.forEach((item, index) => {
-      message += `${index + 1}. *${item.name}* - ${item.brand}\\n`;
-      message += `   Categoria: ${item.category}\\n`;
-      message += `   Quantidade: ${item.quantity}\\n`;
-      message += `   Preço unitário: ${item.price}\\n\\n`;
+      message += `${index + 1}. *${item.name}* - ${item.brand}\n`;
+      message += `   Categoria: ${item.category}\n`;
+      message += `   Quantidade: ${item.quantity}\n`;
+      message += `   Preço unitário: ${item.price}\n\n`;
     });
 
     const { total, originalTotal, hasDiscount } = calculateTotal(cart);
 
     if (hasDiscount && originalTotal) {
-      message += `Total sem desconto: ~R$ ${originalTotal.toFixed(2).replace('.', ',')}~\\n`;
-      message += `*Total com desconto: R$ ${total.toFixed(2).replace('.', ',')}*\\n\\n`;
+      message += `Total sem desconto: ~R$ ${originalTotal.toFixed(2).replace('.', ',')}~\n`;
+      message += `*Total com desconto: R$ ${total.toFixed(2).replace('.', ',')}*\n\n`;
     } else {
-      message += `*Total: R$ ${total.toFixed(2).replace('.', ',')}*\\n\\n`;
+      message += `*Total: R$ ${total.toFixed(2).replace('.', ',')}*\n\n`;
     }
 
     message +=
