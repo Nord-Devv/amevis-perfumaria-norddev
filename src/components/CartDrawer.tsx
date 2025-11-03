@@ -181,32 +181,6 @@ export function CartDrawer() {
                   </div>
                 </div>
 
-                {/* <div className="bg-gradient-to-r from-[#C9A14A]/10 to-[#C9A14A]/5 border border-[#C9A14A]/40 rounded-none p-4 mb-3"> */}
-                {/*   {(() => { */}
-                {/*     const { total, originalTotal, hasDiscount } = calculateTotal(cart); */}
-                {/*     return ( */}
-                {/*       <div className="space-y-2"> */}
-                {/*         {hasDiscount && originalTotal && ( */}
-                {/*           <div className="flex justify-between items-center"> */}
-                {/*             <span className="text-white/60 text-sm">Sem desconto:</span> */}
-                {/*             <span className="text-white/60 line-through text-sm"> */}
-                {/*               R$ {originalTotal.toFixed(2).replace('.', ',')} */}
-                {/*             </span> */}
-                {/*           </div> */}
-                {/*         )} */}
-                {/*         <div className="flex justify-between items-center"> */}
-                {/*           <span className="text-white uppercase tracking-wider"> */}
-                {/*             {hasDiscount ? 'Total com Desconto:' : 'Total:'} */}
-                {/*           </span> */}
-                {/*           <span className="text-[#C9A14A] tracking-wider"> */}
-                {/*             R$ {total.toFixed(2).replace('.', ',')} */}
-                {/*           </span> */}
-                {/*         </div> */}
-                {/*       </div> */}
-                {/*     ); */}
-                {/*   })()} */}
-                {/* </div> */}
-
                 <Button
                   onClick={handleWhatsAppCheckout}
                   className="w-full bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] text-black rounded-none shadow-lg shadow-[#C9A14A]/30 border border-[#C9A14A] uppercase tracking-wider transition-all duration-300"
