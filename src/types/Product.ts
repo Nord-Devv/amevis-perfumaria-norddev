@@ -16,7 +16,6 @@ export interface BaseProduct {
   };
 }
 
-
 export interface PerfumariaProduct extends BaseProduct {
   category: "Perfumaria";
   productType: "Comum" | "Body Splash" | "Brand";
