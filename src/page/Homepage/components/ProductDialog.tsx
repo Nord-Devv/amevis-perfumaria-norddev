@@ -63,10 +63,10 @@ export function ProductDialog({
       <div className="flex w-full flex-row justify-end">
         <button
           onClick={closeProduct}
-          className="relative ml-3 z-50 w-8 h-8 flex items-center justify-center hover:bg-[#C9A14A]/20 text-[#C9A14A] hover:border-[#C9A14A] hover:text-[#C9A14A] rounded-none transition-all duration-300 group"
+          className="relative ml-3 z-50 w-12 h-12 flex items-center justify-center hover:bg-[#C9A14A]/20 text-[#C9A14A] hover:border-[#C9A14A] hover:text-[#C9A14A] rounded-none transition-all duration-300 group"
           aria-label="Fechar"
         >
-          <X className="h-4 w-4 text-[#C9A14A] group-hover:text-white transition-colors" />
+          <X className="h-6 w-6 text-[#C9A14A] group-hover:text-white transition-colors" />
         </button>
       </div>
       {/* Header com padding */}

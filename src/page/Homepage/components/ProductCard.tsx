@@ -46,7 +46,7 @@ export function ProductCard({
         {/*<div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/30 to-transparent"></div>*/}
       </div>
 
-      <CardContent className="sm:p-3 sm:pb-0 lg:p-2 lg:pb-0 bg-gradient-to-b from-[#1A1A1A] to-[#0F0F0F] relative pt-[10px] pr-[10px] pb-[0px] pl-[10px]">
+      <CardContent className="sm:p-3 sm:pb-0 sm:pt-2 lg:p-2 lg:pb-0 lg:pt-1.5 bg-gradient-to-b from-[#1A1A1A] to-[#0F0F0F] relative p-0 pt-[6px] pr-[10px] pb-[0px] pl-[10px]">
         {/* Decorative line */}
         <div className="absolute top-0 left-0 right-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C9A14A]/50 to-transparent"></div>
 
