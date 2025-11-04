@@ -30,7 +30,7 @@ export function ProductCard({
 }: ProductCardProps) {
   return (
     <Card
-      className="group overflow-hidden gap-0 bg-gradient-to-b bgu-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A]/40 hover:border-[#C9A14A] hover:shadow-2xl hover:shadow-[#C9A14A]/50 transition-all duration-500 rounded-none cursor-pointer relative"
+      className="group overflow-hidden gap-0 py-0 bg-gradient-to-b bgu-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A]/40 hover:border-[#C9A14A] hover:shadow-2xl hover:shadow-[#C9A14A]/50 transition-all duration-500 rounded-none cursor-pointer relative"
       onClick={onViewDetails}
     >
       {/* Glow effect */}
@@ -47,12 +47,12 @@ export function ProductCard({
         {/*<div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/30 to-transparent"></div>*/}
       </div>
 
-      <CardContent className="sm:p-3 sm:pb-0 lg:p-2 lg:pb-0 bg-gradient-to-b from-[#1A1A1A] to-[#0F0F0F] relative pt-[10px] pr-[10px] pb-[0px] pl-[10px]">
+      <CardContent className="sm:p-3 sm:pb-3 sm:pt-2 lg:p-2 lg:pb-2 lg:pt-1.5 bg-gradient-to-b from-[#1A1A1A] to-[#0F0F0F] relative p-0 pt-[6px] pr-[10px] pb-[10px] pl-[10px] flex flex-col min-h-[120px]">
         {/* Decorative line */}
         <div className="absolute top-0 left-0 right-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C9A14A]/50 to-transparent"></div>
 
         {/* Brand and Name - Fixed at top */}
-        <div className="mb-2 lg:mb-1.5">
+        <div className="mb-2 lg:mb-1.5 flex-grow">
           <p className="text-[#C9A14A] text-[10px] uppercase tracking-widest mb-0.5 underline">
             {brand}
           </p>
@@ -62,7 +62,7 @@ export function ProductCard({
         </div>
 
         {/* Price and Button - Fixed at bottom */}
-        <div className="space-y-1.5 lg:space-y-1 mt-2 lg:mt-1.5">
+        <div className="space-y-1.5 lg:space-y-1 mt-auto">
           {/* Price with decorative elements */}
           <div className="flex items-center justify-center gap-2">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#C9A14A]/30"></div>
