@@ -1,4 +1,3 @@
-import { SkeletonLoader } from '@/page/Homepage/components/SkeletonAmevis'
 import { useState } from 'react'
 
 const ERROR_IMG_SRC =

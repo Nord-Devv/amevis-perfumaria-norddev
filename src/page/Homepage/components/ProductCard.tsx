@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { SkeletonLoader } from "./SkeletonAmevis";
+import { ImageProductsFallback } from "@/components/figma/ImageProductFallback";
 
 interface ProductCardProps {
   name: string;
@@ -37,7 +38,7 @@ export function ProductCard({
       <div className="absolute inset-0 bg-gradient-to-t from-[#C9A14A]/0 via-transparent to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
 
       <div className="relative overflow-hidden h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96">
-        <ImageWithFallback
+        <ImageProductsFallback
           src={image}
           alt={name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

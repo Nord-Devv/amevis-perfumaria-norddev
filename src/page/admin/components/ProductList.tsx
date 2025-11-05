@@ -1,4 +1,4 @@
-import { type Product } from "@/admin/productStore";
+import { type Product } from "@/page/admin/service/productStore";
 import { Button } from "@/components/ui/button";
 import {
   Table,

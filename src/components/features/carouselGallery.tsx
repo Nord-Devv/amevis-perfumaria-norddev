@@ -1,6 +1,13 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { useEffect, useState } from "react";
+
+import { motion, AnimatePresence } from "framer-motion";
+
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
+
+import slider1 from '@/assets/slide/slide1.webp';
+import slider2 from '@/assets/slide/slide2.webp';
+import slider3 from '@/assets/slide/slide3.webp';
+import slider4 from '@/assets/slide/slide4.webp';
 
 
 export function CarouselGallery() {
@@ -31,7 +38,7 @@ export function CarouselGallery() {
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
-                                src="https://drive.google.com/thumbnail?id=1z_F_0MsBA9b6kGP07GWwhY4Wlw9szFpt&sz=w3000"
+                                src={slider1}
                                 alt="Monochromatic Lifestyle"
                                 className="w-full h-full object-cover"
                             />
@@ -49,7 +56,7 @@ export function CarouselGallery() {
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
-                                src="https://drive.google.com/thumbnail?id=1p1DhAMta9K-CmQcCwM02MAvwjHfWipp2&sz=w3000"
+                                src={slider2}
                                 alt="Row of Luxury Perfumes"
                                 className="w-full h-full object-cover"
                             />
@@ -67,7 +74,7 @@ export function CarouselGallery() {
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
-                                src="https://drive.google.com/thumbnail?id=1OLCm4tMbmOt_X-cgzU6KzXoWAS6M2gC-&sz=w3000"
+                                src={slider3}
                                 alt="Red Tones Fragrance"
                                 className="w-full h-full object-cover"
                             />
@@ -85,7 +92,7 @@ export function CarouselGallery() {
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
-                                src="https://drive.google.com/thumbnail?id=1QihvFHsotudEEbrz2YZWcxgV57nkluty&sz=w3000"
+                                src={slider4}
                                 alt="Golden Perfumes Table"
                                 className="w-full h-full object-cover"
                             />

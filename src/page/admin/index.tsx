@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ProductStore, type Product } from "@/admin/productStore";
+import { ProductStore, type Product } from "@/page/admin/service/productStore";
 import { ProductForm } from "@/page/admin/components/ProductForm";
 import { ProductList } from "@/page/admin/components/ProductList";
 import { Button } from "@/components/ui/button";
@@ -20,8 +20,8 @@ import {
 } from "@/components/ui/alert-dialog";
 
 interface AdminPageProps {
-  onBackToSite: () => void;
-  onProductsChange: () => void;
+  onBackToSite?: () => void;
+  onProductsChange?: () => void;
 }
 
 export function AdminPage({ onBackToSite, onProductsChange }: AdminPageProps) {
@@ -47,7 +47,7 @@ export function AdminPage({ onBackToSite, onProductsChange }: AdminPageProps) {
       toast.success("Produto adicionado com sucesso!");
     }
     loadProducts();
-    onProductsChange();
+    // onProductsChange();
     setShowForm(false);
     setEditingProduct(null);
   };
@@ -61,7 +61,7 @@ export function AdminPage({ onBackToSite, onProductsChange }: AdminPageProps) {
     ProductStore.deleteProduct(id);
     toast.success("Produto excluído com sucesso!");
     loadProducts();
-    onProductsChange();
+    // onProductsChange();
   };
 
   const handleCancel = () => {
@@ -77,7 +77,7 @@ export function AdminPage({ onBackToSite, onProductsChange }: AdminPageProps) {
   const handleResetToDefaults = () => {
     ProductStore.resetToDefaults();
     loadProducts();
-    onProductsChange();
+    // onProductsChange();
     toast.success("Produtos restaurados para o padrão!");
   };
 

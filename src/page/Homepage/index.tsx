@@ -13,6 +13,8 @@ import { CarouselGallery } from "@/components/features/carouselGallery";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { SectionCatalog } from "@/page/Homepage/components/SectionCatalog";
 
+import imageHome from "@/assets/foto header.webp";
+
 export function HomePage() {
   const [showAdmin, setShowAdmin] = useState(false);
   const selectedProduct = useSelectedProductStore().product;
@@ -30,7 +32,7 @@ export function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-            src="https://drive.google.com/thumbnail?id=1u_wq0NLYhHXhy1uNFdC7wxQvKN-FGclV&sz=w3000"
+            src={imageHome}
             alt="Luxury Perfume"
             className="w-full min-h-screen object-cover"
           />
