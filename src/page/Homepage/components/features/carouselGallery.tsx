@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
+import { ImageWithFallback } from "@/components/layout/ImageWithFallback";
 
 import slider1 from '@/assets/slide/slide1.webp';
 import slider2 from '@/assets/slide/slide2.webp';
@@ -19,7 +19,7 @@ export function CarouselGallery() {
       
           const interval = setInterval(() => {
             setActiveSlide((prev) => (prev + 1) % totalSlides);
-          }, 2500); // Troca a cada 2.5 segundos
+          }, 7000); // Troca a cada 2.5 segundos
       
           return () => clearInterval(interval);
         }, []);
@@ -34,7 +34,7 @@ export function CarouselGallery() {
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             exit={{ y: "-100%" }}
-                            transition={{ duration: 0.8, ease: "linear" }}
+                            transition={{ duration: 0.3, ease: "linear" }}
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
@@ -52,7 +52,7 @@ export function CarouselGallery() {
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             exit={{ y: "-100%" }}
-                            transition={{ duration: 0.8, ease: "linear" }}
+                            transition={{ duration: 0.3, ease: "linear" }}
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
@@ -70,7 +70,7 @@ export function CarouselGallery() {
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             exit={{ y: "-100%" }}
-                            transition={{ duration: 0.8, ease: "linear" }}
+                            transition={{ duration: 0.3, ease: "linear" }}
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
@@ -88,7 +88,7 @@ export function CarouselGallery() {
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             exit={{ y: "-100%" }}
-                            transition={{ duration: 0.8, ease: "linear" }}
+                            transition={{ duration: 0.3, ease: "linear" }}
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback

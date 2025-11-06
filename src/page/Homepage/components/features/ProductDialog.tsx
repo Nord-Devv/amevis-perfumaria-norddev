@@ -19,8 +19,8 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
-import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { ImageWithFallback } from "@/components/layout/ImageWithFallback";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { useCartStore } from "@/store/useCartStore";
 import type { Product } from "@/types/Product";
@@ -216,7 +216,7 @@ export function ProductDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A] border-2 text-white w-[400px] max-w-full max-h-[90vh] overflow-y-auto p-0 flex flex-col rounded-none shadow-2xl shadow-[#C9A14A]/30">
+      <DialogContent className="bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A] border-2 text-white max-w-full max-h-[90vh] overflow-y-auto p-0 flex flex-col rounded-none shadow-2xl shadow-[#C9A14A]/30">
         <ProductContent />
       </DialogContent>
     </Dialog>

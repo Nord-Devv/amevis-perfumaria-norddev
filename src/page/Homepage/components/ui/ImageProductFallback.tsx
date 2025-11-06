@@ -1,4 +1,4 @@
-import { SkeletonLoader } from "@/page/Homepage/components/SkeletonAmevis"
+import { SkeletonLoader } from "@/page/Homepage/components/layout/SkeletonAmevis"
 import { useState } from "react"
 
 export function ImageProductsFallback(props: React.ImgHTMLAttributes<HTMLImageElement>) {

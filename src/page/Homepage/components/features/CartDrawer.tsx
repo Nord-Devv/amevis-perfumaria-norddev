@@ -16,8 +16,8 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
-import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { ImageWithFallback } from "@/components/layout/ImageWithFallback";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { useCartStore } from "@/store/useCartStore";
 import { useWhatsApp } from "@/hooks/useWhatsApp";
 

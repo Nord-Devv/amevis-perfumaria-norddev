@@ -34,6 +34,29 @@
   
   h1, h2, h3, h4, h5, h6 {
   }
+
+  @keyframes float-particle {
+    0% { 
+      opacity: 0; 
+      transform: translateY(0) translateX(0); 
+    }
+    10% { 
+      opacity: 1; 
+    }
+    90% { 
+      opacity: 1; 
+    }
+    100% { 
+      opacity: 0; 
+      transform: translateY(-300px) translateX(50px); 
+    }
+  }
+}
+
+@layer utilities {
+  .animate-float-particle {
+    animation: float-particle 8s ease-in-out infinite;
+  }
 }
 
 /* Infinite scroll animation for luxury gallery */

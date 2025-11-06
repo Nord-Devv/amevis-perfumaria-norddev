@@ -1,5 +1,5 @@
 import logoAmevi from "@/assets/e214b3767302229bb769b749498b0cffbf615395.png";
-import { CartDrawer } from "@/page/Homepage/components/CartDrawer";
+import { CartDrawer } from "@/page/Homepage/components/features/CartDrawer";
 
 
 export function Header() {

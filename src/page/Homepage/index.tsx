@@ -1,13 +1,14 @@
 
 
 import { Header } from "@/components/layout/Header";
-import { ProductDialog } from "@/page/Homepage/components/ProductDialog";
+import { ProductDialog } from "@/page/Homepage/components/features/ProductDialog";
 import { Button } from "@/components/ui/button";
-import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
+import { ImageWithFallback } from "@/components/layout/ImageWithFallback";
+import { ParticlesEffect } from "@/page/Homepage/components/ui/particlesEffect";
 import { Toaster } from "@/components/ui/sonner";
 
 import { Footer } from "@/components/layout/footer";
-import { CarouselGallery } from "@/components/features/carouselGallery";
+import { CarouselGallery } from "@/page/Homepage/components/features/carouselGallery";
 
 import { useSelectedProductStore } from "@/store/useSelectedProductStore";
 import { SectionCatalog } from "@/page/Homepage/components/SectionCatalog";
@@ -25,8 +26,11 @@ export function HomePage() {
       {/* Hero Section */}
       <section
         id="home"
-        className="pt-0 pb-0 px-0 relative min-h-screen flex items-center justify-center bg-black overflow-hidden"
+        className="pt-0 pb-0 px-0 relative min-h-screen flex items-center justify-center bg-[radial-gradient(ellipse_at_center,#1a1a1a_0%,#000_70%)] overflow-hidden"
       >
+        {/* Particles */}
+        <ParticlesEffect />
+
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <ImageWithFallback

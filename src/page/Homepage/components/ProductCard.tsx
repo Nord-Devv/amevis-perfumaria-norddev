@@ -1,7 +1,7 @@
 import { ShoppingCart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ImageProductsFallback } from "@/components/figma/ImageProductFallback";
+import { ImageProductsFallback } from "@/page/Homepage/components/ui/ImageProductFallback";
 
 interface ProductCardProps {
   name: string;
