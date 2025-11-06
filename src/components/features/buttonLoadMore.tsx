@@ -1,5 +1,5 @@
-import type { Product } from "@/page/admin/service/productStore";
 import { Button } from "@/components/ui/button";
+import type { Product } from "@/types/Product";
 
 interface ButtonLoadMoreProps {
     visibleProducts: number;

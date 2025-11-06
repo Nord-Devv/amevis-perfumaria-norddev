@@ -1,23 +1,11 @@
-import { Instagram, Settings } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 import logoAmevi from "@/assets/e214b3767302229bb769b749498b0cffbf615395.png";
 
-import { useEffect } from "react";
 
-interface FooterProps {
-    setShowAdmin: (value: boolean) => void;
-}
 
-export function Footer({ setShowAdmin }: FooterProps) {
-
-    useEffect(() => {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get("admin") === "true") {
-            setShowAdmin(true);
-        }
-    }, []);
-
+export function Footer() {
     return (
         <footer className="py-16 px-4 bg-[#1A1A1A]">
             <div className="container mx-auto max-w-6xl">
@@ -92,15 +80,6 @@ export function Footer({ setShowAdmin }: FooterProps) {
                             © 2025 Amevi. Todos os direitos reservados.
                         </p>
                     </div>
-
-                    {/* Admin Access (discreet link) */}
-                    <button
-                        onClick={() => setShowAdmin(true)}
-                        className=" mt-4 text-[#C9A14A]/30 hover:text-[#C9A14A] transition-colors text-xs flex items-center gap-1 mx-auto"
-                    >
-                        <Settings className="h-3 w-3" />
-                        Admin
-                    </button>
                 </div>
             </div>
         </footer>

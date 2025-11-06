@@ -1,12 +1,11 @@
-import { useState } from "react";
-// import { toast } from "sonner";
+
 
 import { Header } from "@/components/layout/Header";
 import { ProductDialog } from "@/page/Homepage/components/ProductDialog";
 import { Button } from "@/components/ui/button";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { Toaster } from "@/components/ui/sonner";
-// import { AdminPage } from "./admin/AdminPage";
+
 import { Footer } from "@/components/layout/footer";
 import { CarouselGallery } from "@/components/features/carouselGallery";
 
@@ -16,7 +15,6 @@ import { SectionCatalog } from "@/page/Homepage/components/SectionCatalog";
 import imageHome from "@/assets/foto header.webp";
 
 export function HomePage() {
-  const [showAdmin, setShowAdmin] = useState(false);
   const selectedProduct = useSelectedProductStore().product;
 
   return (
@@ -83,7 +81,7 @@ export function HomePage() {
       )}
 
       {/* Footer */}
-      <Footer setShowAdmin={setShowAdmin} />
+      <Footer />
 
       {/* Toaster */}
       <Toaster />
