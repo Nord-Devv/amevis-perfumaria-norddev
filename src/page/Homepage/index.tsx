@@ -26,7 +26,7 @@ export function HomePage() {
       {/* Hero Section */}
       <section
         id="home"
-        className="pt-0 pb-0 px-0 relative min-h-screen flex items-center justify-center bg-[radial-gradient(ellipse_at_center,#1a1a1a_0%,#000_70%)] overflow-hidden"
+        className="pt-0 pb-0 px-0 relative min-h-screen flex items-center bg-[radial-gradient(ellipse_at_center,#1a1a1a_0%,#000_70%)] overflow-hidden"
       >
         {/* Particles */}
         <ParticlesEffect />
