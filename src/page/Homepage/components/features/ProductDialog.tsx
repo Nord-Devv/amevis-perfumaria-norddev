@@ -232,7 +232,7 @@ export function ProductDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A] border-2 text-white max-w-full max-h-[90vh] md:max-h-[95vh] md:pb-2 overflow-y-auto p-0 flex flex-col rounded-none shadow-2xl shadow-[#C9A14A]/30">
+      <DialogContent className="bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A] border-2 text-white max-w-full min-h-[90vh] md:min-h-[85vh] md:pb-2 overflow-y-auto p-0 flex flex-col rounded-none shadow-2xl shadow-[#C9A14A]/30">
         <ProductContent />
       </DialogContent>
     </Dialog>

@@ -26,14 +26,14 @@ export function Header() {
               <a
                 href="#home"
                 onClick={(e) => handleSmoothScroll(e, "home")}
-                className="text-white hover:text-[#C9A14A] transition-colors text-sm"
+                className="text-white hover:text-[#C9A14A] transition-colors text-[16px]"
               >
                 Início
               </a>
               <a
                 href="#catalog"
                 onClick={(e) => handleSmoothScroll(e, "catalog")}
-                className="text-white hover:text-[#C9A14A] transition-colors text-sm text-[14px]"
+                className="text-white hover:text-[#C9A14A] transition-colors text-sm text-[16px]"
               >
                 Catálogo
               </a>

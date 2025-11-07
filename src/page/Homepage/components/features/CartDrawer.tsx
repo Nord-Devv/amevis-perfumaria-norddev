@@ -38,7 +38,7 @@ export function CartDrawer() {
         <Button
           variant="ghost"
           size="icon"
-          className="relative border-[#C9A14A]/30 text-white hover:bg-white/10 hover:border-[#C9A14A] hover:text-[#C9A14A] rounded-[0px]"
+          className="relative  border-[#C9A14A]/30 text-white hover:bg-white/10 hover:border-[#C9A14A] hover:text-[#C9A14A] rounded-[0px]"
         >
           <ShoppingCart className="h-5 w-5" />
           {cart.length > 0 && (
