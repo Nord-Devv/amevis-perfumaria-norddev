@@ -7,7 +7,7 @@ export function SkeletonLoader() {
       <style>{`
       .skeleton-loader {
         width: 100%;
-        height: 350px;
+        height: 100%;
         background: linear-gradient(110deg, 
           #1a1a1a 0%, 
           #1a1a1a 40%, 
