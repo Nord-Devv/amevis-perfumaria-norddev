@@ -43,7 +43,7 @@ export function HomePage() {
         </div>
 
         <div className="container relative w-full z-10 px-[10px] py-[0px] mx-[20px] my-[0px] m-[0px]">
-          <div className="grid grid-cols-2 gap-12 items-center min-h-screen py-20">
+          <div className="flex flex-col justify-center md:grid md:grid-cols-2 gap-12 items-center min-h-screen py-20">
             {/* Left Content */}
             <div className="space-y-6">
               <h2 className="md:text-6xl text-white tracking-tight leading-tight font-[Noto_Serif_Display] text-[50px]">
