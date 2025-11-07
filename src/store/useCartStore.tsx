@@ -14,8 +14,9 @@ interface cartState {
   decreaseQuantity: (index: number) => void;
   cleanCart: () => void;
 }
+
 export const useCartStore = create<cartState>((set) => ({
-  cart: [],
+  cart: getLocalStorageItems(),
   total: 0,
   originalTotal: 0,
   hasDiscount: false,
@@ -31,7 +32,7 @@ export const useCartStore = create<cartState>((set) => ({
   decreaseQuantity: (index) => {
     set((state) => handleDecreaseQuantity(index, state))
   },
-  cleanCart: () => { set(() => ({ cart: [] })) }
+  cleanCart: () => { set((state) => handleCleanCart(state)) },
 }))
 
 
@@ -48,10 +49,12 @@ function handleAddItem(product: CartItem, state: cartState): cartState {
     updatedCart[existingItemIndex].quantity += 1;
     toast.success(`${product.name} - quantidade atualizada!`);
 
+    updateLocalStorage(updatedCart)
     return handleUpdateValues(updatedCart, state)
   } else {
     const updatedCart = [...state.cart, { ...product, quantity: 1 }];
     toast.success(`${product.name} adicionado ao carrinho!`);
+    updateLocalStorage(updatedCart)
 
     return handleUpdateValues(updatedCart, state);
   }
@@ -59,6 +62,7 @@ function handleAddItem(product: CartItem, state: cartState): cartState {
 function handleRemoveItem(index: number, state: cartState): cartState {
   const updatedCart = state.cart.filter((_, i) => i !== index);
   toast.info("Produto removido do carrinho");
+  updateLocalStorage(updatedCart)
 
   return handleUpdateValues(updatedCart, state)
 }
@@ -67,6 +71,8 @@ function handleRemoveItem(index: number, state: cartState): cartState {
 function handleIncreaseQuantity(index: number, state: cartState): cartState {
   const updatedCart = state.cart.map((item, i) =>
     i === index ? { ...item, quantity: item.quantity + 1 } : item)
+  updateLocalStorage(updatedCart)
+
   return handleUpdateValues(updatedCart, state)
 }
 
@@ -74,12 +80,29 @@ function handleDecreaseQuantity(index: number, state: cartState): cartState {
   const updatedCart = state.cart.map((item, i) =>
     i === index ? { ...item, quantity: item.quantity - 1 } : item)
     .filter(item => item.quantity > 0);
+  updateLocalStorage(updatedCart)
+
   return handleUpdateValues(updatedCart, state)
 }
 
+// update cart values -> total, originalTotal and hasDiscount
 function handleUpdateValues(cart: CartItem[], state: cartState): cartState {
   const { total, originalTotal, hasDiscount } = calculateTotal(cart);
   return { ...state, cart, total, originalTotal, hasDiscount }
 }
 
+function handleCleanCart(state: cartState): cartState {
+  localStorage.clear()
+  return { ...state, cart: [], total: 0, originalTotal: null, hasDiscount: false }
+}
 
+
+// local storage functions
+function getLocalStorageItems() {
+  const value = localStorage.getItem("cart")
+  return value ? JSON.parse(value) as CartItem[] : []
+}
+
+function updateLocalStorage(cart: CartItem[]) {
+  localStorage.setItem("cart", JSON.stringify(cart))
+}
