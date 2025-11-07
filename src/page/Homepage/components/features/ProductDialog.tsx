@@ -64,7 +64,7 @@ export function ProductDialog({
         <div className="flex w-full flex-row justify-end">
           <button
             onClick={closeProduct}
-            className="relative ml-3 z-50 w-14 h-18 flex items-center justify-center hover:bg-[#C9A14A]/20 text-[#C9A14A] hover:text-white rounded-none transition-all duration-300 group"
+            className="cursor-pointer relative ml-3 z-50 w-14 h-18 flex items-center justify-center hover:bg-[#C9A14A]/20 text-[#C9A14A] hover:text-white rounded-none transition-all duration-300 group"
             aria-label="Fechar"
           >
             <X className="h-8 w-8 text-[#C9A14A] group-hover:text-white transition-colors stroke-[2.5]" />
@@ -139,7 +139,7 @@ export function ProductDialog({
         </div>
 
         {/* Informações do produto */}
-        <div className="flex flex-col justify-between bg-gradient-to-b from-[#1A1A1A] to-[#0F0F0F] p-[24px] md:p-0 md:pb-3 md:bg-none md:max-w-2/4 md:h-[570px]">
+        <div className="flex flex-col justify-between p-[24px] w-full md:p-0 md:pb-3 md:bg-none md:max-w-2/4 md:h-[570px]">
 
           <div className="flex flex-col gap-y-6">
             <DialogTitle className="text-3xl text-white leading-tight text-center">
@@ -221,7 +221,7 @@ export function ProductDialog({
   if (isMobile) {
     return (
       <Drawer open={open} onOpenChange={onOpenChange}>
-        <DrawerContent className="bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A] border-t-2 text-white p-0 flex flex-col rounded-none !max-h-[95vh] h-[95vh]">
+        <DrawerContent className="max-w-[90vw] mx-auto bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A] border-t-2 text-white p-0 flex flex-col rounded-none !max-h-[95vh] h-[95vh]">
           <div className="overflow-y-auto flex-1 overscroll-contain">
             <ProductContent isMobileDrawer={true} />
           </div>
