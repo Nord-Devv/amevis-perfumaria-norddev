@@ -25,17 +25,17 @@ export function Footer() {
                                 href="https://wa.me/558598039134"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-full bg-[#C9A14A] flex items-center justify-center hover:bg-[#B69142] transition-colors"
+                                className="w-10 h-10 rounded-full bg-[#8D021F] flex items-center justify-center hover:bg-[#580000] transition-colors"
                             >
-                                <WhatsAppIcon className="h-5 w-5 text-black" />
+                                <WhatsAppIcon className="h-5 w-5 text-white" />
                             </a>
                             <a
                                 href="https://instagram.com/ameviis"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-full bg-[#C9A14A] flex items-center justify-center hover:bg-[#B69142] transition-colors"
+                                className="w-10 h-10 rounded-full bg-[#8D021F] flex items-center justify-center hover:bg-[#580000] transition-colors"
                             >
-                                <Instagram className="h-5 w-5 text-black" />
+                                <Instagram className="h-5 w-5 text-white" />
                             </a>
                         </div>
                     </div>
@@ -74,10 +74,21 @@ export function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="pt-8 border-t border-[#C9A14A]/20">
+                <div className="pt-8 border-t border-[#8D021F]/20">
                     <div className="text-center text-sm text-gray-300">
                         <p>
                             © 2025 Amevi. Todos os direitos reservados.
+                        </p>
+                        <p>
+                            Desenvolvido por{" "}
+                            <a
+                                href="https://www.instagram.com/nord.devv/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "rgb(224, 149, 36)" }}
+                            >
+                                Nord Dev
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -85,4 +96,3 @@ export function Footer() {
         </footer>
     )
 }
-
