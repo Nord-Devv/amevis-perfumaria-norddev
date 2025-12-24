@@ -52,7 +52,7 @@ export function ProductCard({
 
         {/* Brand and Name - Fixed at top */}
         <div className="mb-2 lg:mb-1.5 flex-grow">
-          <p className="text-[#FF4D4D] text-[10px] uppercase tracking-widest mb-0.5 underline">
+          <p className="text-[#FF4D4D] text-[10px] uppercase tracking-widest mb-0.5">
             {brand}
           </p>
           <h3 className="text-white transition-colors duration-300 leading-tight text-sm">
