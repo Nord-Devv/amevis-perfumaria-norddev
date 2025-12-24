@@ -1,11 +1,11 @@
 :root {
   /* Cores customizadas Amevi - Dark Luxury */
   --black-bg: #0F0F0F;
-  --rose-burnt: #C08E8E;
-  --nude: #E3B7A0;
-  --gold-metallic: #C9A14A;
+  --scarlet-dark: #580000;
+  --scarlet-ligth: #A31919;
+  --primary-scarlet: #8D021F;
   --ice-white: #F8F8F8;
-  --hot-pink: #FF1F8F;
+  --primary-scarlet-variant: #FF4D4D;
   
   /* Cores do sistema baseadas na paleta Amevi Dark */
   --background: #0F0F0F;
@@ -14,13 +14,13 @@
   --card-foreground: #F8F8F8;
   --popover: #1A1A1A;
   --popover-foreground: #F8F8F8;
-  --primary: #FF1F8F;
+  --primary: var(--primary-scarlet-variant);
   --primary-foreground: #F8F8F8;
-  --secondary: #E3B7A0;
+  --secondary: var(--scarlet-ligth);
   --secondary-foreground: #0F0F0F;
   --muted: #2A2A2A;
-  --muted-foreground: #C08E8E;
-  --accent: #C9A14A;
+  --muted-foreground: var(--scarlet-dark);
+  --accent: var(--primary-scarlet);
   --accent-foreground: #0F0F0F;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
@@ -28,20 +28,20 @@
   --input: transparent;
   --input-background: #1A1A1A;
   --switch-background: #2A2A2A;
-  --ring: #FF1F8F;
-  --chart-1: #FF1F8F;
-  --chart-2: #C08E8E;
-  --chart-3: #C9A14A;
-  --chart-4: #E3B7A0;
+  --ring: var(--primary-scarlet-variant);
+  --chart-1: var(--primary-scarlet-variant);
+  --chart-2: var(--scarlet-dark);
+  --chart-3: var(--primary-scarlet);
+  --chart-4: var(--scarlet-ligth);
   --chart-5: #F8F8F8;
   --sidebar: #0F0F0F;
   --sidebar-foreground: #F8F8F8;
-  --sidebar-primary: #FF1F8F;
+  --sidebar-primary: var(--primary-scarlet-variant);
   --sidebar-primary-foreground: #F8F8F8;
-  --sidebar-accent: #E3B7A0;
+  --sidebar-accent: var(--scarlet-ligth);
   --sidebar-accent-foreground: #0F0F0F;
   --sidebar-border: rgba(255, 31, 143, 0.2);
-  --sidebar-ring: #FF1F8F;
+  --sidebar-ring: var(--primary-scarlet-variant);
 }
 
 .dark {

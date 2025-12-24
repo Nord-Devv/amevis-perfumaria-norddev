@@ -38,33 +38,33 @@ export function CartDrawer() {
         <Button
           variant="ghost"
           size="icon"
-          className="relative  border-[#C9A14A]/30 text-white hover:bg-white/10 hover:border-[#C9A14A] hover:text-[#C9A14A] rounded-[0px]"
+          className="relative  border-[#8D021F]/30 text-white hover:bg-white/10 hover:border-[#8D021F] hover:text-[#FF4D4D] rounded-[0px]"
         >
           <ShoppingCart className="h-5 w-5" />
           {cart.length > 0 && (
-            <Badge className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 bg-[#C9A14A] hover:bg-white/10 hover:text-[#C9A14A] border-0 text-xs">
+            <Badge className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 bg-[#8D021F] hover:bg-white/10 hover:text-[#FF4D4D] border-0 text-xs">
               {cart.length}
             </Badge>
           )}
         </Button>
       </SheetTrigger>
-      <SheetContent className="w-full sm:max-w-sm bg-gradient-to-b from-[#0F0F0F] to-[#1A1A1A] border-l-2 border-[#C9A14A]/30">
+      <SheetContent className="w-full sm:max-w-sm bg-gradient-to-b from-[#0F0F0F] to-[#1A1A1A] border-l-2 border-[#8D021F]/30">
         <SheetHeader>
           <div className="flex items-center justify-between">
             <SheetTitle className="text-white flex items-center gap-2 font-['Cinzel']">
-              <ShoppingCart className="h-5 w-5 text-[#C9A14A]" />
+              <ShoppingCart className="h-5 w-5 text-[#FF4D4D]" />
               Meu Carrinho
             </SheetTitle>
             <SheetClose asChild>
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-8 w-8 rounded-none hover:bg-[#C9A14A]/20 text-[#C9A14A] hover:border-[#C9A14A] hover:text-[#C9A14A]">
+                className="h-8 w-8 rounded-none hover:bg-[#8D021F]/20 text-[#FF4D4D] hover:border-[#8D021F] hover:text-[#FF4D4D]">
                 <X className="h-5 w-5" />
               </Button>
             </SheetClose>
           </div>
-          <SheetDescription className="text-[#C9A14A]/70">
+          <SheetDescription className="text-[#FF4D4D]/70">
             {cart.length === 0
               ? "Seu carrinho está vazio"
               : `${cart.length} ${cart.length === 1 ? "item" : "itens"} selecionado${cart.length === 1 ? "" : "s"}`}
@@ -74,13 +74,13 @@ export function CartDrawer() {
         <div className="mt-6 flex flex-col h-[calc(100vh-200px)]">
           {cart.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center">
-              <div className="w-24 h-24 rounded-full bg-[#C9A14A]/10 flex items-center justify-center mb-4 border border-[#C9A14A]/30">
-                <ShoppingCart className="h-12 w-12 text-[#C9A14A]" />
+              <div className="w-24 h-24 rounded-full bg-[#8D021F]/10 flex items-center justify-center mb-4 border border-[#8D021F]/30">
+                <ShoppingCart className="h-12 w-12 text-[#FF4D4D]" />
               </div>
               <p className="text-white/80 text-[15px]">
                 Nenhum produto adicionado ainda
               </p>
-              <p className="text-[#C9A14A]/60 text-sm mt-2 text-[13px]">
+              <p className="text-[#FF4D4D]/60 text-sm mt-2 text-[13px]">
                 Explore nosso catálogo e adicione seus itens
                 favoritos
               </p>
@@ -91,12 +91,12 @@ export function CartDrawer() {
                 {cart.map((item, index) => (
                   <div
                     key={index}
-                    className="mx-auto bg-gradient-to-br from-[#1A1A1A] to-[#252525] rounded-none p-4 border border-[#C9A14A]/30 shadow-lg relative overflow-hidden group hover:border-[#C9A14A]/50 transition-all duration-300"
+                    className="mx-auto bg-gradient-to-br from-[#1A1A1A] to-[#252525] rounded-none p-4 border border-[#8D021F]/30 shadow-lg relative overflow-hidden group hover:border-[#8D021F]/50 transition-all duration-300"
                   >
 
                     <div className="space-y-3 relative z-10">
                       <div className="flex gap-4">
-                        <div className="w-20 h-20 rounded-none overflow-hidden bg-[#0F0F0F] ring-2 ring-[#C9A14A]/40 flex-shrink-0">
+                        <div className="w-20 h-20 rounded-none overflow-hidden bg-[#0F0F0F] ring-2 ring-[#8D021F]/40 flex-shrink-0">
                           <ImageWithFallback
                             src={item.image}
                             alt={item.name}
@@ -107,13 +107,13 @@ export function CartDrawer() {
                           <h4 className="text-white truncate font-['Cinzel']">
                             {item.name}
                           </h4>
-                          <p className="text-[#C9A14A] text-sm">
+                          <p className="text-[#FF4D4D] text-sm">
                             {item.brand}
                           </p>
                           <p className="text-white/60 text-xs mt-1">
                             {item.category}
                           </p>
-                          <p className="text-[#C9A14A] mt-2">
+                          <p className="text-[#FF4D4D] mt-2">
                             {item.price}
                           </p>
                         </div>
@@ -128,7 +128,7 @@ export function CartDrawer() {
                       </div>
 
                       {/* Quantity Controls */}
-                      <div className="flex items-center justify-between pt-2 border-t border-[#C9A14A]/20">
+                      <div className="flex items-center justify-between pt-2 border-t border-[#8D021F]/20">
                         <span className="text-white/70 text-sm">Quantidade:</span>
                         <div className="flex items-center gap-2">
                           <Button
@@ -137,9 +137,9 @@ export function CartDrawer() {
                             onClick={() => {
                               decreaseQuantity(index);
                             }}
-                            className="h-7 w-7 hover:bg-[#C9A14A]/20 border border-[#C9A14A]/30 hover:border-[#C9A14A] rounded-none"
+                            className="h-7 w-7 hover:bg-[#8D021F]/20 border border-[#8D021F]/30 hover:border-[#8D021F] rounded-none"
                           >
-                            <Minus className="h-3 w-3 text-[#C9A14A]" />
+                            <Minus className="h-3 w-3 text-[#FF4D4D]" />
                           </Button>
                           <span className="text-white min-w-[2rem] text-center">
                             {item.quantity}
@@ -148,9 +148,9 @@ export function CartDrawer() {
                             variant="ghost"
                             size="icon"
                             onClick={() => increaseQuantity(index)}
-                            className="h-7 w-7 hover:bg-[#C9A14A]/20 border border-[#C9A14A]/30 hover:border-[#C9A14A] rounded-none"
+                            className="h-7 w-7 hover:bg-[#8D021F]/20 border border-[#8D021F]/30 hover:border-[#8D021F] rounded-none"
                           >
-                            <Plus className="h-3 w-3 text-[#C9A14A]" />
+                            <Plus className="h-3 w-3 text-[#FF4D4D]" />
                           </Button>
                         </div>
                       </div>
@@ -159,9 +159,9 @@ export function CartDrawer() {
                 ))}
               </div>
 
-              <div className="border-t mx-auto border-[#C9A14A]/30 max-w-[98%] pt-4 mt-4 space-y-3">
+              <div className="border-t mx-auto border-[#8D021F]/30 max-w-[98%] pt-4 mt-4 space-y-3">
                 {/* Total */}
-                <div className="bg-gradient-to-r from-[#C9A14A]/10 to-[#C9A14A]/5 border border-[#C9A14A]/40 rounded-none p-4 mb-3">
+                <div className="bg-gradient-to-r from-[#8D021F]/10 to-[#8D021F]/5 border border-[#8D021F]/40 rounded-none p-4 mb-3">
                   <div className="space-y-2">
                     {hasDiscount && originalTotal && (
                       <div className="flex justify-between items-center">
@@ -175,7 +175,7 @@ export function CartDrawer() {
                       <span className="text-white uppercase tracking-wider">
                         {hasDiscount ? 'Total com Desconto:' : 'Total:'}
                       </span>
-                      <span className="text-[#C9A14A] tracking-wider">
+                      <span className="text-[#FF4D4D] tracking-wider">
                         R$ {total.toFixed(2).replace('.', ',')}
                       </span>
                     </div>
@@ -184,7 +184,7 @@ export function CartDrawer() {
 
                 <Button
                   onClick={handleWhatsAppCheckout}
-                  className="w-full bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] text-black rounded-none shadow-lg shadow-[#C9A14A]/30 border border-[#C9A14A] uppercase tracking-wider transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] text-white rounded-none shadow-lg shadow-[#8D021F]/30 border border-[#8D021F] uppercase tracking-wider transition-all duration-300"
                   size="lg"
                 >
                   <WhatsAppIcon className="mr-2 h-5 w-5" />

@@ -29,21 +29,21 @@ export const SectionCatalog = () => {
         <div className="text-center mb-12">
           {/* Decorative top line */}
           <div className="flex items-center justify-center mb-6">
-            <div className="h-px bg-gradient-to-r from-transparent via-[#C9A14A] to-transparent w-32"></div>
-            <div className="w-2 h-2 bg-[#C9A14A] rotate-45 mx-4"></div>
-            <div className="h-px bg-gradient-to-r from-transparent via-[#C9A14A] to-transparent w-32"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#8D021F] to-transparent w-32"></div>
+            <div className="w-2 h-2 bg-[#8D021F] rotate-45 mx-4"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#8D021F] to-transparent w-32"></div>
           </div>
 
           <h2 className="text-5xl text-white mb-4 tracking-tight">
             Nosso Catálogo
           </h2>
-          <p className="text-[#C9A14A]/80 tracking-wide uppercase text-sm">
+          <p className="text-[#FF4D4D]/80 tracking-wide uppercase text-sm">
             Explore nossa coleção de fragrâncias de luxo
           </p>
 
           {/* Decorative bottom line */}
           <div className="flex items-center justify-center mt-6">
-            <div className="h-px bg-gradient-to-r from-transparent via-[#C9A14A]/50 to-transparent w-24"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#8D021F]/50 to-transparent w-24"></div>
           </div>
         </div>
 
@@ -54,22 +54,22 @@ export const SectionCatalog = () => {
             onValueChange={handleCategoryChange}
             className="w-full max-w-3xl"
           >
-            <TabsList className="grid w-full grid-cols-3 bg-gradient-to-r from-[#1A1A1A] via-[#252525] to-[#1A1A1A] border border-[#C9A14A]/30 p-1 rounded-none h-12">
+            <TabsList className="grid w-full grid-cols-3 bg-gradient-to-r from-[#1A1A1A] via-[#252525] to-[#1A1A1A] border border-[#8D021F]/30 p-1 rounded-none h-12">
               <TabsTrigger
                 value="Perfumaria"
-                className="text-[#C9A14A]/70 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#C9A14A] data-[state=active]:to-[#B69142] data-[state=active]:text-black uppercase tracking-wider text-[14px] rounded-none transition-colors duration-200"
+                className="text-[#FF4D4D]/70 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase tracking-wider text-[14px] rounded-none transition-colors duration-200"
               >
                 Perfumaria
               </TabsTrigger>
               <TabsTrigger
                 value="Maquiagem"
-                className="text-[#C9A14A]/70 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#C9A14A] data-[state=active]:to-[#B69142] data-[state=active]:text-black uppercase text-[14px] tracking-wider rounded-none transition-colors duration-200"
+                className="text-[#FF4D4D]/70 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase text-[14px] tracking-wider rounded-none transition-colors duration-200"
               >
                 Maquiagem
               </TabsTrigger>
               <TabsTrigger
                 value="Autocuidado"
-                className="text-[#C9A14A]/70 text-center data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#C9A14A] data-[state=active]:to-[#B69142] data-[state=active]:text-black uppercase tracking-wider text-[14px] rounded-none transition-colors duration-200"
+                className="text-[#FF4D4D]/70 text-center data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase tracking-wider text-[14px] rounded-none transition-colors duration-200"
               >
                 Autocuidado
               </TabsTrigger>
@@ -83,7 +83,7 @@ export const SectionCatalog = () => {
             <div className="flex justify-center mb-6">
               <Button
                 onClick={() => setShowFilters(!showFilters)}
-                className="bg-gradient-to-r from-[#2A2A2A] to-[#1A1A1A] hover:from-[#3A3A3A] hover:to-[#2A2A2A] border border-[#C9A14A]/30 text-[#C9A14A] px-8 py-3 rounded-none uppercase tracking-widest text-xs transition-all duration-300 flex items-center gap-2"
+                className="bg-gradient-to-r from-[#2A2A2A] to-[#1A1A1A] hover:from-[#3A3A3A] hover:to-[#2A2A2A] border border-[#8D021F]/30 text-[#FF4D4D] px-8 py-3 rounded-none uppercase tracking-widest text-xs transition-all duration-300 flex items-center gap-2"
               >
                 {showFilters ? (
                   <>
@@ -121,7 +121,7 @@ export const SectionCatalog = () => {
                     <TabsList className="bg-transparent border-0 p-0">
                       <TabsTrigger
                         value="Todos"
-                        className="min-w-[280px] px-6 py-3 bg-transparent border border-[#8B7355]/20 text-[#8B7355]/50 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8B7355]/40 data-[state=active]:via-[#C9A14A]/30 data-[state=active]:to-[#8B7355]/40 data-[state=active]:text-[#C9A14A] data-[state=active]:border-[#C9A14A]/60 uppercase tracking-wider text-xs sm:text-sm rounded-none transition-all duration-300 hover:border-[#8B7355]/40 hover:text-[#8B7355]/70"
+                        className="min-w-[280px] px-6 py-3 bg-transparent border border-[#A31919]/20 text-[#FF4D4D]/50 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#A31919]/40 data-[state=active]:via-[#8D021F]/30 data-[state=active]:to-[#A31919]/40 data-[state=active]:text-[#FF4D4D] data-[state=active]:border-[#8D021F]/60 uppercase tracking-wider text-xs sm:text-sm rounded-none transition-all duration-300 hover:border-[#A31919]/40 hover:text-[#FF4D4D]/70"
                       >
                         Todos
                       </TabsTrigger>
@@ -137,7 +137,7 @@ export const SectionCatalog = () => {
                           <TabsTrigger
                             key={type}
                             value={type}
-                            className="px-5 py-2 bg-transparent border border-[#8B7355]/20 text-[#8B7355]/50 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8B7355]/40 data-[state=active]:via-[#C9A14A]/30 data-[state=active]:to-[#8B7355]/40 data-[state=active]:text-[#C9A14A] data-[state=active]:border-[#C9A14A]/60 uppercase tracking-wider text-[10px] sm:text-xs rounded-none transition-all duration-300 whitespace-nowrap hover:border-[#8B7355]/40 hover:text-[#8B7355]/70"
+                            className="px-5 py-2 bg-transparent border border-[#A31919]/20 text-[#FF4D4D]/50 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#A31919]/40 data-[state=active]:via-[#8D021F]/30 data-[state=active]:to-[#A31919]/40 data-[state=active]:text-[#FF4D4D] data-[state=active]:border-[#8D021F]/60 uppercase tracking-wider text-[10px] sm:text-xs rounded-none transition-all duration-300 whitespace-nowrap hover:border-[#A31919]/40 hover:text-[#FF4D4D]/70"
                           >
                             {type}
                           </TabsTrigger>
@@ -176,8 +176,8 @@ export const SectionCatalog = () => {
                         className={`min-w-[80px] px-4 py-2 border rounded-none transition-all duration-300 uppercase tracking-wider text-[10px] sm:text-xs ${selectedSubcategory.includes(
                           subcategory,
                         )
-                          ? "bg-gradient-to-r from-[#8B7355]/40 via-[#C9A14A]/30 to-[#8B7355]/40 text-[#C9A14A] border-[#C9A14A]/60"
-                          : "bg-transparent border-[#8B7355]/20 text-[#8B7355]/50 hover:border-[#8B7355]/40 hover:text-[#8B7355]/70"
+                          ? "bg-gradient-to-r from-[#A31919]/40 via-[#8D021F]/30 to-[#A31919]/40 text-[#FF4D4D] border-[#8D021F]/60"
+                          : "bg-transparent border-[#A31919]/20 text-[#FF4D4D]/50 hover:border-[#A31919]/40 hover:text-[#FF4D4D]/70"
                           }`}
                       >
                         {subcategory}

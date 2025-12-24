@@ -16,13 +16,13 @@ export function ButtonLoadMore({visibleProducts, setVisibleProducts, filteredPro
                         onClick={() =>
                             setVisibleProducts((prev) => prev + 9)
                         }
-                        className="bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] text-black px-12 py-6 rounded-none uppercase tracking-widest shadow-lg shadow-[#C9A14A]/30 hover:shadow-[#C9A14A]/50 transition-all duration-300 relative overflow-hidden group"
+                        className="bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] text-white px-12 py-6 rounded-none uppercase tracking-widest shadow-lg shadow-[#8D021F]/30 hover:shadow-[#8D021F]/50 transition-all duration-300 relative overflow-hidden group"
                     >
                         {/* Decorative corners */}
-                        <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-black/20"></div>
-                        <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-black/20"></div>
-                        <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-black/20"></div>
-                        <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-black/20"></div>
+                        <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-white/20"></div>
+                        <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-white/20"></div>
+                        <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-white/20"></div>
+                        <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-white/20"></div>
 
                         <span className="relative z-10">
                             Carregar Mais Produtos
@@ -36,4 +36,3 @@ export function ButtonLoadMore({visibleProducts, setVisibleProducts, filteredPro
         </>
     )
 }
-

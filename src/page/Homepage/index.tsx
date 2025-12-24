@@ -60,7 +60,7 @@ export function HomePage() {
                     .getElementById("catalog")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] shadow-lg shadow-[#C9A14A]/20 hover:shadow-[#C9A14A]/40 text-black px-10 py-6 transition-all duration-300 rounded-none uppercase tracking-wider"
+                className="bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] shadow-lg shadow-[#8D021F]/20 hover:shadow-[#8D021F]/40 text-white px-10 py-6 transition-all duration-300 rounded-none uppercase tracking-wider"
               >
                 Ver Catálogo
               </Button>

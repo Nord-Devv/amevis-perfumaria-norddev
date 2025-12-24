@@ -40,9 +40,9 @@ export const ShippingCalculator = () => {
 
 
   return (
-    <div className="bg-gradient-to-br from-[#2A2A2A] to-[#1A1A1A] rounded-none p-5 border border-[#C9A14A]/30">
+    <div className="bg-gradient-to-br from-[#2A2A2A] to-[#1A1A1A] rounded-none p-5 border border-[#8D021F]/30">
       <div className="flex items-center gap-2 mb-4">
-        <Truck className="h-5 w-5 text-[#C9A14A]" />
+        <Truck className="h-5 w-5 text-[#FF4D4D]" />
         <h4 className="text-white uppercase tracking-wider text-sm">
           Calcular Frete
         </h4>
@@ -53,22 +53,22 @@ export const ShippingCalculator = () => {
           value={cep}
           onChange={handleCepChange}
           maxLength={8}
-          className="flex-1 bg-[#0F0F0F] border-[#C9A14A]/40 focus-visible:ring-[#C9A14A] text-white placeholder:text-gray-500 rounded-none"
+          className="flex-1 bg-[#0F0F0F] border-[#8D021F]/40 focus-visible:ring-[#8D021F] text-white placeholder:text-gray-500 rounded-none"
         />
         <Button
           onClick={calculateShipping}
           disabled={cep.length !== 8 || calculating}
-          className="bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] text-black rounded-none uppercase tracking-wider"
+          className="bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] text-white rounded-none uppercase tracking-wider"
           size="sm"
         >
           {calculating ? "..." : "OK"}
         </Button>
       </div>
       {shippingInfo && (
-        <div className="mt-4 pt-4 border-t border-[#C9A14A]/20">
+        <div className="mt-4 pt-4 border-t border-[#8D021F]/20">
           <div className="flex justify-between text-sm mb-2">
             <span className="text-gray-400">Frete:</span>
-            <span className="text-[#C9A14A]">
+            <span className="text-[#FF4D4D]">
               {shippingInfo.price}
             </span>
           </div>

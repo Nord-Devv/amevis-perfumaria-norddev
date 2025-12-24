@@ -64,10 +64,10 @@ export function ProductDialog({
         <div className="flex w-full flex-row justify-end">
           <button
             onClick={closeProduct}
-            className="cursor-pointer relative ml-3 z-50 w-14 h-18 flex items-center justify-center hover:bg-[#C9A14A]/20 text-[#C9A14A] hover:text-white rounded-none transition-all duration-300 group"
+            className="cursor-pointer relative ml-3 z-50 w-14 h-18 flex items-center justify-center hover:bg-[#FF4D4D]/20 text-[#FF4D4D] hover:text-white rounded-none transition-all duration-300 group"
             aria-label="Fechar"
           >
-            <X className="h-8 w-8 text-[#C9A14A] group-hover:text-white transition-colors stroke-[2.5]" />
+            <X className="h-8 w-8 text-[#FF4D4D] group-hover:text-white transition-colors stroke-[2.5]" />
           </button>
         </div>
         {/* Header com padding */}
@@ -77,8 +77,8 @@ export function ProductDialog({
               <div className="flex items-start gap-3 flex-wrap sm:flex-nowrap">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-2">
-                    <Sparkles className="h-5 w-5 text-[#C9A14A]" />
-                    <DrawerDescription className="text-[#C9A14A] uppercase tracking-widest text-xs">
+                    <Sparkles className="h-5 w-5 text-[#FF4D4D]" />
+                    <DrawerDescription className="text-[#FF4D4D] uppercase tracking-widest text-xs">
                       {product.brand}
                     </DrawerDescription>
                   </div>
@@ -86,7 +86,7 @@ export function ProductDialog({
                     {product.name}
                   </DrawerTitle>
                 </div>
-                <Badge className="bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] text-black border-0 uppercase tracking-wider rounded-none flex-shrink-0">
+                <Badge className="bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] text-white border-0 uppercase tracking-wider rounded-none flex-shrink-0">
                   {product.category}
                 </Badge>
               </div>
@@ -96,8 +96,8 @@ export function ProductDialog({
               <div className="flex items-start gap-3">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <Sparkles className="h-5 w-5 text-[#C9A14A]" />
-                    <DialogDescription className="text-[#C9A14A] uppercase tracking-widest text-xs">
+                    <Sparkles className="h-5 w-5 text-[#FF4D4D]" />
+                    <DialogDescription className="text-[#FF4D4D] uppercase tracking-widest text-xs">
                       {product.brand}
                     </DialogDescription>
                   </div>
@@ -105,7 +105,7 @@ export function ProductDialog({
                   {/*   {product.name} */}
                   {/* </DialogTitle> */}
                 </div>
-                <Badge className="bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] text-black border-0 uppercase tracking-wider rounded-none mx-[24px] my-[0px] mt-[0px] mr-[40px] mb-[0px] ml-[24px]">
+                <Badge className="bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] text-white border-0 uppercase tracking-wider rounded-none mx-[24px] my-[0px] mt-[0px] mr-[40px] mb-[0px] ml-[24px]">
                   {product.category}
                 </Badge>
               </div>
@@ -118,7 +118,7 @@ export function ProductDialog({
       </div>
 
       {/* Decorative line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-[#C9A14A]/50 to-transparent"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-[#8D021F]/50 to-transparent"></div>
 
 
       {/*content */}
@@ -147,21 +147,21 @@ export function ProductDialog({
             </DialogTitle>
 
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#C9A14A]/30"></div>
-              <h3 className="text-[#C9A14A] uppercase tracking-wider text-sm">Descrição</h3>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#C9A14A]/30"></div>
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#8D021F]/30"></div>
+              <h3 className="text-[#FF4D4D] uppercase tracking-wider text-sm">Descrição</h3>
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#8D021F]/30"></div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               {product.description}
             </p>
             {product.notes && (
-              <div className="bg-gradient-to-br from-[#C9A14A]/10 to-[#C9A14A]/5 rounded-none p-5 border border-[#C9A14A]/40 shadow-inner relative overflow-hidden">
+              <div className="bg-gradient-to-br from-[#8D021F]/10 to-[#8D021F]/5 rounded-none p-5 border border-[#8D021F]/40 shadow-inner relative overflow-hidden">
                 {/* Decorative corner */}
-                <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#C9A14A]/20"></div>
+                <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#8D021F]/20"></div>
 
                 <div className="flex items-center gap-2 mb-3">
-                  <Sparkles className="h-4 w-4 text-[#C9A14A]" />
-                  <h3 className="text-[#C9A14A] uppercase tracking-wider text-sm">
+                  <Sparkles className="h-4 w-4 text-[#FF4D4D]" />
+                  <h3 className="text-[#FF4D4D] uppercase tracking-wider text-sm">
                     Principais Notas
                   </h3>
                 </div>
@@ -171,12 +171,12 @@ export function ProductDialog({
               </div>
             )}
             {/* Price with decorative elements */}
-            <div className="bg-gradient-to-r from-[#C9A14A]/5 via-[#C9A14A]/10 to-[#C9A14A]/5 p-4 border border-[#C9A14A]/30 rounded-none">
+            <div className="bg-gradient-to-r from-[#8D021F]/5 via-[#8D021F]/10 to-[#8D021F]/5 p-4 border border-[#8D021F]/30 rounded-none">
               <div className="flex items-center justify-between">
                 <span className="text-gray-400 uppercase tracking-wider text-xs">Preço</span>
                 <div className="flex items-center gap-2">
-                  <div className="h-px w-8 bg-[#C9A14A]/30"></div>
-                  <span className="text-3xl text-[#C9A14A] tracking-tight text-[20px]">
+                  <div className="h-px w-8 bg-[#8D021F]/30"></div>
+                  <span className="text-3xl text-[#FF4D4D] tracking-tight text-[20px]">
                     {product.price}
                   </span>
                 </div>
@@ -192,7 +192,7 @@ export function ProductDialog({
             <Button
               onClick={handleAddItemToCart}
               variant="outline"
-              className="w-full bg-transparent border-2 border-[#C9A14A] text-[#C9A14A] hover:bg-[#C9A14A]/10 hover:text-[#C9A14A] rounded-none h-12 uppercase tracking-wider transition-all duration-300"
+              className="w-full bg-transparent border-2 border-[#8D021F] text-[#FF4D4D] hover:bg-[#8D021F]/10 hover:text-[#FF4D4D] rounded-none h-12 uppercase tracking-wider transition-all duration-300"
               size="lg"
             >
               <ShoppingCart className="h-5 w-5 mr-2" />
@@ -201,7 +201,7 @@ export function ProductDialog({
 
             <Button
               onClick={handleBuySingleProduct}
-              className="w-full bg-gradient-to-r from-[#C9A14A] to-[#B69142] hover:from-[#B69142] hover:to-[#A67F38] text-black rounded-none h-12 uppercase tracking-wider shadow-lg shadow-[#C9A14A]/30 hover:shadow-[#C9A14A]/50 transition-all duration-300"
+              className="w-full bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] text-white rounded-none h-12 uppercase tracking-wider shadow-lg shadow-[#8D021F]/30 hover:shadow-[#8D021F]/50 transition-all duration-300"
               size="lg"
             >
               <WhatsAppIcon className="h-5 w-5 mr-2" />
@@ -221,7 +221,7 @@ export function ProductDialog({
   if (isMobile) {
     return (
       <Drawer open={open} onOpenChange={onOpenChange}>
-        <DrawerContent className="max-w-[90vw] mx-auto bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A] border-t-2 text-white p-0 flex flex-col rounded-none !max-h-[95vh] h-[95vh]">
+        <DrawerContent className="max-w-[90vw] mx-auto bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#8D021F] border-t-2 text-white p-0 flex flex-col rounded-none !max-h-[95vh] h-[95vh]">
           <div className="overflow-y-auto flex-1 overscroll-contain">
             <ProductContent isMobileDrawer={true} />
           </div>
@@ -232,7 +232,7 @@ export function ProductDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#C9A14A] border-2 text-white max-w-full min-h-[90vh] md:min-h-[85vh] md:pb-2 overflow-y-auto p-0 flex flex-col rounded-none shadow-2xl shadow-[#C9A14A]/30">
+      <DialogContent className="bg-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#8D021F] border-2 text-white max-w-full min-h-[90vh] md:min-h-[85vh] md:pb-2 overflow-y-auto p-0 flex flex-col rounded-none shadow-2xl shadow-[#8D021F]/30">
         <ProductContent />
       </DialogContent>
     </Dialog>

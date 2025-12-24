@@ -9,7 +9,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#C9A14A]/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#8D021F]/20">
       <div className="w-full px-6 py-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-12">
@@ -26,14 +26,14 @@ export function Header() {
               <a
                 href="#home"
                 onClick={(e) => handleSmoothScroll(e, "home")}
-                className="text-white hover:text-[#C9A14A] transition-colors text-[16px]"
+                className="text-white hover:text-[#FF4D4D] transition-colors text-[16px]"
               >
                 Início
               </a>
               <a
                 href="#catalog"
                 onClick={(e) => handleSmoothScroll(e, "catalog")}
-                className="text-white hover:text-[#C9A14A] transition-colors text-sm text-[16px]"
+                className="text-white hover:text-[#FF4D4D] transition-colors text-sm text-[16px]"
               >
                 Catálogo
               </a>
