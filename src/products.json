@@ -1,260 +1,246 @@
 [
   {
-  "name": "Brand Collection 297",
-  "brand": "Brand Collection",
-  "price": "R$75, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610477/Brand-Collection-297-Eau-de-Parfum_htqdgd.webp",
-  "description": "Perfume feminino floral frutado moderno, em concentração Eau de Parfum.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral",
-      "Frutado moderno"
-    ]
-  }
-},
-
+    "name": "Brand Collection 297",
+    "brand": "Brand Collection",
+    "price": "R$75, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610477/Brand-Collection-297-Eau-de-Parfum_htqdgd.webp",
+    "description": "Perfume feminino floral frutado moderno, em concentração Eau de Parfum.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado moderno"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection 324",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610477/Brand-Collection-324_rchwm6.webp",
-  "description": "Perfume feminino floral adocicado em concentração Eau de Parfum.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral adocicado"
-    ]
-  }
-},
-
+    "name": "Brand Collection 324",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610477/Brand-Collection-324_rchwm6.webp",
+    "description": "Perfume feminino floral adocicado em concentração Eau de Parfum.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral adocicado"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection 332 – Glam",
-  "brand": "Brand Collection",
-  "price": "R$75, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610478/Brand-Collection-332-Glam_bjo7o1.webp",
-  "description": "Perfume feminino doce intenso, com perfil noturno e estilo glamouroso, ideal para baladas.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Doce intenso",
-      "Noturno"
-    ]
-  }
-},
-
+    "name": "Brand Collection 332 – Glam",
+    "brand": "Brand Collection",
+    "price": "R$75, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610478/Brand-Collection-332-Glam_bjo7o1.webp",
+    "description": "Perfume feminino doce intenso, com perfil noturno e estilo glamouroso, ideal para baladas.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Doce intenso",
+        "Noturno"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 014",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610479/Brand-Collection-No-014-Eau-de-Parfum-25m_lnggi8.webp",
-  "description": "Perfume feminino floral elegante, em concentração Eau de Parfum.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral elegante"
-    ]
-  }
-},
-
+    "name": "Brand Collection Nº 014",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610479/Brand-Collection-No-014-Eau-de-Parfum-25m_lnggi8.webp",
+    "description": "Perfume feminino floral elegante, em concentração Eau de Parfum.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral elegante"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 021",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610503/Brand-Collection-No-021-Eau-de-Parfum-de-25ml_tabhle.webp",
-  "description": "Perfume feminino floral adocicado, ideal para uso no dia a dia.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral adocicado"
-    ]
-  }
-},
-
+    "name": "Brand Collection Nº 021",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610503/Brand-Collection-No-021-Eau-de-Parfum-de-25ml_tabhle.webp",
+    "description": "Perfume feminino floral adocicado, ideal para uso no dia a dia.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral adocicado"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 069",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610503/Brand-Collection-No-069-Eau-de-Parfum_ef6ui0.webp",
-  "description": "Perfume feminino de perfil doce oriental, intenso e envolvente.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Doce oriental"
-    ]
-  }
-},
-
+    "name": "Brand Collection Nº 069",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610503/Brand-Collection-No-069-Eau-de-Parfum_ef6ui0.webp",
+    "description": "Perfume feminino de perfil doce oriental, intenso e envolvente.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Doce oriental"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 116",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-No-116-Eau-de-Parfum_e02evc.webp",
-  "description": "Perfume feminino de perfil floral amadeirado leve, equilibrado e elegante.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral amadeirado leve"
-    ]
-  }
-},
-
+    "name": "Brand Collection Nº 116",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-No-116-Eau-de-Parfum_e02evc.webp",
+    "description": "Perfume feminino de perfil floral amadeirado leve, equilibrado e elegante.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral amadeirado leve"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 105",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610503/Brand-Collection-No-105-Eau-de-Parfum_oy97pq.webp",
-  "description": "Perfume feminino de perfil floral doce, delicado e envolvente.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral doce"
-    ]
-  }
-},
-
+    "name": "Brand Collection Nº 105",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610503/Brand-Collection-No-105-Eau-de-Parfum_oy97pq.webp",
+    "description": "Perfume feminino de perfil floral doce, delicado e envolvente.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral doce"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 159",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-No-159_qscb8j.webp",
-  "description": "Perfume feminino com perfil doce sofisticado, elegante e envolvente.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Doce sofisticado"
-    ]
-  }
-},
+    "name": "Brand Collection Nº 159",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-No-159_qscb8j.webp",
+    "description": "Perfume feminino com perfil doce sofisticado, elegante e envolvente.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Doce sofisticado"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 173",
-  "brand": "Brand Collection",
-  "price": "R$75, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-No-173_ms6t9l.webp",
-  "description": "Perfume feminino de perfil floral oriental, marcante e envolvente.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral oriental"
-    ]
-  }
-}
-,
-
+    "name": "Brand Collection Nº 173",
+    "brand": "Brand Collection",
+    "price": "R$75, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-No-173_ms6t9l.webp",
+    "description": "Perfume feminino de perfil floral oriental, marcante e envolvente.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral oriental"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 151",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-No-151-Eau-de-Parfum_mv1ccm.webp",
-  "description": "Perfume feminino de perfil floral clássico, elegante e atemporal.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral clássico"
-    ]
-  }
-},
-
+    "name": "Brand Collection Nº 151",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-No-151-Eau-de-Parfum_mv1ccm.webp",
+    "description": "Perfume feminino de perfil floral clássico, elegante e atemporal.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral clássico"
+      ]
+    }
+  },
   {
-  "name": "Durrat Al Aroos",
-  "brand": "Al Wataniah",
-  "price": "R$ 200,00",
-  "category": "Perfumaria",
-  "productType": "Comum",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Durrat-Al-Aroos-Al-Wataniah-Eau-de-Parfum_fruwx0.webp",
-  "description": "Perfume feminino elegante e marcante, com assinatura oriental floral e excelente presença.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral oriental",
-      "Muito feminino"
-    ]
-  }
-},
-
+    "name": "Durrat Al Aroos",
+    "brand": "Al Wataniah",
+    "price": "R$ 200,00",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Durrat-Al-Aroos-Al-Wataniah-Eau-de-Parfum_fruwx0.webp",
+    "description": "Perfume feminino elegante e marcante, com assinatura oriental floral e excelente presença.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral oriental",
+        "Muito feminino"
+      ]
+    }
+  },
   {
-  "name": "Brand Collection Nº 349",
-  "brand": "Brand Collection",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-N%C2%BA-349_f6eh8a.webp",
-  "description": "Perfume feminino com perfil doce intenso, marcante e envolvente.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Doce intenso"
-    ]
-  }
-},
-
+    "name": "Brand Collection Nº 349",
+    "brand": "Brand Collection",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610504/Brand-Collection-N%C2%BA-349_f6eh8a.webp",
+    "description": "Perfume feminino com perfil doce intenso, marcante e envolvente.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Doce intenso"
+      ]
+    }
+  },
   {
-  "name": "Musam Branco – A018",
-  "brand": "Ard Al Zaafaran",
-  "price": "R$ 75,00",
-  "category": "Perfumaria",
-  "productType": "Comum",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610607/Musam-Branco-A018_r8y1gb.webp",
-  "description": "Perfume feminino floral limpo e elegante, ideal para uso diurno.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Floral limpo",
-      "Elegante"
-    ]
-  }
-},
-
+    "name": "Musam Branco – A018",
+    "brand": "Ard Al Zaafaran",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610607/Musam-Branco-A018_r8y1gb.webp",
+    "description": "Perfume feminino floral limpo e elegante, ideal para uso diurno.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral limpo",
+        "Elegante"
+      ]
+    }
+  },
   {
     "name": "Ameerat Al Arab",
     "brand": "Asdaaf",
@@ -267,47 +253,49 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Floral adocicado", "Elegante", "Feminino"]
+      "base": [
+        "Floral adocicado",
+        "Elegante",
+        "Feminino"
+      ]
     }
   },
   {
-  "name": "NYC Scents Nº 022",
-  "brand": "NYC Scents",
-  "price": "R$65, 00",
-  "category": "Perfumaria",
-  "productType": "Brand",
-  "subcategory": "Feminino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610607/NYC-Scents-N%C2%BA-022_oijdsg.webp",
-  "description": "Perfume feminino de perfil urbano, com doçura moderna e estilo contemporâneo.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Urbano",
-      "Doce moderno"
-    ]
-  }
-},
-
+    "name": "NYC Scents Nº 022",
+    "brand": "NYC Scents",
+    "price": "R$65, 00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610607/NYC-Scents-N%C2%BA-022_oijdsg.webp",
+    "description": "Perfume feminino de perfil urbano, com doçura moderna e estilo contemporâneo.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Urbano",
+        "Doce moderno"
+      ]
+    }
+  },
   {
-  "name": "Arab Noble Wazeer",
-  "brand": "Provável casa árabe",
-  "price": "R$ 75,00",
-  "category": "Perfumaria",
-  "productType": "Comum",
-  "subcategory": "Masculino",
-  "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610607/Perfume-Arabe-Noble-Wazeer-Eau-Parfum-25ml_jo3afw.webp",
-  "description": "Perfume masculino de perfil amadeirado oriental, com alta fixação.",
-  "notes": {
-    "top": [],
-    "heart": [],
-    "base": [
-      "Amadeirado",
-      "Oriental"
-    ]
-  }
-},
-
+    "name": "Arab Noble Wazeer",
+    "brand": "Provável casa árabe",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Comum",
+    "subcategory": "Masculino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610607/Perfume-Arabe-Noble-Wazeer-Eau-Parfum-25ml_jo3afw.webp",
+    "description": "Perfume masculino de perfil amadeirado oriental, com alta fixação.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Amadeirado",
+        "Oriental"
+      ]
+    }
+  },
   {
     "name": "Best Brand Collection Nº 809",
     "brand": "Best Brand Collection",
@@ -320,7 +308,10 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Floral", "Frutado"]
+      "base": [
+        "Floral",
+        "Frutado"
+      ]
     }
   },
   {
@@ -335,7 +326,10 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Doce", "Floral"]
+      "base": [
+        "Doce",
+        "Floral"
+      ]
     }
   },
   {
@@ -350,7 +344,10 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Amadeirado", "Aromático"]
+      "base": [
+        "Amadeirado",
+        "Aromático"
+      ]
     }
   },
   {
@@ -365,7 +362,9 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Floral adocicado"]
+      "base": [
+        "Floral adocicado"
+      ]
     }
   },
   {
@@ -380,7 +379,10 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Floral branco", "Doce sofisticado"]
+      "base": [
+        "Floral branco",
+        "Doce sofisticado"
+      ]
     }
   },
   {
@@ -395,7 +397,10 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Amadeirado", "Doce"]
+      "base": [
+        "Amadeirado",
+        "Doce"
+      ]
     }
   },
   {
@@ -410,7 +415,10 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Baunilha", "Floral cremoso"]
+      "base": [
+        "Baunilha",
+        "Floral cremoso"
+      ]
     }
   },
   {
@@ -425,7 +433,9 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Âmbar doce"]
+      "base": [
+        "Âmbar doce"
+      ]
     }
   },
   {
@@ -440,7 +450,11 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Doce", "Floral", "Baunilha"]
+      "base": [
+        "Doce",
+        "Floral",
+        "Baunilha"
+      ]
     }
   },
   {
@@ -455,10 +469,13 @@
     "notes": {
       "top": [],
       "heart": [],
-      "base": ["Doce", "Cremoso", "Feminino"]
+      "base": [
+        "Doce",
+        "Cremoso",
+        "Feminino"
+      ]
     }
   },
-
   {
     "name": "Sauvage",
     "brand": "Christian Dior",
@@ -504,7 +521,7 @@
     "category": "Perfumaria",
     "productType": "Comum",
     "subcategory": "Feminino",
-    "image":"https://res.cloudinary.com/da59ikbyh/image/upload/v1762308204/c6bec870-4fd9-43f5-94c2-83215f5bc9a9_dgasz6.webp",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308204/c6bec870-4fd9-43f5-94c2-83215f5bc9a9_dgasz6.webp",
     "description": "Um buquê floral radiante e clássico, com Ylang-Ylang, Jasmim e Rosa. A essência da feminilidade absoluta.",
     "notes": {
       "top": [],
@@ -612,25 +629,6 @@
     }
   },
   {
-    "name": "Toy Boy",
-    "brand": "Moschino",
-    "price": "R$ 75,00",
-    "category": "Perfumaria",
-    "productType": "Brand",
-    "subcategory": "Masculino",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308144/brand_collection_394_inspiracao_toy_boy_moschino_25ml_1397_1_b54013852af058884809839255912807-a2beda814a02e586aa17367337599840-1024-1024_ehiqmp.webp",
-    "description": "Amadeirado Especiado inusitado. Abre com pera e pimenta rosa, surpreendendo com um coração floral de rosa e magnólia.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Amadeirado",
-        "Rosa",
-        "Pera"
-      ]
-    }
-  },
-  {
     "name": "Lady Million",
     "brand": "Paco Rabanne",
     "price": "R$ 39,90",
@@ -646,25 +644,6 @@
         "Floral",
         "Frutado",
         "Amadeirado"
-      ]
-    }
-  },
-  {
-    "name": "Fame",
-    "brand": "Brand Collection",
-    "price": "R$ 75,00",
-    "category": "Perfumaria",
-    "productType": "Brand",
-    "subcategory": "Feminino",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308144/365_z2jcs8.webp",
-    "description": "Uma fragrância Chipre Floral Frutada que exala luxo e ousadia, combinando manga suculenta com um buquê de jasmim cremoso e incenso.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Chipre",
-        "Floral",
-        "Manga"
       ]
     }
   },
@@ -707,28 +686,9 @@
     }
   },
   {
-    "name": "Scandal",
-    "brand": "Jean Paul Gaultier",
-    "price": "R$ 30,00",
-    "category": "Perfumaria",
-    "productType": "Body Splash",
-    "subcategory": "Feminino",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308233/IMG_6872_dblu23.webp",
-    "description": "Versão Body Splash da icônica fragrância, ideal para prolongar a sensação de banho.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Chipre",
-        "Floral",
-        "Mel"
-      ]
-    }
-  },
-  {
     "name": "Skateboard Heroes",
     "brand": "Brand Collection",
-    "price": "R$ 75,00",
+    "price": "R$ 65,00",
     "category": "Perfumaria",
     "productType": "Brand",
     "subcategory": "Masculino",
@@ -760,25 +720,6 @@
         "Oriental",
         "Baunilha",
         "Amêndoa"
-      ]
-    }
-  },
-  {
-    "name": "Musamam White Intense ",
-    "brand": "Lattafa",
-    "price": "R$ 75,00",
-    "category": "Perfumaria",
-    "productType": "Brand",
-    "subcategory": "Unissex",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308144/whatsapp-image-2024-10-09-at-120416_1080x1080_jtqt8k.webp",
-    "description": "Uma fragrância amadeirada cremosa e intensa, com notas cítricas de abertura, suavizadas por âmbar e madeiras de Oud.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Amadeirado",
-        "Aromático",
-        "Âmbar"
       ]
     }
   },
@@ -859,63 +800,6 @@
     }
   },
   {
-    "name": "Fakhar Rose",
-    "brand": "Lattafa",
-    "price": "R$ 75,00",
-    "category": "Perfumaria",
-    "productType": "Brand",
-    "subcategory": "Feminino",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308165/PF31_vbrkz4.webp",
-    "description": "Um amadeirado aromático fresco e limpo, com ótima performance para o uso diário.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Floral",
-        "Frutado",
-        "Baunilha"
-      ]
-    }
-  },
-  {
-    "name": "Yara",
-    "brand": "Lattafa",
-    "price": "R$ 30,00",
-    "category": "Perfumaria",
-    "productType": "Body Splash",
-    "subcategory": "Feminino",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308225/IMG_6869_w03jvp.webp",
-    "description": "Uma fragrância floral exuberante e sedutora, com destaque para um buquê de flores brancas (Tuberosa, Jasmim) e um fundo suave de baunilha.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Oriental",
-        "Baunilha",
-        "Frutado"
-      ]
-    }
-  },
-  {
-    "name": "Sabah Al Ward",
-    "brand": "Lattafa",
-    "price": "R$ 30,00",
-    "category": "Perfumaria",
-    "productType": "Body Splash",
-    "subcategory": "Feminino",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308227/IMG_6870_b3g5oz.webp",
-    "description": "Body Splash floral oriental com pimenta rosa e cacau, perfeito para um toque exótico no dia a dia.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Floral",
-        "Oriental",
-        "Especiado"
-      ]
-    }
-  },
-  {
     "name": "Royal Amber",
     "brand": "Orientica",
     "price": "R$ 39,90",
@@ -931,6 +815,25 @@
         "Oriental",
         "Baunilha",
         "Âmbar"
+      ]
+    }
+  },
+  {
+    "name": "Fakhar Rose",
+    "brand": "Lattafa",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "productType": "Brand",
+    "subcategory": "Feminino",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308165/PF31_vbrkz4.webp",
+    "description": "Um amadeirado aromático fresco e limpo, com ótima performance para o uso diário.",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Floral",
+        "Frutado",
+        "Baunilha"
       ]
     }
   },
@@ -968,25 +871,6 @@
       "base": [
         "Aromático",
         "Fougère",
-        "Baunilha"
-      ]
-    }
-  },
-  {
-    "name": "Royal Amber",
-    "brand": "Orientica",
-    "price": "R$ 30,00",
-    "category": "Perfumaria",
-    "productType": "Body Splash",
-    "subcategory": "Unissex",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308235/IMG_6868_pdvqnv.webp",
-    "description": "Versão Body Splash do perfume, ideal para manter a aura ambarada e exótica com leveza.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Oriental",
-        "Âmbar",
         "Baunilha"
       ]
     }
@@ -1127,7 +1011,7 @@
   {
     "name": "Black",
     "brand": "Ferrari",
-    "price": "R$ 75,00",
+    "price": "R$ 39,90",
     "category": "Perfumaria",
     "productType": "Brand",
     "subcategory": "Masculino",
@@ -1146,7 +1030,7 @@
   {
     "name": "Silver Scent Intense",
     "brand": "Jacques Bogart",
-    "price": "R$ 75,00",
+    "price": "R$ 39,90",
     "category": "Perfumaria",
     "productType": "Brand",
     "subcategory": "Masculino",
@@ -1197,25 +1081,6 @@
         "Oriental",
         "Couro",
         "Especiado"
-      ]
-    }
-  },
-  {
-    "name": "212 VIP Rosé",
-    "brand": "Carolina Herrera",
-    "price": "R$ 30,00",
-    "category": "Perfumaria",
-    "productType": "Body Splash",
-    "subcategory": "Feminino",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308230/IMG_6871_fp2j64.webp",
-    "description": "Versão leve e refrescante da fragrância VIP Rosé, perfeita para uso diário após o banho.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Floral",
-        "Frutado",
-        "Champagne Rosé"
       ]
     }
   },
