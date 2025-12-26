@@ -202,7 +202,7 @@
   {
   "name": "Durrat Al Aroos",
   "brand": "Al Wataniah",
-  "price": "R$ 75,00",
+  "price": "R$ 250,00",
   "category": "Perfumaria",
   "productType": "Comum",
   "subcategory": "Feminino",
@@ -258,7 +258,7 @@
   {
     "name": "Ameerat Al Arab",
     "brand": "Asdaaf",
-    "price": "R$ 75,00",
+    "price": "R$ 250,00",
     "category": "Perfumaria",
     "productType": "Comum",
     "subcategory": "Feminino",
@@ -386,7 +386,7 @@
   {
     "name": "Lattafa Fakhar Gold",
     "brand": "Lattafa",
-    "price": "R$ 75,00",
+    "price": "R$ 250,00",
     "category": "Perfumaria",
     "productType": "Comum",
     "subcategory": "Masculino",
@@ -399,14 +399,14 @@
     }
   },
   {
-    "name": "Lattafa Yara",
+    "name": "Lattafa Yara body splash",
     "brand": "Lattafa",
-    "price": "R$ 75,00",
-    "category": "Perfumaria",
+    "price": "R$ 45,00",
+    "category": "body splash",
     "productType": "Comum",
     "subcategory": "Feminino",
     "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610606/Lattafa-Yara-Eau-De-Parfum_gxhrsr.webp",
-    "description": "Perfume feminino extremamente popular, com baunilha e floral cremoso.",
+    "description": "Body splash feminino extremamente popular, com baunilha e floral cremoso.",
     "notes": {
       "top": [],
       "heart": [],
@@ -431,7 +431,7 @@
   {
     "name": "Yara Spray Corporal",
     "brand": "Lattafa",
-    "price": "R$ 75,00",
+    "price": "R$ 45,00",
     "category": "Perfumaria",
     "productType": "Body Splash",
     "subcategory": "Feminino",
@@ -446,7 +446,7 @@
   {
     "name": "Yara Hair & Body Mist",
     "brand": "Lattafa",
-    "price": "R$ 75,00",
+    "price": "R$ 45,00",
     "category": "Perfumaria",
     "productType": "Body Splash",
     "subcategory": "Feminino",
