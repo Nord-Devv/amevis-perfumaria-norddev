@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ImageWithFallback } from "@/components/layout/ImageWithFallback";
 
 import slider1 from '@/assets/slide/slide1.webp';
-import slider2 from '@/assets/slide/slide2.webp';
+import slider2 from '@/assets/slide/slide5.webp';
 import slider3 from '@/assets/slide/slide3.webp';
 import slider4 from '@/assets/slide/slide4.webp';
 
