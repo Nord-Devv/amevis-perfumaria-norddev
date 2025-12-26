@@ -31,10 +31,10 @@ export function CarouselGallery() {
                     {activeSlide === 0 && (
                         <motion.div
                             key="slide-0"
-                            initial={{ y: "100%" }}
-                            animate={{ y: 0 }}
-                            exit={{ y: "-100%" }}
-                            transition={{ duration: 0.3, ease: "linear" }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.8, ease: "easeInOut" }}
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
@@ -49,10 +49,10 @@ export function CarouselGallery() {
                     {activeSlide === 1 && (
                         <motion.div
                             key="slide-1"
-                            initial={{ y: "100%" }}
-                            animate={{ y: 0 }}
-                            exit={{ y: "-100%" }}
-                            transition={{ duration: 0.3, ease: "linear" }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.8, ease: "easeInOut" }}
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
@@ -67,10 +67,10 @@ export function CarouselGallery() {
                     {activeSlide === 2 && (
                         <motion.div
                             key="slide-2"
-                            initial={{ y: "100%" }}
-                            animate={{ y: 0 }}
-                            exit={{ y: "-100%" }}
-                            transition={{ duration: 0.3, ease: "linear" }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.8, ease: "easeInOut" }}
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
@@ -85,10 +85,10 @@ export function CarouselGallery() {
                     {activeSlide === 3 && (
                         <motion.div
                             key="slide-3"
-                            initial={{ y: "100%" }}
-                            animate={{ y: 0 }}
-                            exit={{ y: "-100%" }}
-                            transition={{ duration: 0.3, ease: "linear" }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.8, ease: "easeInOut" }}
                             className="absolute inset-0 will-change-transform"
                         >
                             <ImageWithFallback
