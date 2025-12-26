@@ -23,7 +23,7 @@ export const SectionCatalog = () => {
   return (<>
     <section
       id="catalog"
-      className="py-24 px-4 bg-gradient-to-b from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] relative overflow-hidden"
+      className="py-24 bg-gradient-to-b from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] relative overflow-hidden"
     >
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
@@ -57,19 +57,19 @@ export const SectionCatalog = () => {
             <TabsList className="grid w-full grid-cols-3 bg-gradient-to-r from-[#1A1A1A] via-[#252525] to-[#1A1A1A] border border-[#8D021F]/30 p-1 rounded-none h-12">
               <TabsTrigger
                 value="Perfumaria"
-                className="text-[#FF4D4D]/70 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase tracking-wider text-[14px] rounded-none transition-colors duration-200"
+                className="text-[#FF4D4D]/70 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase tracking-wider text-[13px] rounded-none transition-colors duration-200"
               >
                 Perfumaria
               </TabsTrigger>
               <TabsTrigger
                 value="Maquiagem"
-                className="text-[#FF4D4D]/70 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase text-[14px] tracking-wider rounded-none transition-colors duration-200"
+                className="text-[#FF4D4D]/70 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase text-[13px] tracking-wider rounded-none transition-colors duration-200"
               >
                 Maquiagem
               </TabsTrigger>
               <TabsTrigger
                 value="Autocuidado"
-                className="text-[#FF4D4D]/70 text-center data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase tracking-wider text-[14px] rounded-none transition-colors duration-200"
+                className="text-[#FF4D4D]/70 text-center data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#8D021F] data-[state=active]:to-[#580000] data-[state=active]:text-white uppercase tracking-wider text-[13px] rounded-none transition-colors duration-200"
               >
                 Autocuidado
               </TabsTrigger>
