@@ -1,5 +1,6 @@
 import { fetchCatalog } from "@/services/fetchCatalog";
 import type { PerfumariaProduct, Product } from "@/types/Product";
+import { convertCurrencyStringToFloat } from "@/utils/convertCurrencyStringToFloat";
 import { useEffect, useState } from "react";
 
 export const useCatalog = () => {
@@ -20,7 +21,7 @@ export const useCatalog = () => {
   // options to list 
   const productTypes =
     selectedCategory === "Perfumaria"
-      ? ["Todos", "Comum", "Body Splash", "Brand"]
+      ? ["Todos", "Originais", "Comum", "Body Splash", "Brand"]
       : [];
 
   const subcategories =
@@ -62,9 +63,16 @@ export const useCatalog = () => {
     }
 
     if (selectedType !== "Todos" && selectedCategory === "Perfumaria") {
-      filtered = filtered.filter(
-        (p) => (p as PerfumariaProduct).productType === selectedType
-      );
+      if (selectedType === "Originais") {
+        filtered = filtered.filter(
+          (p) => convertCurrencyStringToFloat(p.price) === 250
+        );
+      }
+      else {
+        filtered = filtered.filter(
+          (p) => (p as PerfumariaProduct).productType === selectedType
+        );
+      }
     }
 
     if (selectedSubcategory !== "Todos") {
