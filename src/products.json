@@ -610,25 +610,6 @@
     }
   },
   {
-    "name": "Invictus",
-    "brand": "Brand Collection",
-    "price": "R$ 75,00",
-    "category": "Perfumaria",
-    "productType": "Brand",
-    "subcategory": "Masculino",
-    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308146/IMG_2892_mbyxos.webp",
-    "description": "Miniatura inspirada no Invictus, com acordes aquáticos e cítricos.",
-    "notes": {
-      "top": [],
-      "heart": [],
-      "base": [
-        "Amadeirado",
-        "Aquático",
-        "Cítrico"
-      ]
-    }
-  },
-  {
     "name": "Lady Million",
     "brand": "Paco Rabanne",
     "price": "R$ 39,90",
@@ -821,7 +802,7 @@
   {
     "name": "Fakhar Rose",
     "brand": "Lattafa",
-    "price": "R$ 75,00",
+    "price": "R$ 39,90",
     "category": "Perfumaria",
     "productType": "Brand",
     "subcategory": "Feminino",
