@@ -15,11 +15,18 @@ interface cartState {
   cleanCart: () => void;
 }
 
+const initialCart = getLocalStorageItems();
+const { total, originalTotal, hasDiscount } = calculateTotal(initialCart);
+
+const initialState = {
+  cart: initialCart,
+  total,
+  originalTotal,
+  hasDiscount,
+}
+
 export const useCartStore = create<cartState>((set) => ({
-  cart: getLocalStorageItems(),
-  total: 0,
-  originalTotal: 0,
-  hasDiscount: false,
+  ...initialState,
   addItem: (item) => {
     set((state) => handleAddItem(item, state))
   },
