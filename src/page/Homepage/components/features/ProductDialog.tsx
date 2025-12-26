@@ -59,9 +59,12 @@ export function ProductDialog({
   // Componente de conteúdo reutilizável
   const ProductContent = ({ isMobileDrawer = false }: { isMobileDrawer?: boolean }) => (
     <>
-      <div className="flex flex-row-reverse">
+      <div className="sm:flex sm:justify-between sm:items-center sm:ml-3 flex-row-reverse">
         {/* Close Button */}
-        <div className="flex w-full flex-row justify-end">
+        <div className="flex flex-row justify-between align-center">
+          <Badge className="flex h-5 my-auto ml-3 sm:hidden bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] text-white border-0 uppercase tracking-wider rounded-none flex-shrink-0">
+            {product.category}
+          </Badge>
           <button
             onClick={closeProduct}
             className="cursor-pointer relative ml-3 z-50 w-14 h-18 flex items-center justify-center hover:bg-[#FF4D4D]/20 text-[#FF4D4D] hover:text-white rounded-none transition-all duration-300 group"
@@ -71,14 +74,14 @@ export function ProductDialog({
           </button>
         </div>
         {/* Header com padding */}
-        <div className="p-6 flex-shrink-0 relative">
+        <div className="hidden  py-4 px-2 sm:flex justify-center  relative max-w-full">
           {isMobileDrawer ? (
             <DrawerHeader className="p-0">
-              <div className="flex items-start gap-3 flex-wrap sm:flex-nowrap">
+              <div className="flex items-start gap-3 sm:flex flex-wrap sm:flex-nowrap">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-2">
                     <Sparkles className="h-5 w-5 text-[#FF4D4D]" />
-                    <DrawerDescription className="text-[#FF4D4D] uppercase tracking-widest text-xs">
+                    <DrawerDescription className="invisible sm:visible text-[#FF4D4D] uppercase tracking-widest text-xs">
                       {product.brand}
                     </DrawerDescription>
                   </div>
