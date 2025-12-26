@@ -11,18 +11,18 @@ import slider4 from '@/assets/slide/slide4.webp';
 
 
 export function CarouselGallery() {
-      const [activeSlide, setActiveSlide] = useState(0);
+    const [activeSlide, setActiveSlide] = useState(0);
 
-       // Fast slideshow automation for luxury gallery
-        useEffect(() => {
-          const totalSlides = 4;
-      
-          const interval = setInterval(() => {
+    // Fast slideshow automation for luxury gallery
+    useEffect(() => {
+        const totalSlides = 4;
+
+        const interval = setInterval(() => {
             setActiveSlide((prev) => (prev + 1) % totalSlides);
-          }, 7000); // Troca a cada 2.5 segundos
-      
-          return () => clearInterval(interval);
-        }, []);
+        }, 7000); // Troca a cada 2.5 segundos
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <section className="py-0 overflow-hidden bg-[#1A1A1A] h-96 relative">
