@@ -284,9 +284,9 @@
     "price": "R$ 75,00",
     "category": "Perfumaria",
     "productType": "Brand",
-    "subcategory": "Masculino",
+    "subcategory": "Unissex",
     "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610607/Perfume-Arabe-Noble-Wazeer-Eau-Parfum-25ml_jo3afw.webp",
-    "description": "Perfume masculino de perfil amadeirado oriental, com alta fixação.",
+    "description": "Perfume Unissex de perfil amadeirado oriental, com alta fixação.",
     "notes": {
       "top": [],
       "heart": [],
@@ -338,9 +338,9 @@
     "price": "R$65,00",
     "category": "Perfumaria",
     "productType": "Brand",
-    "subcategory": "Masculino",
+    "subcategory": "Feminino",
     "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1766610477/Brand-Collection-007-Eau-de-Parfum_zuwuw6.webp",
-    "description": "Perfume masculino amadeirado aromático inspirado em perfumes de luxo.",
+    "description": "Perfume Feminino amadeirado aromático inspirado em perfumes de luxo.",
     "notes": {
       "top": [],
       "heart": [],
@@ -748,7 +748,7 @@
     "price": "R$ 39,90",
     "category": "Perfumaria",
     "productType": "Comum",
-    "subcategory": "Feminino",
+    "subcategory": "Unissex",
     "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308153/IMG_1199_v4cwpu.webp",
     "description": "Uma fragrância floral opulenta e sensual, com tuberosa e notas frutadas.",
     "notes": {
@@ -938,7 +938,7 @@
     "price": "R$ 39,90",
     "category": "Perfumaria",
     "productType": "Comum",
-    "subcategory": "Feminino",
+    "subcategory": "Unissex",
     "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308155/IMG_6855_jobstn.webp",
     "description": "Um clássico fresco e cítrico, que remete aos dias de verão no Mediterrâneo, com limão siciliano e cedro.",
     "notes": {
