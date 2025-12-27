@@ -137,7 +137,7 @@ export const SectionCatalog = () => {
                           <TabsTrigger
                             key={type}
                             value={type}
-                            className="px-5 py-2 bg-transparent border border-[#A31919]/20 text-[#FF4D4D]/50 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#A31919]/40 data-[state=active]:via-[#8D021F]/30 data-[state=active]:to-[#A31919]/40 data-[state=active]:text-[#FF4D4D] data-[state=active]:border-[#8D021F]/60 uppercase tracking-wider text-[10px] sm:text-xs rounded-none transition-all duration-300 whitespace-nowrap hover:border-[#A31919]/40 hover:text-[#FF4D4D]/70"
+                            className="px-4 py-2 bg-transparent border border-[#A31919]/20 text-[#FF4D4D]/50 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#A31919]/40 data-[state=active]:via-[#8D021F]/30 data-[state=active]:to-[#A31919]/40 data-[state=active]:text-[#FF4D4D] data-[state=active]:border-[#8D021F]/60 uppercase tracking-wider text-[10px] sm:text-xs rounded-none transition-all duration-300 whitespace-nowrap hover:border-[#A31919]/40 hover:text-[#FF4D4D]/70"
                           >
                             {type}
                           </TabsTrigger>
