@@ -64,9 +64,10 @@ export const useCatalog = () => {
 
     if (selectedType !== "Todos" && selectedCategory === "Perfumaria") {
       if (selectedType === "Originais") {
-        filtered = filtered.filter(
-          (p) => convertCurrencyStringToFloat(p.price) === 250
-        );
+        filtered = filtered.filter((p) => {
+          const price = convertCurrencyStringToFloat(p.price);
+          return price === 250 || price === 200;
+        });
       }
       else {
         filtered = filtered.filter(
@@ -80,6 +81,12 @@ export const useCatalog = () => {
         (p) => (p as any).subcategory === selectedSubcategory
       );
     }
+
+    filtered.sort((a, b) => {
+      const pa = convertCurrencyStringToFloat(a.price);
+      const pb = convertCurrencyStringToFloat(b.price);
+      return pb - pa;
+    });
 
     setFilteredProdutcs(filtered);
     setVisibleProducts(8);
