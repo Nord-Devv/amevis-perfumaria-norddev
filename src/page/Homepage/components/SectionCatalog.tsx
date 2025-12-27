@@ -26,7 +26,7 @@ export const SectionCatalog = () => {
       className="py-24 bg-gradient-to-b from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] relative overflow-hidden"
     >
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 px-2">
           {/* Decorative top line */}
           <div className="flex items-center justify-center mb-6">
             <div className="h-px bg-gradient-to-r from-transparent via-[#8D021F] to-transparent w-32"></div>
@@ -48,7 +48,7 @@ export const SectionCatalog = () => {
         </div>
 
         {/* Main Category Tabs */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-6 mx-2">
           <Tabs
             value={selectedCategory}
             onValueChange={handleCategoryChange}
