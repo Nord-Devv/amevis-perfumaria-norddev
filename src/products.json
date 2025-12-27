@@ -1303,5 +1303,41 @@
         "Volume"
       ]
     }
+  },
+  {
+    "name": "Arabic Collection Lembrança A022",
+    "brand": "Perfumaria",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "subcategory": "Brand",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308238/IMG_9812_sl7tep.webp_celd1p",
+    "description": "É uma fragrância feminina inspirada no Souvenir Floral Bouquet da Afnan ",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Brilho",
+        "Cintilante",
+        "Volume"
+      ]
+    }
+  },
+   {
+    "name": "Arabic Collection Serenidade A016",
+    "brand": "Perfumaria",
+    "price": "R$ 75,00",
+    "category": "Perfumaria",
+    "subcategory": "Brand",
+    "image": "https://res.cloudinary.com/da59ikbyh/image/upload/v1762308238/IMG_9813_sl7tep.webp_eegnkz",
+    "description": "Esta fragrância é uma inspiração do perfume Emaan da casa de perfumaria árabe Lattafa",
+    "notes": {
+      "top": [],
+      "heart": [],
+      "base": [
+        "Brilho",
+        "Cintilante",
+        "Volume"
+      ]
+    }
   }
 ]
