@@ -36,7 +36,7 @@ export function HomePage() {
           <ImageWithFallback
             src={imageHome}
             alt="Luxury Perfume"
-            className="w-full min-h-[calc(100vh-150px)] object-cover"
+            className="w-full min-h-[calc(100vh+150px)] object-cover"
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/70 bg-blend-overlay md:bg-black/40"></div>
