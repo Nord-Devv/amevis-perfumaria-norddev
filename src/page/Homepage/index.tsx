@@ -36,7 +36,7 @@ export function HomePage() {
           <ImageWithFallback
             src={imageHome}
             alt="Luxury Perfume"
-            className="w-full min-h-screen object-cover"
+            className="w-full min-h-[calc(100vh-150px)] object-cover"
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/70 bg-blend-overlay md:bg-black/40"></div>
@@ -49,7 +49,7 @@ export function HomePage() {
               <h2 className="md:text-6xl text-white tracking-tight leading-tight font-[Noto_Serif_Display] text-[50px]">
                 PERFUMES DE LUXO
               </h2>
-              <p className="text-gray-200 max-w-md leading-relaxed text-[16px]">
+              <p className="text-gray-200 max-w-[310px] leading-relaxed text-[16px]">
                 Descubra aromas que refletem elegância e
                 sutileza, com notas inspiradas na perfumaria
                 árabe e internacional.
@@ -60,7 +60,7 @@ export function HomePage() {
                     .getElementById("catalog")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] shadow-lg shadow-[#8D021F]/20 hover:shadow-[#8D021F]/40 text-white px-10 py-6 transition-all duration-300 rounded-none uppercase tracking-wider"
+                className="bg-gradient-to-r from-[#8D021F] to-[#580000] hover:from-[#580000] hover:to-[#580000] shadow-lg shadow-[#8D021F]/20 hover:shadow-[#8D021F]/40 text-white px-10 mt-[40px] py-6 transition-all duration-300 rounded-none uppercase tracking-wider"
               >
                 Ver Catálogo
               </Button>
