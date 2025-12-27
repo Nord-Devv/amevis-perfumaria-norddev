@@ -28,7 +28,8 @@ export function ProductCard({
   onViewDetails,
   onAddToCart,
 }: ProductCardProps) {
-  const isOriginal = convertCurrencyStringToFloat(price) === 250;
+  const priceFloat = convertCurrencyStringToFloat(price);
+  const isOriginal = priceFloat === 250 || priceFloat === 200;
   return (
     <Card
       className="group overflow-hidden gap-0 py-0 bg-gradient-to-b bgu-gradient-to-br from-[#1A1A1A] to-[#0F0F0F] border-[#8D021F]/40 hover:border-[#8D021F] hover:shadow-2xl hover:shadow-[#8D021F]/50 transition-all duration-500 rounded-none cursor-pointer relative"

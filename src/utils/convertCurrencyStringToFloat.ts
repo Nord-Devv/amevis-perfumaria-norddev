@@ -1,12 +1,14 @@
 export const convertCurrencyStringToFloat = (value: string) => {
-  let cleanedString = value.replace(/R\$\s*/g, '').trim();
-  cleanedString = cleanedString.replace(/\./g, '').replace(',', '.');
+  const cleanedString = value.replace(/[^\d,]/g, '');
 
-  const number = parseFloat(cleanedString);
+  const numberString = cleanedString.replace(',', '.');
+
+  const number = parseFloat(numberString);
 
   if (isNaN(number)) {
     throw new Error(`error trying to convert string value: "${value} to number"`);
   }
 
   return number;
-}
+};
+
